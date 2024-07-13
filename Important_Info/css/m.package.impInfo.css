@@ -1,0 +1,303 @@
+/*Important Info - Contest_Name(15MM) - V1.0 - Pkg Mobile CSS by VAD - 12/2023*/
+
+/******Package Specific Style Start******/
+body{	
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: left;
+	background: #000;
+	color: #000;
+	font-size: 100%;
+}
+
+/* @media (400px >= width) or (orientation: landscape){
+	body{
+		background-color: lime;
+	}
+} */
+
+/* #contestWrap{ overflow: hidden;} */
+
+#package-wrap{
+	width: 320px;
+	margin: 0 auto;	
+	overflow: hidden;	
+}
+
+/* #mobileBody p{ padding: 10px 0;} */
+
+#deviceWrap1{ display: none; }
+/******Package Specific Style Start******/
+
+#package-contest_section{
+	font-family: 'Roboto', sans-serif;
+	width: 320px;
+	margin: 20px auto 10px;	
+	box-sizing: border-box;
+	/* padding-left: 100px; */
+	overflow: hidden;
+	/* display: none; */
+}
+
+#package-contest_section #contestAmt{
+	background: #ed1c24 url(../images/LP_Contest_Bkgrnd_Mob.png) 0 0 no-repeat;
+	height: 188px;
+	text-align: center;
+}
+#package-contest_section #contestAmt .pzAmt{
+	font-weight: 900;
+	text-transform: uppercase;
+	color: #fff;
+	font-size: 41px;
+	line-height: 37px;
+	padding: 40px 10px 5px;
+}
+#package-contest_section #contestAmt .pzAmt span{
+	font-size: 37px;
+	line-height: 37px;
+}
+#package-contest_section #contestAmt .pzAmtGuarantee{
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 23px;
+	line-height: 23px;
+}
+
+#package-contest_section #contestMain{
+	background-color: #fff;
+	text-align: center;
+	overflow: hidden;
+	position: relative;
+
+	box-sizing: border-box;
+	padding: 0 10px 0px;
+}
+#package-contest_section #contestTopTriangle{
+	position: absolute;
+	top: 0;
+	left: 0px;
+	right: 0px;
+	margin: auto;
+	overflow: hidden;
+
+	width: 0;
+	height: 0;
+	border-left:136px solid transparent;
+	border-right: 136px solid transparent;
+	border-top: 0px solid #ed1c24;
+	/* border-top: 33px solid #ed1c24; */
+}
+#package-contest_section #contestMain h6{
+	font-weight: 900;
+	font-size: 34px;
+	line-height: 34px;
+	text-transform: uppercase;
+	padding: 5px 0px 10px;
+}
+#package-contest_section #contestMain p{
+	text-align: left;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 23px;
+}
+
+#impInfo_Btn {
+	margin: 20px auto;
+	background-color: #ed1c24;
+	color: #fff;
+	font-weight: 500;
+	font-size: 31px;
+	line-height: 58px;
+	text-transform: uppercase;
+	width: 284px;
+	height: 58px;
+	border-radius: 50px;
+	font-family: 'Roboto', sans-serif;
+	cursor: pointer;
+	text-align: center;
+	box-shadow: -4px 3px 1px rgb(0, 0, 0, 0.2);
+}
+
+#package-order_section{
+	overflow: auto;
+	/* background-color: #00128c; */
+	display: none;
+}
+
+#package-ob_section{
+	width: 299px;
+	margin: 20px auto;
+	background: #fff url(../images/LP_OB_Bkgrnd_Mob.png) center top no-repeat;
+	font-family: 'Lato', sans-serif;
+	box-sizing: border-box;
+	overflow: hidden;
+	box-shadow: 4px 4px 6px rgb(0, 0, 0, 0.44);
+}
+
+.ob_dir_Msg h6{
+	padding-top: 10px;
+	font-weight: 900;
+	font-size: 27px;
+	line-height: 34px;
+	color: #00128c;
+	text-align: center;
+	text-transform: uppercase;
+}
+.ob_dir_Msg h5{
+	padding-top: 10px;
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 27px;
+	text-align: center;
+}
+.ob_dir_Msg h4{
+	background-color: rgb(0, 18, 140, .59);
+	color: #fff;
+	padding: 10px 5px;
+	font-weight: 900;
+	font-size: 22px;
+	line-height: 30px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.ob_dir_Msg ul{
+	padding: 20px 10px 0px;
+}
+.ob_dir_Msg li{
+	font-size: 21px;
+	line-height: 30px;	
+	padding: 0px 0px 15px;
+}
+.ob_dir_Msg .Current u.ob_Underline{
+	/* display: block; */
+	text-decoration: none;
+	/* position: relative; */
+
+	background-image: linear-gradient(90deg, #000, #000);
+	background-size: 0% 1px;
+	background-repeat: no-repeat;
+	background-position: left bottom;
+}
+/* .ob_Underline::after{
+	content: "";
+	height: 2px;
+	background-color: #000;
+
+	position: absolute;
+	bottom: 0px;
+} */
+
+
+
+ .ob_dir_Msg .balance li{
+	font-size: 21px;
+	line-height: 30px;	
+	padding: 0px 0px 15px;
+}
+.ob_dir_Msg .lapsed li{
+	font-size: 21px;
+	line-height: 30px;	
+	padding: 0px 20px 15px;
+}
+.ob_dir_Msg .prospect li{
+	font-size: 20px;
+	line-height: 30px;	
+	padding: 0px 0px 15px;
+}
+.ob_dir_Msg .preferred li{
+	font-size: 21px;
+	line-height: 30px;	
+	padding: 0px 0px 15px;
+}
+.ob_dir_Msg .prefPlus li{
+	font-size: 20px;
+	line-height: 30px;	
+	padding: 0px 0px 15px;
+}
+.ob_dir_Msg .presPreferred li{
+	font-size: 23px;
+	line-height: 32px;	
+	padding: 0px 20px 15px;
+}
+.ob_dir_Msg .presPreferred h4{
+	text-transform: none;
+}
+.ob_dir_Msg .decelPresPreferred li{
+	font-size: 23px;
+	line-height: 32px;	
+	padding: 0px 20px 15px;
+}
+.ob_dir_Msg .decelPresPreferred h4{
+	text-transform: none;
+}
+
+.ob_dir_Msg .offline li{
+	font-size: 20px;
+	line-height: 32px;	
+	padding: 0px 0px 15px;
+}
+.ob_dir_Msg .offline h4{
+	font-size: 24px;
+}
+
+/*
+.ob_dir_Msg .offline li{
+	display: inline-grid;
+	grid-template-columns: auto auto;
+	gap: 10px;
+}
+ */
+
+.ob_dir_Msg .balance, 
+.ob_dir_Msg .prospect, 
+.ob_dir_Msg .presPreferred, 
+.ob_dir_Msg .prefPlus,
+.ob_dir_Msg .preferred,
+.ob_dir_Msg .offline,
+.ob_dir_Msg .lapsed, 
+.ob_dir_Msg .decelPresPreferred{
+	display: none;
+  }
+
+
+/******Default Package Style Start******/
+
+
+.disclaimer {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 0.6875em;
+	max-width: 320px;
+	padding: 20px 0;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.disclaimer p, .disclaimer a{
+	color: #fff;
+}
+
+.disclaimer p {
+	margin-bottom: 14px;
+}
+
+.isUppercase {
+	text-transform: uppercase;
+}
+/******Default Package Style End******/
+
+/*****Merch Ineligible button.. place over package button (Absoulute positioning)*****/
+/*Refer to merch INELLIGABLE inelligable doc: http://creativedept.classic.pchad.com/Libraries/Packages/Spectrum/_docs/MERCH%20INELLIGABLE.TXT*/
+.contestOnlySubmitButton{
+	width: 251px;
+	height: 74px;
+	border: 0;
+	text-indent: -999px;
+	overflow: hidden;
+	font-size: 0;
+	background: none;
+	cursor: pointer;
+	display: none;
+	position: absolute;
+	top: 0;
+	z-index: 10;
+}

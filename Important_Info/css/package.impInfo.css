@@ -1,0 +1,283 @@
+/*Important Info - Contest_Name(15MM) - V1.0 - Pkg Desktop CSS by VAD - 12/2023*/
+body{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	text-align: left;
+	color: #000;
+	background-color: #000;
+}
+
+/*****Package Style Start*******/
+
+#package-contest_section{
+	font-family: 'Roboto', sans-serif;
+	width: 1043px;
+	margin: 20px auto 10px;
+	background: #ed1c24 url(../images/LP_Contest_Bkgrnd.png) 0 0 no-repeat;
+	box-sizing: border-box;
+	padding-left: 100px;
+	overflow: hidden;
+	/* display: none; */
+}
+
+#package-contest_section #contestAmt{
+	height: 143px;
+	text-align: center;
+}
+#package-contest_section #contestAmt .pzAmt{
+	font-weight: 900;
+	text-transform: uppercase;
+	color: #fff;
+	font-size: 54px;
+	line-height: 54px;
+	padding: 20px 0 5px;
+}
+#package-contest_section #contestAmt .pzAmtGuarantee{
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 36px;
+	line-height: 36px;
+}
+
+
+
+#package-contest_section #contestMain{
+	background-color: #fff;
+	text-align: center;
+	overflow: auto;
+	position: relative;
+
+	box-sizing: border-box;
+	padding: 0 50px 0px;
+}
+#package-contest_section #contestTopTriangle{
+	position: absolute;
+	/* top: -33px; */
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	margin: auto;
+	overflow: hidden;
+
+	width: 0;
+	height: 0;
+	border-left:136px solid transparent;
+	border-right: 136px solid transparent;
+	/* border-top: 0px solid #ed1c24; */
+	border-top: 33px solid #ed1c24;
+}
+#package-contest_section #contestMain h6{
+	font-weight: 900;
+	font-size: 44px;
+	line-height: 89px;
+	text-transform: uppercase;
+	padding-top: 33px;
+}
+#package-contest_section #contestMain p{
+	text-align: left;
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 32px;
+}
+
+#impInfo_Btn {
+	margin: 40px auto 30px;
+	background-color: #ed1c24;
+	color: #fff;
+	font-weight: 500;
+	font-size: 41px;
+	line-height: 76px;
+	text-transform: uppercase;
+	width: 372px;
+	height: 76px;
+	border-radius: 50px;
+	font-family: 'Roboto', sans-serif;
+	cursor: pointer;
+	text-align: center;
+	box-shadow: -4px 3px 1px rgb(0, 0, 0, 0.2);
+}
+
+#package-order_section{
+	overflow: auto;
+	/* background-color: #00128c; */
+	display: none;
+}
+
+#package-ob_section{
+	/* width: 972px; */
+	width: 956px;
+	/* height: 500px; */
+	margin: 20px auto;
+	/* background: transparent url(../images/LP_OB_Bkgrnd.png) center top no-repeat; */
+	background-color: #fff;
+	font-family: 'Lato', sans-serif;
+	box-sizing: border-box;
+	overflow: hidden;
+	box-shadow: 4px 4px 6px rgb(0, 0, 0, 0.44);
+}
+
+.ob_dir_Msg h6{
+	padding-top: 20px;
+	font-weight: 900;
+	font-size: 48px;
+	line-height: 48px;
+	color: #00128c;
+	text-align: center;
+	text-transform: uppercase;
+}
+.ob_dir_Msg h5{
+	padding-top: 10px;
+	font-weight: 700;
+	font-size: 32px;
+	line-height: 35px;
+	text-align: center;
+}
+.ob_dir_Msg h4{
+	background-color: rgb(0, 18, 140, .59);
+	color: #fff;
+	padding: 20px 5px;
+	font-weight: 900;
+	font-size: 27px;
+	line-height: 32px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+/* .ob_dir_Msg ul{
+	padding: 20px 15px;
+} */
+/* .ob_dir_Msg li{ */
+	/* width: 900px; */
+	/* margin: 0 auto;	 */
+	/* font-size: 30px;
+	line-height: 45px;	 */
+	/* display: flex;
+	flex-direction: row;
+	justify-content: center; */
+/* } */
+
+.ob_dir_Msg .Current u.ob_Underline{
+	text-decoration: none;
+	/* position: relative; */
+
+	background-image: linear-gradient(90deg, #000, #000);
+	/* background-size: 0% 3px; */
+	background-size: 100% 1px;
+	background-repeat: no-repeat;
+	background-position: left bottom;
+}
+
+.ob_dir_Msg .balance ul{
+	font-size: 30px;
+	line-height: 55px;
+	padding: 20px 15px;
+}
+.ob_dir_Msg .prospect ul{
+	font-size: 30px;
+	line-height: 55px;
+	padding: 20px 55px;
+}
+.ob_dir_Msg .presPreferred ul{
+	font-size: 30px;
+	line-height: 45px;
+	padding: 20px 75px;
+}
+.ob_dir_Msg .presPreferred h4{
+	text-transform: none;
+}
+
+.ob_dir_Msg .prefPlus ul{
+	font-size: 28px;
+	line-height: 45px;
+	padding: 20px 15px;
+}
+.ob_dir_Msg .preferred ul{
+	font-size: 27px;
+	line-height: 45px;
+	padding: 20px 25px;
+}
+.ob_dir_Msg .offline > ul{
+	font-size: 25px;
+	line-height: 35px;
+	padding: 20px 15px 0px;
+}
+	.ob_dir_Msg .offline > ul li{
+		padding-bottom: 10px;
+	}
+	.ob_dir_Msg .offline li ul{
+		display: inline-grid;
+		grid-template-columns: auto auto;
+		gap: 10px;
+	}
+.ob_dir_Msg .offline h4{
+	font-size: 24px;
+}
+
+.ob_dir_Msg .lapsed ul{
+	font-size: 30px;
+	line-height: 55px;
+	padding: 20px 55px;
+}
+.ob_dir_Msg .decelPresPreferred ul{
+	font-size: 30px;
+	line-height: 45px;
+	padding: 20px 75px;
+}
+.ob_dir_Msg .decelPresPreferred h4{
+	text-transform: none;
+}
+
+.ob_dir_Msg .balance, 
+.ob_dir_Msg .prospect, 
+.ob_dir_Msg .presPreferred, 
+.ob_dir_Msg .prefPlus,
+.ob_dir_Msg .preferred,
+.ob_dir_Msg .offline,
+.ob_dir_Msg .lapsed, 
+.ob_dir_Msg .decelPresPreferred{
+	display: none;
+  }
+
+/*****Package Style End*********/
+#multipageWrap{
+	margin: 0 20px;
+}
+
+.disclaimer{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	width: 600px;
+	padding: 20px 0;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.disclaimer p, .disclaimer a{
+	color: #fff;
+}
+
+.disclaimer p {
+	margin-bottom: 14px;
+}
+
+.disclaimer strong {
+	/*for NPN*/
+	font-size: 12px;
+}
+
+/*****Merch Ineligible button.. place over package button (Absoulute positioning)*****/
+/*Refer to merch INELLIGABLE inelligable doc: http://creativedept.classic.pchad.com/Libraries/Packages/Spectrum/_docs/MERCH%20INELLIGABLE.TXT*/
+.contestOnlySubmitButton{
+	width: 251px;
+	height: 74px;
+	border: 0;
+	text-indent: -999px;
+	overflow: hidden;
+	font-size: 0;
+	background: none;
+	cursor: pointer;
+	display: none;
+	position: absolute;
+	top: 0;
+	z-index: 10;
+}
