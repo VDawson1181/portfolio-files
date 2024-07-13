@@ -86,7 +86,7 @@ function impInfo_Init(){
         ImpInfo_OBAni.play();
     });
 	
-	$("#copyright").html(new Date(SERVER_DATE).getFullYear());
+	$("#copyright").html(new Date().getFullYear());
 
 };
 
