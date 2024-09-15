@@ -1,0 +1,421 @@
+/*Permanent Placement Alert - Contest_Name(15MM_POAL) - V1.0 - Desktop Pkg by VAD - 01/2024*/
+body{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	text-align: left;
+	color: #333;
+}
+
+/*****Package Style Start*******/
+#package-contest_section{
+	position: relative;
+	display: none;
+}
+#package-contest_section>hr{
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 296px;
+	background-color: #0085dc;
+	z-index: 55;
+	border: 0;
+	margin: 0;
+}
+#package-contest_section p.contestHdr{
+	position: relative;
+	z-index: 85;
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 900;
+	font-size: 27px;
+	line-height: 27px;
+	text-transform: uppercase;
+	padding: 10px 0;
+	color: #fff;
+}
+#package-contest_section p.contestFtr{
+	text-align: center;
+	font-size: 17px;
+	line-height: 26px;
+	padding: 10px 0;
+	color: #000;
+}
+
+#package-contest_section p.contestFtr .contestFtr_ULine{
+	border-bottom: 1px solid #000;
+}
+
+#package-contest_section .package-contest_container{
+	width: 928px;
+	background-color: #fff;
+	overflow: hidden;
+	margin: 0 auto;
+	box-sizing: border-box;
+	border-radius: 20px;
+	box-shadow: 0px 0px 7px rgb(0, 0, 0, 0.2);
+	padding: 10px 20px;
+	position: relative;
+	z-index: 85;
+}
+
+#package-contest_section .package-contest_container .package-contest_hdr{
+	text-align: center;
+	padding: 10px 0;
+}
+#package-contest_section .package-contest_container .package-contest_hdr hr{
+	position: absolute;
+	top: 215px;
+	width: 100%;
+	height: 1px;
+	background-color: rgba(0, 133, 220, 0.2);
+	z-index: 5;
+	border: 0;
+	margin: 0;
+}
+#package-contest_section .package-contest_container .package-contest_hdr p.contestAmt{
+	font-family: 'Roboto', sans-serif;
+	font-weight: 900;
+	font-size: 72px;
+	line-height: 72px;
+	color: #0085dc;
+	text-shadow: 0px 5px 2px rgb(177, 215, 238, 1);
+}
+#package-contest_section .package-contest_container .package-contest_hdr h6{
+	font-family: 'Roboto', sans-serif;
+	font-weight: 900;
+	font-size: 36px;
+	line-height: 45px;
+	text-transform: capitalize;
+	color: #000;
+}
+#package-contest_section .package-contest_container .package-contest_hdr h6:nth-of-type(1){
+	text-decoration: underline;
+}
+
+#package-contest_section .package-contest_container .package-contest_hdr #PPA_Btn {
+	margin: 10px auto;
+	background-color: #0085dc;
+	color: #fff;
+	font-weight: 500;
+	font-size: 41px;
+	line-height: 62px;
+	text-transform: uppercase;
+	width: 342px;
+	height: 62px;
+	border-radius: 50px;
+	font-family: 'Roboto', sans-serif;
+	cursor: pointer;
+	text-align: center;
+	position: relative;
+	z-index: 55;
+}
+
+.package-contest_hdr, .package-contest_main .package-contest_inner{
+	background-color: #ecf6fc;
+	border-radius: 20px;
+	position: relative;
+	box-sizing: border-box;	
+}
+.package-contest_main .package-contest_inner{
+	padding: 20px 0 10px;
+}
+
+.package-contest_main :is(h6,h5){
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.package-contest_main :is(h6){
+	color: #514e4e;
+	font-size: 16px;
+	line-height: 21px;
+	padding: 10px 0;
+}
+.package-contest_main :is(h5){
+	color: #0085dc;
+	font-weight: bold;
+	font-size: 22px;
+	line-height: 22px;
+	padding: 10px 0;
+}
+
+.package-contest_main ul li .listItemMarker{
+	background: transparent url(../images/PPA_Chevron.png) center center no-repeat;
+	width: 44px;
+	height: 26px;
+	background-color: #0085dc;
+	border-radius: 50px;
+	text-align: center;
+	box-shadow: 0px 3px 0px rgb(3, 91, 149, 1);
+	color: #fff;
+	font-weight: 500;
+	font-size: 13px;
+	line-height: 26px;
+
+	position: relative;
+	left: 120px
+}
+
+.package-contest_main ul li .listItemCpy{
+	color: #514e4e;
+	font-size: 16px;	
+	line-height: 21px;	
+	
+}
+
+.package-contest_main ul li .listItemCpy p{
+	position: relative;
+	transform-origin: center left;
+}
+.package-contest_main ul li:first-child .listItemCpy p{
+	line-height: 28px;
+}
+
+.package-contest_main ul li{
+	display: grid;
+	grid-template-columns: 180px auto;
+	padding: 10px 0px;
+	border-bottom: 1px solid rgba(0, 133, 220, 0.2);
+}
+
+/* OB section styles */
+#package-order_section{
+	display: none;
+	position: relative;
+	background-color: #c5d7e1;
+	overflow: auto;
+}
+
+#package-ob_section{
+	width: 808px;
+	margin: 10px auto 20px;
+	border-radius: 20px 20px 0 0;
+	background-color: #fff;
+	color: #000;
+	font-family: Arial, Helvetica, sans-serif;
+	overflow: hidden;
+	box-sizing: border-box;
+	box-shadow: 5px 7px 0px rgb(118, 92, 21, 0.32);
+}
+
+.ob_dir_Msg .ob_hdr{
+	height: 123px;
+	background-color: #00fff6;
+	text-align: center;
+	border-bottom: 8px solid #000;
+}
+.ob_dir_Msg .ob_hdr h6{
+	font-size: 32px;
+	line-height: 32px;
+	text-transform: uppercase;
+	font-weight: bold;
+	padding: 10px 0 0;
+}
+.ob_dir_Msg .ob_hdr h5{
+	font-size: 26px;
+	line-height: 33px;
+	text-transform: uppercase;
+	font-weight: bold;
+	padding: 5px 0;
+}
+
+.ob_dir_Msg :is(.ob_main, .ob_ftr){
+	padding: 0 50px;
+}
+
+.ob_dir_Msg :is(.ob_main){
+	position: relative;
+}
+.ob_dir_Msg .ob_arrow{
+	position: absolute;
+	top: 0;
+	left: 20px;
+	width: 8px;
+	height: 100%;
+	background-color: #000;
+}
+
+/* OB arrow styles Start - Arrow grows/shrinks to match the position of the footer copy */
+.ob_dir_Msg .ob_ftr{
+	position: relative;
+}
+.ob_dir_Msg .ob_ftr .ob_pointer{
+	position: absolute;
+	top: 0;
+	left: 20px;
+	width: 61px;
+	height: 55%;
+	background: transparent url(../images/PPA_OB_FtrArrow.png) center bottom no-repeat;
+}
+.ob_dir_Msg .ob_ftr .ob_pointer::after{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 80%;
+	width: 8px;
+	background-color: #000;
+}
+/* OB arrow styles End*/
+
+.ob_dir_Msg .ob_main h4{
+	padding: 20px 0 0px;
+}
+.ob_dir_Msg .prospect .ob_main h4{
+	font-size: 21px;
+	line-height: 29px;
+} 
+.ob_dir_Msg .balance .ob_main h4{
+	font-size: 22px;
+	line-height: 32px;
+} 
+.ob_dir_Msg .lapsed .ob_main h4{
+	font-size: 22px;
+	line-height: 29px;
+}
+.ob_dir_Msg .offline .ob_main h4{
+	font-size: 20px;
+	line-height: 30px;
+}
+.ob_dir_Msg .preferred .ob_main h4{
+	font-size: 21px;
+	line-height: 29px;
+}
+.ob_dir_Msg .prefPlus .ob_main h4{
+	font-size: 21px;
+	line-height: 29px;
+}
+.ob_dir_Msg .presPreferred .ob_main h4{
+	font-size: 21px;
+	line-height: 28px;
+}
+.ob_dir_Msg .decelPresPreferred .ob_main h4{
+	font-size: 24px;
+	line-height: 30px;
+}
+
+.ob_dir_Msg .ob_main ul li{
+	display: grid;
+	grid-template-columns: 65px auto;
+	padding: 10px 0px;
+	position: relative;
+	left: -10px;
+}
+
+.ob_dir_Msg .ob_main .ob_left_arrow{
+	width: 45px;
+	height: 65px;
+	background: transparent url(../images/PPA_OB_Arrow.png) center center no-repeat;
+	position: relative;
+	z-index: 50;
+  }
+
+.ob_dir_Msg .ob_main .ob_benefit{
+	width: 650px;
+	background-color: #000;
+	color: #fff;
+	border-radius: 0 50px 50px 0;
+	padding-left: 50px;
+	position: relative;
+	left: -50px;
+	z-index: 25;
+	font-size: 37px;
+	line-height: 65px;
+}
+
+.ob_dir_Msg .ob_main .ob_benefit .ob_bene_highlight{
+	font-weight: bold;
+	color: #00fff6;
+	text-transform: uppercase;
+}
+
+	.ob_dir_Msg :is(.offline) .ob_main li .ob_benefit{
+		font-size: 32px;
+		line-height: 65px;
+	}
+	.ob_dir_Msg :is(.offline) .ob_main li:last-child{
+		height: 96px;
+	}
+	.ob_dir_Msg :is(.offline) .ob_main li:last-child .ob_left_arrow{
+		height: 96px;
+	}
+	.ob_dir_Msg :is(.offline) .ob_main li:last-child .ob_benefit{
+		font-size: 32px;
+		line-height: 40px;
+		padding-top: 10px;
+	}
+
+.ob_dir_Msg .ob_ftr h3{
+	padding: 10px 0 20px 40px;
+	font-weight: bold;
+}
+.ob_dir_Msg .prospect .ob_ftr h3{
+	font-size: 17px;
+	line-height: 30px;	
+} 
+.ob_dir_Msg .balance .ob_ftr h3{
+	font-size: 21px;
+	line-height: 30px;
+} 
+.ob_dir_Msg .lapsed .ob_ftr h3{
+	font-size: 18px;
+	line-height: 28px;
+}
+.ob_dir_Msg .offline .ob_ftr h3{
+	font-size: 22px;
+	line-height: 30px;
+}
+.ob_dir_Msg .preferred .ob_ftr h3{
+	font-size: 21px;
+	line-height: 30px;
+}
+.ob_dir_Msg :is(.prefPlus, .presPreferred, .decelPresPreferred) .ob_main li:last-child .ob_benefit{
+	font-size: 31px;
+}
+.ob_dir_Msg .prefPlus .ob_ftr h3{
+	font-size: 21px;
+	line-height: 30px;
+}
+.ob_dir_Msg .presPreferred .ob_ftr h3{
+	font-size: 22px;
+	line-height: 31px;
+}
+.ob_dir_Msg .decelPresPreferred .ob_ftr h3{
+	font-size: 20px;
+	line-height: 30px;
+}
+
+
+.ob_dir_Msg .balance, 
+.ob_dir_Msg .prospect, 
+.ob_dir_Msg .presPreferred, 
+.ob_dir_Msg .prefPlus,
+.ob_dir_Msg .preferred,
+.ob_dir_Msg .offline,
+.ob_dir_Msg .lapsed, 
+.ob_dir_Msg .decelPresPreferred{
+	display: none;
+  }
+
+/*****Package Style End*********/
+.disclaimer{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	width: 600px;
+	padding: 20px 0;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.disclaimer p, .disclaimer a{
+	color: #000;
+}
+
+.disclaimer p {
+	margin-bottom: 14px;
+}
+
+.disclaimer strong {
+	/*for NPN*/
+	font-size: 12px;
+}

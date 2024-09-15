@@ -1,0 +1,586 @@
+/*UnCut Checks - 2_5MM_2_5kAWFL - V1.0 - Pkg Mobile CSS by VAD- 03/2024*/
+
+/******Package Specific Style Start******/
+body{	
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: left;
+	color: #000;
+	font-size: 100%;
+}
+
+#contestWrap{ overflow: hidden;}
+
+#mainWrap{
+	width: 320px;
+	margin: 0 auto;	
+	overflow: hidden;
+	background: #fff;
+}
+
+#mobileBody p{ padding: 10px 0;}
+
+#deviceWrap1{ display: none; }
+
+
+/* Google font utility classes */
+.oswald-Bold{
+	font-family: "Oswald", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 700;
+	font-style: normal;
+  }
+
+.allerta-stencil-regular {
+	font-family: "Allerta Stencil", sans-serif;
+	font-weight: bold;
+	font-style: normal;
+	color: #004892;
+}
+.lato-regular {
+	font-family: "Lato", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+.lato-bold {
+	font-family: "Lato", sans-serif;
+	font-weight: 700;
+	font-style: normal;
+}
+.dotgothic16-regular {
+	font-family: "DotGothic16", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	color: #d6181f;
+	text-transform: uppercase;
+}
+.roboto-regular {
+	font-family: "Roboto", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+  }
+  
+  .roboto-medium {
+	font-family: "Roboto", sans-serif;
+	font-weight: 500;
+	font-style: normal;
+  }
+  
+  .roboto-bold {
+	font-family: "Roboto", sans-serif;
+	font-weight: 700;
+	font-style: normal;
+  }
+  
+  .roboto-black {
+	font-family: "Roboto", sans-serif;
+	font-weight: 900;
+	font-style: normal;
+  }
+
+.asap-medium {
+  font-family: "Asap", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+.asap-semibold {
+  font-family: "Asap", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+.asap-bold {
+  font-family: "Asap", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+  
+/* Google font utility classes */
+
+/*****Package Style Start*******/
+#package-contest_section{
+	background-color: #000;
+	width: 320px;
+	margin: 0 auto;
+	box-sizing: border-box;
+
+	/* display: none; */
+
+	& header{
+		background-color: #000;
+		text-align: center;
+		color: #fff;
+		padding: 5px 0;
+
+		& p:nth-of-type(1){
+			font-size: 16px;
+			line-height: 20px;
+			margin: 0 10px;
+		}
+		& p:nth-of-type(2){
+			font-size: 27px;
+			line-height: 30px;
+			margin: 0;
+		}
+	}
+
+	& main{
+		max-width: 1080px;
+		margin: 0 auto;
+		position: relative;
+		/* border: 1px solid #000; */
+
+		& .contestMainText{
+			position: absolute;
+			top: 0px;
+			bottom: 0px;
+			left: 10px;
+			height: max-content;
+			margin: auto;
+			z-index: 85;
+
+			& h6{
+				/* font-family: Helvetica Neue, Arial, sans-serif; */
+				font-size: 68px;
+				line-height: 60px;
+				color: #000;
+				text-transform: uppercase;
+				text-align: left;
+				/* letter-spacing: -9px; */
+				opacity: 0;
+				text-shadow:1px 1px 10px #fff, 1px 1px 10px #ccc;
+			}
+		}
+
+
+		& .checksContainer{
+			width: 320px;
+			margin: 0 auto;
+			
+			display: grid;
+			grid-template-columns: repeat(2, 1fr); 
+			/* display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: center; */
+
+			& div{
+				width: 160px;
+				height: 65px;
+				text-align: right;
+				position: relative;
+				overflow: hidden;
+				box-sizing: border-box;
+				opacity: 0;
+			}
+
+	
+			& .check{
+				background-image: url('../images/PKG_Check_rpt.png') ;
+				background-image: url('../images/PKG_Check_rpt_Blank.png') ;
+				background-size: cover;
+				/* width: 361px;
+				height: 146px;
+				text-align: right;
+				position: relative;
+				overflow: hidden;
+				box-sizing: border-box; */
+				left: -500px;
+				 
+				/* & p{opacity: 0;} */
+
+				& span{
+					position: absolute;
+					text-align: center;
+				}
+
+				& p.checkAmt{
+					font-size: 7px;
+					line-height: 7px;
+					padding: 16px 10px 9px 0px;
+					letter-spacing: 0.7px;
+
+					& span{
+						width: 100px;
+						right: 20px;
+						top: 90px;
+					}
+
+				
+				}
+				& p.checkElig{
+					font-size: 5px;
+					line-height: 5px;
+					padding: 0px 10px 0px 0px;
+					letter-spacing: 1.1px;
+
+					& span {
+						background: transparent url('../images/PKG_Check_Yellow_Stencil.png') center center no-repeat;
+						background-size: contain;
+						width: 35px;
+						height: 15px;
+						right: 14px;
+						top: 41px;
+						overflow: hidden;
+						text-indent: -99999px;
+						/* transform-origin: center; */
+						/* transform: rotate(-4deg); */
+					}
+				}
+			}
+			/* Check order is now controlled in the JS function createCoupons */
+			/* & .check:nth-child(1){
+				order: 0;
+			} */
+
+			& .upfront{
+				/* width: 361px;
+				height: 146px;
+				text-align: right;
+				position: relative;
+				box-sizing: border-box; */
+				left: -500px;
+				order: 1;
+				background-image: url('../images/PKG_CheckUpfront_rpt.png');
+				background-image: url('../images/PKG_CheckUpfront_rpt_Blank.png');
+				background-size: cover;
+				/* & p{opacity: 0;} */
+
+				& span{
+					position: absolute;
+					text-align: center;
+				}
+
+				& p.checkAmt{
+					font-size: 5px;
+					line-height: 5px;
+					padding: 16px 9px 0px 0px;
+					letter-spacing: 0.5px;
+
+					& span{
+						width: 100px;
+						right: 20px;
+						top: 90px;
+					}
+				}
+				& p.checkElig{
+					font-size: 5px;
+					line-height: 5px;
+					padding: 10px 6px 0px 0px;
+					letter-spacing: 0.6px;
+					
+					& span {
+						background: transparent url('../images/PKG_CheckUpfront_Stencil.png') center center no-repeat;
+						background-size: contain;
+						width: 35px;
+						height: 15px;
+						right: 14px;
+						top: 41px;
+						overflow: hidden;
+						text-indent: -99999px;
+						/* transform-origin: center; */
+						/* transform: rotate(-4deg); */
+					}
+				}
+			}
+		}
+	}
+
+	& footer{
+		background-color: #fff;
+		/* max-width: 1080px; */
+		margin: 0 auto;
+		position: relative;
+		overflow: auto;
+		/* text-align: center; */
+
+		& h6{
+			font-size: 19px;
+			line-height: 23px;
+			padding: 5px 0;
+			background-color: #000;
+			color: #fff;
+			text-align: center;
+		}
+
+		& .actNowBtn {
+			width: 246px;
+			height: 59px;
+			margin: 10px auto;
+			background-color: #ed1c24;
+			color: #fff;
+			font-size: 40px;
+			line-height: 59px;
+			text-transform: uppercase;
+
+			border-radius: 50px;
+			font-family: var(--Roboto-font);
+			cursor: pointer;
+			text-align: center;
+			/* box-shadow: -4px 3px 1px rgb(0, 0, 0, 0.2); */
+
+			/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ec1b23+0,a5080b+99 */
+			background: linear-gradient(to bottom,  #ec1b23 0%,#a5080b 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		}
+
+		& p{
+			max-width: max-content;
+			font-size: 18px;
+			line-height: 26px;
+			text-align: left;
+			/* margin: 0 0 50px 115px; */
+			margin: 0 20px;
+		}
+	}
+}
+/*****Package Style End*******/
+
+/*****OB Section Style Start*******/
+
+#package-order_section{
+	display: none;
+}
+
+#package-ob_section{
+	width: 320px;
+	margin: 0 auto;
+	background-color: #005826;
+	color: #fff;
+	padding: 10px 0 0;
+}
+
+.ob_Main{
+	
+	margin: 10px auto;
+	position: relative;
+
+
+	& .mainFeatureTxt{
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 80;
+
+		& p{
+			color: #000;
+			text-align: left;
+			/* text-shadow:1px 1px 10px #fff, 1px 1px 10px rgba(0, 0, 0, 0.7); */
+			text-shadow:1px 1px 10px #fff, 1px 1px 10px rgb(0, 0, 0), 1px 1px 10px rgba(0, 0, 0, 0.5);
+		}
+	}
+	
+	& .mainFeatureRepeat{
+		/* background-color: #fff; */
+		display: grid;
+		grid-template-columns: repeat(2, 1fr); 
+	
+		& .benefitCard{
+			/* background: url(../images/PKG_BenefitCard_rpt.png); */
+			background-color: #fff;
+			width: 160px;
+			height: 143px;
+			position: relative;
+			box-sizing: border-box;
+			/* display: flex;
+			flex-wrap: nowrap;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center; */
+			
+	
+			& p{
+				color: #231f20;
+				position: relative;
+				z-index: 85;
+			}
+		}
+
+		& .benefitCard::before {    
+			content: "";
+			background-image: url(../images/PKG_BenefitCard_rpt.png);
+			background-size: cover;
+			position: absolute;
+			top: 0px;
+			right: 0px;
+			bottom: 0px;
+			left: 0px;
+			/* opacity: 0.75; */
+	  }
+
+		& .benefitCard:nth-of-type(1)::before, .benefitCard:nth-of-type(1) p, .benefitCard:nth-of-type(2)::before, .benefitCard:nth-of-type(2) p {opacity: 0.2;}
+		& .benefitCard:nth-of-type(3)::before, .benefitCard:nth-of-type(3) p, .benefitCard:nth-of-type(4)::before, .benefitCard:nth-of-type(4) p {opacity: 0.4;}
+		& .benefitCard:nth-of-type(5)::before, .benefitCard:nth-of-type(5) p, .benefitCard:nth-of-type(6)::before, .benefitCard:nth-of-type(6) p {opacity: 0.6;}
+		/* & .benefitCard:nth-of-type(4n + 2)::before, .benefitCard:nth-of-type(4n + 2) p {opacity: 0.4;}
+		& .benefitCard:nth-of-type(4n + 3)::before, .benefitCard:nth-of-type(4n + 3) p {opacity: 0.6;} */
+	}
+
+	& .ob_Ftr{
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		background: #005826;
+		padding: 5px 0px;
+		z-index: 85;
+		/* opacity: 0; */
+	}
+}
+
+
+.ob_dir_Msg .balance, 
+.ob_dir_Msg .prospect, 
+.ob_dir_Msg .presPreferred, 
+.ob_dir_Msg .prefPlus,
+.ob_dir_Msg .preferred,
+.ob_dir_Msg .offline,
+.ob_dir_Msg .lapsed, 
+.ob_dir_Msg .decelPresPreferred{
+	display: none;
+}
+
+/* Balance OB Style */
+.ob_dir_Msg .balance .ob_Hdr p{ font-size: 32px; line-height: 38px;}
+.ob_dir_Msg .balance .benefitCard{padding-top: 10px;}
+.ob_dir_Msg .balance .benefitCard p:nth-of-type(1){text-transform: uppercase; font-size: 27px; line-height: 27px;}
+.ob_dir_Msg .balance .benefitCard p:nth-of-type(2){font-size: 22px; line-height: 22px;}
+.ob_dir_Msg .balance .mainFeatureTxt p{text-transform: uppercase; margin: 0px 0 0 10px; }
+.ob_dir_Msg .balance .mainFeatureTxt p:nth-of-type(1){font-size: 40px; line-height: 30px; margin: 15px 0 0 10px; }
+.ob_dir_Msg .balance .mainFeatureTxt p:nth-of-type(2){font-size: 108px; line-height: 90px;}
+.ob_dir_Msg .balance .mainFeatureTxt p:nth-of-type(3){font-size: 146px; line-height: 118px;}
+.ob_dir_Msg .balance .ob_Ftr p:nth-of-type(1){font-size: 23px; line-height: 32px;}
+.ob_dir_Msg .balance .ob_Ftr p:nth-of-type(2){font-size: 27px; line-height: 41px; text-transform: uppercase; text-decoration: underline;}
+
+/* Prospect OB Style */
+.ob_dir_Msg .prospect .ob_Hdr p{ font-size: 32px; line-height: 38px;}
+.ob_dir_Msg .prospect .benefitCard{padding-top: 27px;}
+.ob_dir_Msg .prospect .benefitCard p:nth-of-type(odd){ font-size: 22px; line-height: 22px;}
+.ob_dir_Msg .prospect .benefitCard p:nth-of-type(2){text-transform: uppercase; font-size: 26px; line-height: 32px;}
+.ob_dir_Msg .prospect .mainFeatureTxt p{text-transform: uppercase; margin: 0px 0 0 10px; }
+.ob_dir_Msg .prospect .mainFeatureTxt p:nth-of-type(1){font-size: 40px; line-height: 30px; margin: 15px 0 0 10px; }
+.ob_dir_Msg .prospect .mainFeatureTxt p:nth-of-type(2){font-size: 108px; line-height: 90px;}
+.ob_dir_Msg .prospect .mainFeatureTxt p:nth-of-type(3){font-size: 165px; line-height: 132px;}
+.ob_dir_Msg .prospect .ob_Ftr p:nth-of-type(1){font-size: 23px; line-height: 32px;}
+.ob_dir_Msg .prospect .ob_Ftr p:nth-of-type(2){font-size: 27px; line-height: 41px; text-transform: uppercase; text-decoration: underline;}
+
+/* Offline OB Style */
+.ob_dir_Msg .offline .ob_Hdr p{ font-size: 32px; line-height: 38px;}
+.ob_dir_Msg .offline .benefitCard{padding-top: 27px;}
+.ob_dir_Msg .offline .benefitCard p:nth-of-type(odd){ font-size: 22px; line-height: 22px;}
+.ob_dir_Msg .offline .benefitCard p:nth-of-type(2){text-transform: uppercase; font-size: 26px; line-height: 32px;}
+.ob_dir_Msg .offline .mainFeatureTxt p{text-transform: uppercase; margin: 0px 0 0 10px; }
+.ob_dir_Msg .offline .mainFeatureTxt p:nth-of-type(1){font-size: 40px; line-height: 30px; margin: 15px 0 0 10px; }
+.ob_dir_Msg .offline .mainFeatureTxt p:nth-of-type(2){font-size: 108px; line-height: 90px;}
+.ob_dir_Msg .offline .mainFeatureTxt p:nth-of-type(3){font-size: 165px; line-height: 132px;}
+.ob_dir_Msg .offline .ob_Ftr p:nth-of-type(1){font-size:23px; line-height: 32px;}
+.ob_dir_Msg .offline .ob_Ftr p:nth-of-type(2){font-size: 27px; line-height: 41px; text-transform: uppercase; text-decoration: underline;}
+
+/* Lapased OB Style */
+.ob_dir_Msg .lapsed .ob_Hdr p{ font-size: 32px; line-height: 38px;}
+.ob_dir_Msg .lapsed .benefitCard{padding-top: 27px;}
+.ob_dir_Msg .lapsed .benefitCard p:nth-of-type(odd){ font-size: 22px; line-height: 22px;}
+.ob_dir_Msg .lapsed .benefitCard p:nth-of-type(2){text-transform: uppercase; font-size: 26px; line-height: 32px;}
+.ob_dir_Msg .lapsed .mainFeatureTxt p{text-transform: uppercase; margin: 0px 0 0 10px; }
+.ob_dir_Msg .lapsed .mainFeatureTxt p:nth-of-type(1){font-size: 40px; line-height: 30px; margin: 15px 0 0 10px; }
+.ob_dir_Msg .lapsed .mainFeatureTxt p:nth-of-type(2){font-size: 108px; line-height: 90px;}
+.ob_dir_Msg .lapsed .mainFeatureTxt p:nth-of-type(3){font-size: 165px; line-height: 132px;}
+.ob_dir_Msg .lapsed .ob_Ftr p:nth-of-type(1){font-size:23px; line-height: 32px;}
+.ob_dir_Msg .lapsed .ob_Ftr p:nth-of-type(2){font-size: 27px; line-height: 41px; text-transform: uppercase; text-decoration: underline;}
+
+/* Preferred OB Style */
+.ob_dir_Msg .preferred .ob_Hdr p{ font-size: 32px; line-height: 38px;}
+.ob_dir_Msg .preferred .benefitCard{padding-top: 17px;}
+.ob_dir_Msg .preferred .benefitCard p:nth-of-type(odd){ font-size: 22px; line-height: 22px;}
+.ob_dir_Msg .preferred .benefitCard p:nth-of-type(2){text-transform: uppercase; font-size: 26px; line-height: 26px;}
+.ob_dir_Msg .preferred .mainFeatureTxt p{text-transform: uppercase; margin: 0px 0 0 10px; }
+.ob_dir_Msg .preferred .mainFeatureTxt p:nth-of-type(1){font-size: 40px; line-height: 30px; margin: 15px 0 0 10px; }
+.ob_dir_Msg .preferred .mainFeatureTxt p:nth-of-type(2){font-size: 108px; line-height: 90px;}
+.ob_dir_Msg .preferred .mainFeatureTxt p:nth-of-type(3){font-size: 165px; line-height: 132px;}
+.ob_dir_Msg .preferred .ob_Ftr p:nth-of-type(1){font-size:23px; line-height: 32px; padding-top: 15px;}
+.ob_dir_Msg .preferred .ob_Ftr p:nth-of-type(2){font-size: 27px; line-height: 41px;  padding-bottom: 15px; text-transform: uppercase; text-decoration: underline;}
+
+/* Preferred Plus OB Style */
+.ob_dir_Msg .prefPlus .ob_Hdr p{ font-size: 32px; line-height: 38px;}
+.ob_dir_Msg .prefPlus .benefitCard{padding-top: 17px;}
+.ob_dir_Msg .prefPlus .benefitCard p:nth-of-type(odd){ font-size: 19px; line-height: 25px;}
+.ob_dir_Msg .prefPlus .benefitCard p:nth-of-type(2){text-transform: uppercase; font-size: 22px; line-height: 22px;}
+.ob_dir_Msg .prefPlus .mainFeatureTxt p{text-transform: uppercase; margin: 0px 0 0 10px; }
+.ob_dir_Msg .prefPlus .mainFeatureTxt p:nth-of-type(1){font-size: 40px; line-height: 30px; margin: 15px 0 0 10px; }
+.ob_dir_Msg .prefPlus .mainFeatureTxt p:nth-of-type(2){font-size: 108px; line-height: 90px;}
+.ob_dir_Msg .prefPlus .mainFeatureTxt p:nth-of-type(3){font-size: 165px; line-height: 132px;}
+.ob_dir_Msg .prefPlus .ob_Ftr p:nth-of-type(1){font-size:23px; line-height: 32px;}
+.ob_dir_Msg .prefPlus .ob_Ftr p:nth-of-type(2){font-size: 28px; line-height: 42px; text-transform: uppercase; text-decoration: underline;}
+
+/* Presidential Preferred OB Style */
+.ob_dir_Msg .presPreferred .ob_Hdr p{ font-size: 32px; line-height: 38px;}
+.ob_dir_Msg .presPreferred .benefitCard{padding-top: 10px;}
+.ob_dir_Msg .presPreferred .benefitCard p:nth-of-type(1){text-transform: uppercase; font-size: 27px; line-height: 27px;}
+.ob_dir_Msg .presPreferred .benefitCard p:nth-of-type(2){font-size: 22px; line-height: 22px;}
+.ob_dir_Msg .presPreferred .mainFeatureTxt p{text-transform: uppercase; margin: 0px 0 0 10px; }
+.ob_dir_Msg .presPreferred .mainFeatureTxt p:nth-of-type(1){font-size: 40px; line-height: 30px; margin: 15px 0 0 10px; }
+.ob_dir_Msg .presPreferred .mainFeatureTxt p:nth-of-type(2){font-size: 108px; line-height: 90px;}
+.ob_dir_Msg .presPreferred .mainFeatureTxt p:nth-of-type(3){font-size: 146px; line-height: 118px;}
+.ob_dir_Msg .presPreferred .ob_Ftr p:nth-of-type(1){font-size: 23px; line-height: 29px;}
+.ob_dir_Msg .presPreferred .ob_Ftr p:nth-of-type(2){font-size: 27px; line-height: 36px; text-transform: uppercase; text-decoration: underline;}
+
+/* Decelerating Presidential Preferred OB Style */
+.ob_dir_Msg .decelPresPreferred .ob_Hdr p{ font-size: 32px; line-height: 38px;}
+.ob_dir_Msg .decelPresPreferred .benefitCard{padding-top: 10px;}
+.ob_dir_Msg .decelPresPreferred .benefitCard p:nth-of-type(1){text-transform: uppercase; font-size: 27px; line-height: 27px;}
+.ob_dir_Msg .decelPresPreferred .benefitCard p:nth-of-type(2){font-size: 22px; line-height: 22px;}
+.ob_dir_Msg .decelPresPreferred .mainFeatureTxt p{text-transform: uppercase; margin: 0px 0 0 10px; }
+.ob_dir_Msg .decelPresPreferred .mainFeatureTxt p:nth-of-type(1){font-size: 40px; line-height: 30px; margin: 15px 0 0 10px; }
+.ob_dir_Msg .decelPresPreferred .mainFeatureTxt p:nth-of-type(2){font-size: 108px; line-height: 90px;}
+.ob_dir_Msg .decelPresPreferred .mainFeatureTxt p:nth-of-type(3){font-size: 146px; line-height: 118px;}
+.ob_dir_Msg .decelPresPreferred .ob_Ftr p:nth-of-type(1){font-size: 23px; line-height: 32px;}
+.ob_dir_Msg .decelPresPreferred .ob_Ftr p:nth-of-type(2){font-size: 27px; line-height: 42px; text-transform: uppercase; text-decoration: underline;}
+
+.ob_dir_Msg div p{
+	text-align: center;
+}
+
+/*****OB Section Style End*******/
+
+.disclaimer {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 0.6875em;
+	max-width: 320px;
+	padding: 20px 0;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.disclaimer p, .disclaimer a{
+	color: #fff;
+}
+
+.disclaimer p {
+	margin-bottom: 14px;
+}
+
+.isUppercase {
+	text-transform: uppercase;
+}
+/******Default Package Style End******/
+
+/*****Merch Ineligible button.. place over package button (Absoulute positioning)*****/
+/*Refer to merch INELLIGABLE inelligable doc: http://creativedept.classic.pchad.com/Libraries/Packages/Spectrum/_docs/MERCH%20INELLIGABLE.TXT*/
+.contestOnlySubmitButton{
+	width: 251px;
+	height: 74px;
+	border: 0;
+	text-indent: -999px;
+	overflow: hidden;
+	font-size: 0;
+	background: none;
+	cursor: pointer;
+	display: none;
+	position: absolute;
+	top: 0;
+	z-index: 10;
+}

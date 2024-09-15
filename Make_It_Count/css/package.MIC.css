@@ -1,0 +1,593 @@
+/*Make It Count - Contest_Name(15MM_POAL) - V1.0 - Desktop Pkg by VAD*/
+
+/* https://fonts.google.com/share?selection.family=Archivo+Black|Nunito:ital,wght@0,400;0,600;0,700;1,700|Poppins:wght@400;700;900|Roboto:ital,wght@0,400;0,500;0,700;1,500 */
+/* font-family: 'Archivo Black', sans-serif;
+font-weight: 400; */
+
+/* font-family: 'Poppins', sans-serif;
+font-weight: 400;
+font-weight: 700;
+font-weight: 900; */
+
+/* font-family: 'Roboto', sans-serif;
+font-style :italic;
+font-weight: 400;
+font-weight: 500; */
+
+:root{
+	--primary-color: rgba(0, 0, 0, 1);
+	--pureWht-color: rgba(255, 255, 255,1);
+	--AltWhite-color: rgba(240, 241, 247,1);
+	--canaryYellow-color: rgba(255, 249, 142,1);
+	--red-color: rgba(251, 2, 25,1);
+	--offWhite-color: rgba(240, 241, 247, 0.95);
+	--normalBlue-color: rgba(40, 84, 113,1);
+	--yellow-color: rgb(255, 246, 0,1);
+	--ltBlue-color: rgba(6, 116, 148,1);
+	--dkBlue-color: rgba(40, 84, 113,1);
+	--teal-color: rgb(7, 78, 98);
+	--ltTan-color: rgb(243, 226, 209);
+	--default-font: Arial, Helvetica, sans-serif;
+	--Archivo-font: 'Archivo Black', sans-serif;
+	--Poppins-font: 'Poppins', sans-serif;
+	--Roboto-font: 'Roboto', sans-serif;
+	--Nunito-font: 'Nunito', sans-serif;
+	--strikeThrough-color: var(--red-color);
+	--strikeThrough-Thickness: 8px;
+}
+
+
+body{
+	font-family: var(--default-font);
+	font-size: 12px;
+	text-align: left;
+	color: #333;
+	background-color: var(--AltWhite-color);
+}
+
+/*****Package Style Start*******/
+
+#package-contest_section{
+	opacity: 0;
+	display: none;
+}
+
+#package-wrap{
+	min-width: 972px;
+	width: 100%;
+	height: 742px;
+	margin: 0 auto;
+	padding: 0;
+	/* background: transparent url(../images/MIC_Contest_Bkgrnd_Temp.png) top center no-repeat; */
+	position: relative;
+	text-align: center;
+}
+
+#package-contestWrap{
+	/* display: none; */
+	
+	#arrowLeft, #arrowRight{
+		position: absolute;
+		width: 97px;
+		height: 477px;
+		top: 14px;
+		cursor: pointer;
+		z-index: 100;
+		overflow: hidden;
+	}
+	#arrowLeft{
+		left: 20px;
+	} 
+	
+	#arrowRight{
+		right: 17px;
+		transform: rotateY(180deg);
+	}
+	
+	#HowieImg{
+		position: absolute;	
+		width: 251px;
+		height: 577px;
+		top: 23px;
+		left: -290px;
+		z-index: 50;
+	}
+	#DanielleImg{
+		position: absolute;
+		width: 276px;
+		height: 521px;
+		top: 62px;
+		right: -356px;
+		z-index: 50;
+	}
+	#VanImg{
+		position: absolute;
+		width: 987px;
+		height: 435px;
+		top: 51px;
+		left: 0;
+		right: 0;
+		margin: auto;
+		z-index: 1;
+		/* display: none; */
+	}
+	
+	#package-contestInner{
+		width: 583px;
+		/* height: auto; */
+		margin: 0 auto;
+		position: relative;
+		z-index: 55;
+		box-sizing: border-box;
+		/* overflow: hidden; */
+
+		& #package-contestCopy{
+			background-color: var(--offWhite-color);
+			overflow: hidden;
+
+			& h6{
+				color: var(--red-color);
+				font-family: var(--Poppins-font);
+				font-weight: 700;
+				text-transform: uppercase;
+				font-size: 36px;
+				line-height: 45px;
+			}
+			& h6:first-of-type{
+				padding-top: 26px;
+			}
+
+			& p{
+				color: var(--normalBlue-color);
+				font-family: var(--default-font);
+				font-size: 25px;
+				line-height: 34px;
+				padding: 0 0 10px;
+			}
+			
+			& .MIC_Special_Box{
+				width: 505px;	
+				/* width: 55px; */
+				/* opacity: 0.2; */
+				position: relative;
+				padding: 6px;
+				/* border: 3px solid var(--red-color); */
+				margin: 0 auto;
+				white-space: nowrap;
+				overflow: hidden;
+			}
+			& .MIC_Special_Box::before,
+			& .MIC_Special_Box::after{
+				content: "";
+				width: 32px;
+				height: 100%;
+				position: absolute;
+				top: 0px;	
+				border: 3px solid var(--red-color);
+				box-sizing: border-box;	
+			}			
+			& .MIC_Special_Box::before{
+				border-right: 0;
+				left: 0px;
+			}
+			& .MIC_Special_Box::after{
+				border-left: 0;
+				right: 0px;
+			}
+			& .MIC_Special_Box h5{	
+				/* width: 505px;	 */
+				color: var(--normalBlue-color);
+				font-family: var(--Poppins-font);
+				font-weight: 700;
+				text-transform: uppercase;
+				font-size: 34px;
+				line-height: 36px;
+				/* background-color: var(--yellow-color); */
+				padding: 3px 0px;
+				/* opacity: 0; */
+
+				/* background-image: linear-gradient(90deg, #000, #000); */
+				background-image: linear-gradient(90deg, var(--yellow-color), var(--yellow-color));
+				background-size: 0 100%;
+				background-repeat: no-repeat;
+				background-position: left bottom;
+			}
+			& .MIC_Special_Box h5 span.pkgPrizeAmt{ 	
+				color: var(--red-color);
+				font-weight: 900;
+				font-size: 61px;
+				line-height: 61px;
+			}
+			& .MIC_Special_Box h5 span.pkgPrizeDesc{
+				font-size: 44px;
+				line-height: 53px;
+			}
+			& .MIC_Special_Box:nth-last-child(2) h5{
+				padding: 13px 0;
+			}
+		}
+	}
+	
+	
+	
+
+
+	
+	#package-contestInner #MIC_Button{
+			margin: 20px auto 0px;
+			background-color: var(--red-color);
+			color: #fff;
+			font-weight: 700;
+			font-size: 41px;
+			line-height: 62px;
+			text-transform: uppercase;
+			width: 318px;
+			height: 62px;
+			border-radius: 50px;
+			font-family: var(--Roboto-font);
+			cursor: pointer;
+			text-align: center;
+			/* box-shadow: -4px 3px 1px rgb(0, 0, 0, 0.2); */
+	}
+	
+	#package-contestFtr{
+		margin-top: 10px;
+	}
+	
+	#package-contestFtr p{
+		font-family: var(--default-font);
+		color:  var(--dkBlue-color);
+		font-size: 22px;
+		line-height: 32px;
+	}
+	
+	#package-contestFtr h6{
+		width: 865px;
+		margin: 0 auto 7px;
+		color: var(--normalBlue-color);
+		font-family: var(--Poppins-font);
+		font-weight: 700;
+		text-transform: uppercase;
+		font-size: 42px;
+		line-height: 48px;
+		/* background-color: var(--yellow-color); */
+		padding: 3px 0px;
+
+		background-image: linear-gradient(90deg, var(--yellow-color), var(--yellow-color));
+		background-size: 0 100%;
+		background-repeat: no-repeat;
+		background-position: left bottom;
+	}
+}
+
+
+#package-ob_section{
+	width: 728px;
+	margin: 0 auto;
+	font-family: var(--Roboto-font);
+	color: var(--pureWht-color);
+	overflow: hidden;
+
+	.ob_Hdr{
+		/* height: 0; */
+		overflow: hidden;
+		box-sizing: border-box;
+		background-color: var(--ltBlue-color);
+		border-radius: 0 0 40px 40px;
+		padding: 20px;
+		box-shadow: 0px 2px 7px rgba(71, 74, 75, 0.31);
+		position: relative;
+		/* top: -100%; */
+		z-index: 51;
+
+		& h6{
+			position: relative;
+			width: 648px;
+			line-height: 138px;
+			margin: 0 auto;
+			overflow: hidden;
+			background: transparent url(../images/MIC_OB_HdrImg.png) top center no-repeat;
+			text-indent: -10000px;
+		}
+
+		& p{
+			font-size: 26px;
+			font-style: italic;
+			font-weight: 500;
+		}
+	}
+
+	.ob_Main{
+		width: 684px;
+		background-color: var(--ltTan-color);
+		margin: -20px auto 50px;
+		padding: 20px 20px 20px;
+		border-radius: 0 0 10px 10px;
+		box-sizing: border-box;
+		box-shadow: 0px 2px 29px rgba(71, 74, 75, 0.31);
+		position: relative;
+		z-index: 50;
+
+		.bottomArrow{
+			width: 538px;
+			height: 25px;
+			background-color: var(--teal-color);
+			margin: 0 auto 10px;
+			/* clip-path: polygon(0% 100%, 50% 0%, 100% 100%); */
+			clip-path: polygon(0% 0%, 50% 100%, 100% 0%);
+		}
+
+		& ul li{
+			font-family: var(--Roboto-font);
+			font-weight: 700;
+			font-size: 30px;
+			line-height: 30px;
+			text-transform: uppercase;
+			/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#06708f+0,075166+100 */
+			background: linear-gradient(to bottom,  #06708f 0%,#075166 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			margin: 0 0 10px;
+			border-radius: 40px;
+			overflow: hidden;
+			text-align: left;
+			box-sizing: border-box;
+			padding: 15px 10px;
+			position: relative;
+
+			& span{
+				font-family: var(--Nunito-font);
+				font-weight: 700;
+				font-style: italic;
+				background-color: var(--teal-color);
+				text-transform: uppercase;
+				font-size: 36px;
+				line-height: 30px;
+				width: max-content;
+				height: 100%;
+				position: relative;
+				top: 0;
+				left: -10px;
+				padding: 5px 10px 5px 30px;
+				margin-right: 10px;
+			}
+			& span::after{
+				position: absolute;
+				content: "";
+				width: 50px;
+				height: 100%;
+				top: 0;
+				right: -50px;
+				background-color: var(--teal-color);
+				clip-path: polygon(0 0, 0% 100%, 55% 0);
+			}
+		}
+		
+
+		.obFooterCpy{
+			color: var(--teal-color);
+			font-size: 22px;
+			line-height: 30px;
+		}
+	}
+
+	/* OB header styles */
+	.ob_dir_Msg .prospect .ob_Hdr p{
+		/* font-size: 26px; */
+		margin: 10px 40px 0;
+
+		& span{
+			font-size: 30px;
+		}
+	}
+	.ob_dir_Msg .balance .ob_Hdr p{
+		/* font-size: 26px; */
+		margin: 10px 100px 0;
+	} 
+	.ob_dir_Msg .presPreferred .ob_Hdr p{
+		/* font-size: 26px; */
+		margin: 10px 100px 0;
+	}
+	.ob_dir_Msg .prefPlus .ob_Hdr p{
+		/* font-size: 26px; */
+		margin: 10px 40px 0;
+
+		& span{
+			font-size: 30px;
+		}
+	}
+	.ob_dir_Msg .preferred .ob_Hdr p{
+		/* font-size: 26px; */
+		margin: 10px 40px 0;
+
+		& span{
+			font-size: 30px;
+		}
+	}
+	.ob_dir_Msg .offline .ob_Hdr p{
+		/* font-size: 26px; */
+		margin: 10px 40px 0;
+
+		& span{
+			font-size: 30px;
+		}
+	}
+	.ob_dir_Msg .lapsed .ob_Hdr p{
+		/* font-size: 26px; */
+		margin: 10px 40px 0;
+
+		& span{
+			font-size: 30px;
+		}
+	}
+	.ob_dir_Msg .decelPresPreferred .ob_Hdr p{
+		/* font-size: 26px; */
+		margin: 10px 100px 0;
+	}
+
+	/* OB list pill shape styles */
+	.ob_dir_Msg .balance .ob_Main ul li span{text-transform: none;}
+	.ob_dir_Msg .prospect .ob_Main ul li span{text-transform: uppercase;} 
+	.ob_dir_Msg .presPreferred .ob_Main ul li span{text-transform: none;} 
+	.ob_dir_Msg .prefPlus .ob_Main ul li{
+		font-size: 30px; 
+		padding: 10px 10px;
+		/* color: lime; */
+
+		& span s{
+			position: relative;
+			text-decoration: none;
+			display: inline-block;
+		}
+		& span s::after{
+			content: " ";
+			background-color: var(--ltBlue-color);
+			position: absolute;
+			width: 100%;
+			height: 6px;
+			top: 37%;
+			left: 0px;
+		}
+	}
+	.ob_dir_Msg .prefPlus .ob_Main ul li:first-child span{
+			font-size: 34px; 
+			line-height: 30px;
+	}
+	.ob_dir_Msg .prefPlus .ob_Main ul li:nth-child(2) span{
+			font-size: 30px; 
+			line-height: 30px;
+	}
+	.ob_dir_Msg .prefPlus .ob_Main ul li:last-child span{
+			font-size: 25px; 
+			line-height: 30px;
+			padding: 10px 10px 10px 30px;
+	}
+
+	.ob_dir_Msg .preferred .ob_Main ul li{
+		border-radius: 60px;
+		
+		& span.OB_strikethrough{
+			width: 274px;
+			height: 20px;
+			position: absolute;
+			display: inline-block;
+			z-index: 88;		
+			text-decoration: none;
+			padding: 10px 0 0 100px;	
+			/* position: relative;	 */
+		}
+		
+		& span s{
+			position: relative;
+			text-decoration: none;
+			display: inline-block;
+		}
+		& span s::after{
+			content: " ";
+			background-color: var(--strikeThrough-color);
+			position: absolute;
+			width: 100%;
+			height: var(--strikeThrough-Thickness);
+			top: 37%;
+			left: 0px;
+		}
+
+		& span.OB_strikethrough::after{
+			clip-path: polygon(0 0, 0% 203%, 55% 0);
+		}
+
+		& p.OB_correctiveSpacing{
+				display: inline-block;
+				inset: -15px 0 0 10px;
+				position: relative;
+		}
+
+		& span{text-transform: uppercase;}
+	} 
+
+	.ob_dir_Msg .offline .ob_Main ul li span{text-transform: uppercase;}
+	.ob_dir_Msg .lapsed .ob_Main ul li{
+		font-size: 35px;
+		& span{font-size: 44px; text-transform: uppercase;} 
+	}
+	.ob_dir_Msg .decelPresPreferred .ob_Main ul li span{text-transform: none;}
+
+	.ob_dir_Msg .balance, 
+	.ob_dir_Msg .prospect, 
+	.ob_dir_Msg .presPreferred, 
+	.ob_dir_Msg .prefPlus,
+	.ob_dir_Msg .preferred,
+	.ob_dir_Msg .offline,
+	.ob_dir_Msg .lapsed, 
+	.ob_dir_Msg .decelPresPreferred{
+		display: none;
+	}
+
+	.prospect p.obFooterCpy{font-size: 22px;}
+	.balance p.obFooterCpy{ padding: 0 20px 10px; }
+
+	/*.presPreferred p.obFooterCpy{ }
+	.prefPlus, p.obFooterCpy{ }
+	.preferred p.obFooterCpy{ }
+	.offline p.obFooterCpy{ } */
+	.offline .bottomCpy{
+		color: var(--teal-color);
+		font-size: 24px;
+		font-weight: 700;
+		padding-bottom: 20px;
+		position: relative;
+	}
+	.offline .bottomCpy::before{
+		content: "";
+		width: 15px;
+		height: 25px;
+		border-left: 2px solid var(--teal-color);
+		border-bottom: 2px solid var(--teal-color);
+		position: absolute;
+		top: -12px;
+		left: 50px;
+	}
+	.offline .bottomCpy::after{
+		content: "";
+		width: 15px;
+		height: 25px;
+		border-right: 2px solid var(--teal-color);
+		border-bottom: 2px solid var(--teal-color);
+		position: absolute;
+		top: -12px;
+		right: 50px;
+	}
+
+	.lapsed p.obFooterCpy{ padding: 10px 0px 0px; }
+	.decelPresPreferred p.obFooterCpy{font-size: 18px; padding: 10px 0px 0px;}
+}
+
+#package-order_section{
+	display: none;
+}
+
+
+/*****Package Style End*********/
+#multipageWrap{
+	margin: 0 20px;
+}
+
+.disclaimer{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	width: 600px;
+	padding: 20px 0;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.disclaimer p, .disclaimer a{
+	color: #000;
+}
+
+.disclaimer p {
+	margin-bottom: 14px;
+}
+
+.disclaimer strong {
+	/*for NPN*/
+	font-size: 12px;
+}

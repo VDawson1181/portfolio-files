@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+  <contestgroup name="MakeItCount" autoactivate="true" isPrimary="true">
+    <contest tag="Superprize">
+      <attribute tag="Giveaway Number" name="gwy" type="string" tempVal="5678"/>
+      <attribute tag="Deadline Date" name="deadline" type="date" tempVal="1/12/2024"/>
+      <attribute tag="Award Date" name="awardDate" type="date" tempVal="2/1/2024"/>
+      <attribute tag="OB Visibility" name="OBvisibility" type="dropdown">
+        <attributeValue value="showOB"/>
+        <attributeValue value="hideOB"/>
+      </attribute>
+    </contest>
+  </contestgroup>
+</metadata>

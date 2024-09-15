@@ -1,0 +1,467 @@
+/*Win_1MM_Tonight_V14 - Contest_Name(1MM) - V1.0 - Pkg Desktop CSS by VAD - 06/2022*/
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  text-align: left;
+  color: #333;
+  background-color: #2caa8e;
+}
+
+/*****Package Style Start*******/
+.mobilePkg #package-contest_section .stage--big {
+  width: 298px;
+  height: 680px;
+}
+
+#package-contest_section {
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  overflow-x: hidden;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#db285f+0,db285f+50,221a83+50,221a83+50,221a83+50,221a83+100 */
+  background: #db285f;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(#db285f), color-stop(50%, #db285f), color-stop(50%, #221a83), color-stop(50%, #221a83), color-stop(50%, #221a83), to(#221a83));
+  background: linear-gradient(to right, #db285f 0%, #db285f 50%, #221a83 50%, #221a83 50%, #221a83 50%, #221a83 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#db285f', endColorstr='#221a83',GradientType=1 );
+  /* IE6-9 */
+  /*Block*/
+  /*Modifier*/
+}
+
+#package-contest_section .stage {
+  margin: 20px auto;
+  background-color: white;
+  -webkit-box-shadow: black 0px 0px 21px;
+          box-shadow: black 0px 0px 21px;
+}
+
+#package-contest_section .stage--big {
+  width: 811px;
+  height: 680px;
+  position: relative;
+}
+
+#package-contest_section .stage__clock {
+  width: 100%;
+  height: 170px;
+  color: #fff;
+  background-color: #1a086a;
+  border: 3px solid #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+}
+
+#package-contest_section .stage__clock h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 17px;
+  padding: 10px 0;
+  font-style: italic;
+  text-align: center;
+}
+
+#package-contest_section .stage__clock .stage__clock__inner {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  opacity: 0;
+}
+
+#package-contest_section .stage__clock .stage__clock__inner li:nth-child(even) {
+  width: 30px;
+  margin-top: 20px;
+}
+
+#package-contest_section .stage__clock .stage__clock__inner li {
+  width: 145px;
+  position: relative;
+  text-align: center;
+}
+
+#package-contest_section .stage__clock .stage__clock__inner li .stage__clock__hdr {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#package-contest_section .stage__clock .stage__clock__inner li .stage__clock__hdr {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 18px;
+}
+
+#package-contest_section .stage__clock .stage__clock__inner li .stage__clock__num {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 110px;
+  line-height: 141px;
+}
+
+#package-contest_section .stage__clock .stage__clock__inner li .stage__clock__seperator {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  height: 100%;
+  font-size: 100px;
+  line-height: 100px;
+}
+
+#package-contest_section .stage__main {
+  text-align: center;
+}
+
+#package-contest_section .stage__main p {
+  font-size: 18px;
+  line-height: 25px;
+  color: #161616;
+  margin-top: 10px;
+}
+
+#package-contest_section .stage__main .stage__main__hdr {
+  width: 710px;
+  margin: 13px auto 20px;
+  border: 3px solid #db285f;
+  color: #db285f;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-transform: uppercase;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 900;
+  font-size: 37px;
+  line-height: 37px;
+  -webkit-transform: rotate(1deg);
+          transform: rotate(1deg);
+  -webkit-mask-image: url("../images/W1MMT_grunge.png");
+  -webkit-mask-size: 944px 604px;
+  mask-image: url("../images/W1MMT_grunge.png");
+  mask-size: 944px 604px;
+  mix-blend-mode: multiply;
+}
+
+#package-contest_section .stage__main .stage__main__contestAmt, #package-contest_section .stage__main .stage__main__contestAward {
+  color: #db285f;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 37px;
+  line-height: 37px;
+  text-transform: uppercase;
+}
+
+#package-contest_section .stage__main .stage__main__contestAmt {
+  font-size: 64px;
+  line-height: 64px;
+}
+
+#package-contest_section .stage__main .stage__main__handwriting {
+  margin-top: 20px;
+  display: inline-block;
+  font-family: "Shadows Into Light", cursive;
+  font-weight: 400;
+  color: #1a086a;
+  font-size: 33px;
+  line-height: 39px;
+  position: relative;
+}
+
+#package-contest_section .stage__main .stage__main__handwriting h6 {
+  position: relative;
+  z-index: 55;
+}
+
+#package-contest_section .stage__main .stage__main__handwriting .handwriting_highlight {
+  width: 711px;
+  position: absolute;
+  top: 0;
+  z-index: 48;
+}
+
+#package-contest_section .stage__main .stage__main__handwriting .handwriting_highlight:nth-of-type(1) {
+  width: 711px;
+  height: 48px;
+  background-image: url("../images/W1MMT_HighlightTop.png");
+  top: 0;
+  left: -10px;
+}
+
+#package-contest_section .stage__main .stage__main__handwriting .handwriting_highlight:nth-of-type(2) {
+  width: 644px;
+  height: 39px;
+  background-image: url("../images/W1MMT_HighlightBot.png");
+  top: 45px;
+  left: 20px;
+}
+
+#package-contest_section .stage__main .stage__main__underlines {
+  width: 655px;
+  height: 15px;
+  margin: 0 auto;
+}
+
+#package-contest_section .stage__main .stage__main__underlines .underlines {
+  display: block;
+  width: 655px;
+  height: 15px;
+  background-image: url("../images/W1MMT_Underlines.png");
+}
+
+#package-contest_section .stage__main .stage__main__BtnSec .stage__main__Btn {
+  display: block;
+  width: 308px;
+  height: 70px;
+  text-align: center;
+  cursor: pointer;
+  margin: 15px auto 10px;
+  border: 1px solid #db285f;
+  border-radius: 50px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  color: white;
+  font-size: 37px;
+  line-height: 70px;
+  text-transform: uppercase;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 10px 0px;
+          box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 10px 0px;
+  background: #db285f none repeat scroll 0% 0%;
+  position: relative;
+  z-index: 88;
+}
+
+#package-contest_section .stage__main .stage__main__BtnSec .stage__main__ftrCpy {
+  text-align: center;
+}
+
+#package-order_section {
+  display: none;
+  background-color: #2caa8e;
+}
+
+#package-order_section #package-ob_section {
+  min-width: 1230px;
+  margin: 0 auto;
+}
+
+#package-order_section #package-ob_section #OB_DirMsg {
+  text-align: center;
+}
+
+#package-order_section #package-ob_section #OB_DirMsg .presPreferred, #package-order_section #package-ob_section #OB_DirMsg .prefPlus, #package-order_section #package-ob_section #OB_DirMsg .preferred, #package-order_section #package-ob_section #OB_DirMsg .offline, #package-order_section #package-ob_section #OB_DirMsg .prospect, #package-order_section #package-ob_section #OB_DirMsg .lapsed, #package-order_section #package-ob_section #OB_DirMsg .balance {
+  display: none;
+}
+
+#package-order_section #package-ob_section #OB_DirMsg .ob__stage1 {
+  font-family: "Acme", sans-serif;
+  font-weight: 400;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 125px;
+  line-height: 125px;
+  padding-top: 50px;
+}
+
+#package-order_section #package-ob_section #OB_DirMsg .ob__stage2 .ob__stage2__top h6 {
+  font-family: "Acme", sans-serif;
+  font-weight: 400;
+  font-size: 57px;
+  line-height: 63px;
+  color: #fff;
+  padding-top: 20px;
+}
+
+#package-order_section #package-ob_section #OB_DirMsg .ob__stage2 .ob__stage2__top h6 u {
+  display: inline-block;
+}
+
+#package-order_section #package-ob_section #OB_DirMsg .ob__stage2 .ob__stage2__top h6 .ob__underline {
+  position: relative;
+  color: #fff194;
+  font-style: italic;
+}
+
+#package-order_section #package-ob_section #OB_DirMsg .ob__stage2 .ob__stage2__top h6 .ob__underline::after {
+  content: "";
+  position: absolute;
+  left: -14px;
+  bottom: -11px;
+  width: 382px;
+  height: 25px;
+  background: transparent url("../images/W1MMT_OBUnderlines.png") 0 0 no-repeat;
+}
+
+#package-order_section #package-ob_section #OB_DirMsg .ob__stage2 .ob__stage2__mid {
+  height: 218px;
+  background-color: #fff194;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.77);
+          box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.77);
+  margin: 40px 0px 20px;
+}
+
+#package-order_section #package-ob_section #OB_DirMsg .ob__stage2 .ob__stage2__mid .ob__stage2__mid__wrapper {
+  width: 750px;
+  margin: 5px auto 0px;
+  text-align: left;
+  position: relative;
+}
+
+#package-order_section #package-ob_section #OB_DirMsg .ob__stage2 .ob__stage2__mid .ob__stage2__mid__wrapper .ob__stage2__mid__seal {
+  background: transparent url("../images/W1MMT_Seal.png") center center no-repeat;
+  width: 166px;
+  height: 218px;
+  display: block;
+  position: absolute;
+  top: -5px;
+  overflow: hidden;
+  text-indent: -1000px;
+}
+
+#package-order_section #package-ob_section #OB_DirMsg .ob__stage2 .ob__stage2__mid .ob__stage2__mid__wrapper .Current ul {
+  width: 720px;
+  margin: 0 auto;
+  position: relative;
+  top: 10px;
+  left: 170px;
+}
+
+#package-order_section #package-ob_section #OB_DirMsg .ob__stage2 .ob__stage2__mid .ob__stage2__mid__wrapper .Current ul li {
+  color: #2caa8e;
+  list-style: disc;
+  list-style-position: inside;
+  font-size: 33px;
+  line-height: 53px;
+  margin: 0px auto 10px;
+}
+
+#package-order_section #package-ob_section #OB_DirMsg .ob__stage2 .ob__stage2__ftr h6 {
+  font-family: "Acme", sans-serif;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 42px;
+  color: #fff;
+  padding-bottom: 20px;
+}
+
+#package-pkg_section {
+  min-width: 1230px;
+  margin: 0 auto;
+}
+
+/*****Package Style End*********/
+#package-pkg_section {
+  display: none;
+}
+
+.disclaimer {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  width: 750px;
+  padding: 20px 0;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.disclaimer p, .disclaimer a {
+  color: #fff;
+}
+
+.disclaimer p {
+  margin-bottom: 14px;
+}
+
+.disclaimer strong {
+  /*for NPN*/
+  font-size: 12px;
+}
+
+/*****Merch Ineligible button.. place over package button (Absoulute positioning)*****/
+/*Refer to merch INELLIGABLE inelligable doc: http://creativedept.classic.pchad.com/Libraries/Packages/Spectrum/_docs/MERCH%20INELLIGABLE.TXT*/
+.contestOnlySubmitButton {
+  width: 251px;
+  height: 74px;
+  border: 0;
+  text-indent: -999px;
+  overflow: hidden;
+  font-size: 0;
+  background: none;
+  cursor: pointer;
+  display: none;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+}
+
+.slide-in-elliptic-top-fwd {
+  -webkit-animation: slide-in-elliptic-top-fwd 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-in-elliptic-top-fwd 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2022-6-9 15:38:4
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+/**
+ * ----------------------------------------
+ * animation slide-in-elliptic-top-fwd
+ * ----------------------------------------
+ */
+@-webkit-keyframes slide-in-elliptic-top-fwd {
+  0% {
+    -webkit-transform: translateY(-600px) rotateX(-30deg) scale(0);
+    transform: translateY(-600px) rotateX(-30deg) scale(0);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0) rotateX(0) scale(1);
+    transform: translateY(0) rotateX(0) scale(1);
+    -webkit-transform-origin: 50% 1400px;
+    transform-origin: 50% 1400px;
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-elliptic-top-fwd {
+  0% {
+    -webkit-transform: translateY(-600px) rotateX(-30deg) scale(0);
+    transform: translateY(-600px) rotateX(-30deg) scale(0);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0) rotateX(0) scale(1);
+    transform: translateY(0) rotateX(0) scale(1);
+    -webkit-transform-origin: 50% 1400px;
+    transform-origin: 50% 1400px;
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=package.WTV14.css.map */
