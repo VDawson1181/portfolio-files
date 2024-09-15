@@ -1,6 +1,4 @@
 //Important Info - 15MM - V1.0 - Desktop Pkg by VAD - 12/2023
-// Also checking to see if window.DmaAttributesByGmt != null - VAD  
- 
 document.addEventListener('DOMContentLoaded', impInfo_Init, false);	
 
 function impInfo_Init(){			
@@ -93,15 +91,7 @@ function impInfo_Init(){
 function getUserSegmentCode(){
     console.log("get user seg codes")
 
-    let ImpInfo_Seg_balance = document.querySelectorAll(".ob_dir_Msg .balance"),
-    ImpInfo_Seg_prospects = document.querySelectorAll(".ob_dir_Msg .prospect"),
-    ImpInfo_Seg_Lapsed = document.querySelectorAll(".ob_dir_Msg .lapsed"),
-    ImpInfo_Seg_offline = document.querySelectorAll(".ob_dir_Msg .offline"),
-    ImpInfo_Seg_preferred = document.querySelectorAll(".ob_dir_Msg .preferred"),
-    ImpInfo_Seg_prefPlus = document.querySelectorAll(".ob_dir_Msg .prefPlus"),
-    ImpInfo_Seg_prezPref = document.querySelectorAll(".ob_dir_Msg .presPreferred"),
-    ImpInfo_Seg_DecelPrezPref = document.querySelectorAll(".ob_dir_Msg .decelPresPreferred");
-    
+    let ImpInfo_Seg_balance = document.querySelectorAll(".ob_dir_Msg .balance")
     for(var IARI=0;IARI<ImpInfo_Seg_balance.length;IARI++){
         ImpInfo_Seg_balance[IARI].style.display = "block";
         ImpInfo_Seg_balance[IARI].classList.add("Current");                           
