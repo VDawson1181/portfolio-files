@@ -17,7 +17,7 @@
 console.log("LOAD loadPreviews.js Local")
 
 // var strSrc = "//cdn-imageconv.pchassets.com/spectrum/packageReview/"; //PROD
-var strSrc = "js/"; //PROD
+var strSrc = "https://vdawson1181.github.io/portfolio-files/dependencies/previewJS/"; //PROD
 //var strSrc = "//creativedept.classic.pchad.com/Libraries/Packages/Spectrum/_global/prod/packagereview/" //testing
 
 // $.ajaxSetup ({

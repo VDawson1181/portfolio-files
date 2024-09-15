@@ -34,6 +34,8 @@ font-weight: 500; */
 	--Nunito-font: 'Nunito', sans-serif;
 	--strikeThrough-color: var(--red-color);
 	--strikeThrough-Thickness: 8px;
+	--text-stroke-Color-Mob: rgb(7, 78, 98);
+	--strikeThrough-Thickness-Mob: 6px;
 }
 
 
@@ -61,159 +63,154 @@ body{
 	/* background: transparent url(../images/MIC_Contest_Bkgrnd_Temp.png) top center no-repeat; */
 	position: relative;
 	text-align: center;
-}
 
-#package-contestWrap{
-	/* display: none; */
-	
-	#arrowLeft, #arrowRight{
-		position: absolute;
-		width: 97px;
-		height: 477px;
-		top: 14px;
-		cursor: pointer;
-		z-index: 100;
-		overflow: hidden;
-	}
-	#arrowLeft{
-		left: 20px;
-	} 
-	
-	#arrowRight{
-		right: 17px;
-		transform: rotateY(180deg);
-	}
-	
-	#HowieImg{
-		position: absolute;	
-		width: 251px;
-		height: 577px;
-		top: 23px;
-		left: -290px;
-		z-index: 50;
-	}
-	#DanielleImg{
-		position: absolute;
-		width: 276px;
-		height: 521px;
-		top: 62px;
-		right: -356px;
-		z-index: 50;
-	}
-	#VanImg{
-		position: absolute;
-		width: 987px;
-		height: 435px;
-		top: 51px;
-		left: 0;
-		right: 0;
-		margin: auto;
-		z-index: 1;
+	& #package-contestWrap{
 		/* display: none; */
-	}
-	
-	#package-contestInner{
-		width: 583px;
-		/* height: auto; */
-		margin: 0 auto;
-		position: relative;
-		z-index: 55;
-		box-sizing: border-box;
-		/* overflow: hidden; */
-
-		& #package-contestCopy{
-			background-color: var(--offWhite-color);
+		
+		#arrowLeft, #arrowRight{
+			position: absolute;
+			width: 97px;
+			height: 477px;
+			top: 14px;
+			cursor: pointer;
+			z-index: 100;
 			overflow: hidden;
+		}
+		#arrowLeft{
+			left: 20px;
+		} 
+		
+		#arrowRight{
+			right: 17px;
+			transform: rotateY(180deg);
+		}
+		
+		#HowieImg{
+			position: absolute;	
+			width: 251px;
+			height: 577px;
+			top: 23px;
+			left: -290px;
+			z-index: 50;
+		}
+		#DanielleImg{
+			position: absolute;
+			width: 276px;
+			height: 521px;
+			top: 62px;
+			right: -356px;
+			z-index: 50;
+		}
+		#VanImg{
+			position: absolute;
+			width: 987px;
+			height: 435px;
+			top: 51px;
+			left: 0;
+			right: 0;
+			margin: auto;
+			z-index: 1;
+			/* display: none; */
+		}
+		
+		#package-contestInner{
+			width: 583px;
+			/* height: auto; */
+			margin: 0 auto;
+			position: relative;
+			z-index: 55;
+			box-sizing: border-box;
+			/* overflow: hidden; */
 
-			& h6{
-				color: var(--red-color);
-				font-family: var(--Poppins-font);
-				font-weight: 700;
-				text-transform: uppercase;
-				font-size: 36px;
-				line-height: 45px;
-			}
-			& h6:first-of-type{
-				padding-top: 26px;
-			}
-
-			& p{
-				color: var(--normalBlue-color);
-				font-family: var(--default-font);
-				font-size: 25px;
-				line-height: 34px;
-				padding: 0 0 10px;
-			}
-			
-			& .MIC_Special_Box{
-				width: 505px;	
-				/* width: 55px; */
-				/* opacity: 0.2; */
-				position: relative;
-				padding: 6px;
-				/* border: 3px solid var(--red-color); */
-				margin: 0 auto;
-				white-space: nowrap;
+			& #package-contestCopy{
+				height: auto;
+				background-color: var(--offWhite-color);
 				overflow: hidden;
-			}
-			& .MIC_Special_Box::before,
-			& .MIC_Special_Box::after{
-				content: "";
-				width: 32px;
-				height: 100%;
-				position: absolute;
-				top: 0px;	
-				border: 3px solid var(--red-color);
-				box-sizing: border-box;	
-			}			
-			& .MIC_Special_Box::before{
-				border-right: 0;
-				left: 0px;
-			}
-			& .MIC_Special_Box::after{
-				border-left: 0;
-				right: 0px;
-			}
-			& .MIC_Special_Box h5{	
-				/* width: 505px;	 */
-				color: var(--normalBlue-color);
-				font-family: var(--Poppins-font);
-				font-weight: 700;
-				text-transform: uppercase;
-				font-size: 34px;
-				line-height: 36px;
-				/* background-color: var(--yellow-color); */
-				padding: 3px 0px;
-				/* opacity: 0; */
 
-				/* background-image: linear-gradient(90deg, #000, #000); */
-				background-image: linear-gradient(90deg, var(--yellow-color), var(--yellow-color));
-				background-size: 0 100%;
-				background-repeat: no-repeat;
-				background-position: left bottom;
-			}
-			& .MIC_Special_Box h5 span.pkgPrizeAmt{ 	
-				color: var(--red-color);
-				font-weight: 900;
-				font-size: 61px;
-				line-height: 61px;
-			}
-			& .MIC_Special_Box h5 span.pkgPrizeDesc{
-				font-size: 44px;
-				line-height: 53px;
-			}
-			& .MIC_Special_Box:nth-last-child(2) h5{
-				padding: 13px 0;
+				& h6{
+					color: var(--red-color);
+					font-family: var(--Poppins-font);
+					font-weight: 700;
+					text-transform: uppercase;
+					font-size: 36px;
+					line-height: 45px;
+				}
+				& h6:first-of-type{
+					padding-top: 26px;
+				}
+
+				& p{
+					color: var(--normalBlue-color);
+					font-family: var(--default-font);
+					font-size: 25px;
+					line-height: 34px;
+					padding: 0 0 10px;
+				}
+				
+				& .MIC_Special_Box{
+					width: 505px;	
+					position: relative;
+					padding: 6px;
+					margin: 0 auto;
+					white-space: nowrap;
+					overflow: hidden;
+				}
+				& .MIC_Special_Box::before,
+				& .MIC_Special_Box::after{
+					content: "";
+					width: 32px;
+					height: 100%;
+					position: absolute;
+					top: 0px;	
+					border: 3px solid var(--red-color);
+					box-sizing: border-box;	
+				}			
+				& .MIC_Special_Box::before{
+					border-right: 0;
+					left: 0px;
+				}
+				& .MIC_Special_Box::after{
+					border-left: 0;
+					right: 0px;
+				}
+				& .MIC_Special_Box h5{	
+					/* width: 505px;	 */
+					color: var(--normalBlue-color);
+					font-family: var(--Poppins-font);
+					font-weight: 700;
+					text-transform: uppercase;
+					font-size: 34px;
+					line-height: 36px;
+					/* background-color: var(--yellow-color); */
+					padding: 3px 0px;
+					/* opacity: 0; */
+
+					/* background-image: linear-gradient(90deg, #000, #000); */
+					background-image: linear-gradient(90deg, var(--yellow-color), var(--yellow-color));
+					background-size: 0 100%;
+					background-repeat: no-repeat;
+					background-position: left bottom;
+				}
+				& .MIC_Special_Box h5 span.pkgPrizeAmt{ 	
+					color: var(--red-color);
+					font-weight: 900;
+					font-size: 61px;
+					line-height: 61px;
+				}
+				& .MIC_Special_Box h5 span.pkgPrizeDesc{
+					font-size: 44px;
+					line-height: 53px;
+				}
+				& .MIC_Special_Box:nth-last-child(2) h5{
+					padding: 13px 0;
+				}
 			}
 		}
-	}
-	
-	
-	
-
-
-	
-	#package-contestInner #MIC_Button{
+		
+		#package-contestInner #MIC_Button{
+			width: 318px;
+			height: 62px;
+			border-radius: 50px;
 			margin: 20px auto 0px;
 			background-color: var(--red-color);
 			color: #fff;
@@ -221,399 +218,454 @@ body{
 			font-size: 41px;
 			line-height: 62px;
 			text-transform: uppercase;
-			width: 318px;
-			height: 62px;
-			border-radius: 50px;
 			font-family: var(--Roboto-font);
 			cursor: pointer;
 			text-align: center;
 			/* box-shadow: -4px 3px 1px rgb(0, 0, 0, 0.2); */
-	}
-	
-	#package-contestFtr{
-		margin-top: 10px;
-	}
-	
-	#package-contestFtr p{
-		font-family: var(--default-font);
-		color:  var(--dkBlue-color);
-		font-size: 22px;
-		line-height: 32px;
-	}
-	
-	#package-contestFtr h6{
-		width: 865px;
-		margin: 0 auto 7px;
-		color: var(--normalBlue-color);
-		font-family: var(--Poppins-font);
-		font-weight: 700;
-		text-transform: uppercase;
-		font-size: 42px;
-		line-height: 48px;
-		/* background-color: var(--yellow-color); */
-		padding: 3px 0px;
-
-		background-image: linear-gradient(90deg, var(--yellow-color), var(--yellow-color));
-		background-size: 0 100%;
-		background-repeat: no-repeat;
-		background-position: left bottom;
-	}
-}
-
-/* 
-						<!-- <div id="VanImg"><img src="images/MIC_PPVan.png" alt="Prize Patrol Van"></div> -->
-						<div id="package-contestInner">
-							<!-- <div id="arrowLeft"><img src="images/MIC_Arrow.png"></div>
-							<div id="arrowRight"><img src="images/MIC_Arrow.png"></div>						
-							<div id="HowieImg"><img src="images/MIC_Howie.png" alt="Howie of the Prize Patrol"></div>
-							<div id="DanielleImg"><img src="images/MIC_Danielle.png" alt="Danielle of the Prize Patrol"></div> -->
-
-*/
-@media only screen and (max-width: 600px) {
-	#VanImg, #arrowLeft, #arrowRight, #HowieImg, #DanielleImg{
-		display: none;
-	}
-
-	#package-wrap{
-		min-width: 972px;
-		width: 100%;
-		/* height: 742px; */
-		margin: 0 auto;
-		padding: 0;
-		background-color: var(--AltWhite-color);
-		position: relative;
-		text-align: center;
-	}
-}
-
-
-#package-ob_section{
-	width: 728px;
-	margin: 0 auto;
-	font-family: var(--Roboto-font);
-	color: var(--pureWht-color);
-	overflow: hidden;
-
-	.ob_Hdr{
-		/* height: 0; */
-		overflow: hidden;
-		box-sizing: border-box;
-		background-color: var(--ltBlue-color);
-		border-radius: 0 0 40px 40px;
-		padding: 20px;
-		box-shadow: 0px 2px 7px rgba(71, 74, 75, 0.31);
-		position: relative;
-		/* top: -100%; */
-		z-index: 51;
-
-		& h6{
-			position: relative;
-			width: 648px;
-			line-height: 138px;
+		}
+		
+		#package-contestFtr{
+			margin-top: 10px;
+		}
+		
+		#package-contestFtr p{
+			width: 500px;
 			margin: 0 auto;
-			overflow: hidden;
-			background: transparent url(../images/MIC_OB_HdrImg.png) top center no-repeat;
-			text-indent: -10000px;
-		}
-
-		& p{
-			font-size: 26px;
-			font-style: italic;
-			font-weight: 500;
-		}
-	}
-
-	.ob_Main{
-		width: 684px;
-		background-color: var(--ltTan-color);
-		margin: -20px auto 50px;
-		padding: 20px 20px 20px;
-		border-radius: 0 0 10px 10px;
-		box-sizing: border-box;
-		box-shadow: 0px 2px 29px rgba(71, 74, 75, 0.31);
-		position: relative;
-		z-index: 50;
-
-		.bottomArrow{
-			width: 538px;
-			height: 25px;
-			background-color: var(--teal-color);
-			margin: 0 auto 10px;
-			/* clip-path: polygon(0% 100%, 50% 0%, 100% 100%); */
-			clip-path: polygon(0% 0%, 50% 100%, 100% 0%);
-		}
-
-		& ul li{
-			font-family: var(--Roboto-font);
-			font-weight: 700;
-			font-size: 30px;
-			line-height: 30px;
-			text-transform: uppercase;
-			/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#06708f+0,075166+100 */
-			background: linear-gradient(to bottom,  #06708f 0%,#075166 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-			margin: 0 0 10px;
-			border-radius: 40px;
-			overflow: hidden;
-			text-align: left;
-			box-sizing: border-box;
-			padding: 15px 10px;
-			position: relative;
-
-			& span{
-				font-family: var(--Nunito-font);
-				font-weight: 700;
-				font-style: italic;
-				background-color: var(--teal-color);
-				text-transform: uppercase;
-				font-size: 36px;
-				line-height: 30px;
-				width: max-content;
-				height: 100%;
-				position: relative;
-				top: 0;
-				left: -10px;
-				padding: 5px 10px 5px 30px;
-				margin-right: 10px;
-			}
-			& span::after{
-				position: absolute;
-				content: "";
-				width: 50px;
-				height: 100%;
-				top: 0;
-				right: -50px;
-				background-color: var(--teal-color);
-				clip-path: polygon(0 0, 0% 100%, 55% 0);
-			}
-		}
-		
-
-		.obFooterCpy{
-			color: var(--teal-color);
+			font-family: var(--default-font);
+			color:  var(--dkBlue-color);
 			font-size: 22px;
-			line-height: 30px;
-		}
-	}
-
-	/* OB header styles */
-	.ob_dir_Msg .prospect .ob_Hdr p{
-		/* font-size: 26px; */
-		margin: 10px 40px 0;
-
-		& span{
-			font-size: 30px;
-		}
-	}
-	.ob_dir_Msg .balance .ob_Hdr p{
-		/* font-size: 26px; */
-		margin: 10px 100px 0;
-	} 
-	.ob_dir_Msg .presPreferred .ob_Hdr p{
-		/* font-size: 26px; */
-		margin: 10px 100px 0;
-	}
-	.ob_dir_Msg .prefPlus .ob_Hdr p{
-		/* font-size: 26px; */
-		margin: 10px 40px 0;
-
-		& span{
-			font-size: 30px;
-		}
-	}
-	.ob_dir_Msg .preferred .ob_Hdr p{
-		/* font-size: 26px; */
-		margin: 10px 40px 0;
-
-		& span{
-			font-size: 30px;
-		}
-	}
-	.ob_dir_Msg .offline .ob_Hdr p{
-		/* font-size: 26px; */
-		margin: 10px 40px 0;
-
-		& span{
-			font-size: 30px;
-		}
-	}
-	.ob_dir_Msg .lapsed .ob_Hdr p{
-		/* font-size: 26px; */
-		margin: 10px 40px 0;
-
-		& span{
-			font-size: 30px;
-		}
-	}
-	.ob_dir_Msg .decelPresPreferred .ob_Hdr p{
-		/* font-size: 26px; */
-		margin: 10px 100px 0;
-	}
-
-	/* OB list pill shape styles */
-	.ob_dir_Msg .balance .ob_Main ul li span{text-transform: none;}
-	.ob_dir_Msg .prospect .ob_Main ul li span{text-transform: uppercase;} 
-	.ob_dir_Msg .presPreferred .ob_Main ul li span{text-transform: none;} 
-	.ob_dir_Msg .prefPlus .ob_Main ul li{
-		font-size: 30px; 
-		padding: 10px 10px;
-		/* color: lime; */
-
-		& span s{
-			position: relative;
-			text-decoration: none;
-			display: inline-block;
-		}
-		& span s::after{
-			content: " ";
-			background-color: var(--ltBlue-color);
-			position: absolute;
-			width: 100%;
-			height: 6px;
-			top: 37%;
-			left: 0px;
-		}
-	}
-	.ob_dir_Msg .prefPlus .ob_Main ul li:first-child span{
-			font-size: 34px; 
-			line-height: 30px;
-	}
-	.ob_dir_Msg .prefPlus .ob_Main ul li:nth-child(2) span{
-			font-size: 30px; 
-			line-height: 30px;
-	}
-	.ob_dir_Msg .prefPlus .ob_Main ul li:last-child span{
-			font-size: 25px; 
-			line-height: 30px;
-			padding: 10px 10px 10px 30px;
-	}
-
-	.ob_dir_Msg .preferred .ob_Main ul li{
-		border-radius: 60px;
-		
-		& span.OB_strikethrough{
-			width: 274px;
-			height: 20px;
-			position: absolute;
-			display: inline-block;
-			z-index: 88;		
-			text-decoration: none;
-			padding: 10px 0 0 100px;	
-			/* position: relative;	 */
+			line-height: 32px;
 		}
 		
-		& span s{
-			position: relative;
-			text-decoration: none;
-			display: inline-block;
+		#package-contestFtr h6{
+			width: 865px;
+			margin: 0 auto 7px;
+			color: var(--normalBlue-color);
+			font-family: var(--Poppins-font);
+			font-weight: 700;
+			text-transform: uppercase;
+			font-size: 42px;
+			line-height: 48px;
+			padding: 3px 0px;
+			background-image: linear-gradient(90deg, var(--yellow-color), var(--yellow-color));
+			background-size: 0 100%;
+			background-repeat: no-repeat;
+			background-position: left bottom;
 		}
-		& span s::after{
-			content: " ";
-			background-color: var(--strikeThrough-color);
-			position: absolute;
-			width: 100%;
-			height: var(--strikeThrough-Thickness);
-			top: 37%;
-			left: 0px;
-		}
-
-		& span.OB_strikethrough::after{
-			clip-path: polygon(0 0, 0% 203%, 55% 0);
-		}
-
-		& p.OB_correctiveSpacing{
-				display: inline-block;
-				inset: -15px 0 0 10px;
-				position: relative;
-		}
-
-		& span{text-transform: uppercase;}
-	} 
-
-	.ob_dir_Msg .offline .ob_Main ul li span{text-transform: uppercase;}
-	.ob_dir_Msg .lapsed .ob_Main ul li{
-		font-size: 35px;
-		& span{font-size: 44px; text-transform: uppercase;} 
 	}
-	.ob_dir_Msg .decelPresPreferred .ob_Main ul li span{text-transform: none;}
 
-	.ob_dir_Msg .balance, 
-	.ob_dir_Msg .prospect, 
-	.ob_dir_Msg .presPreferred, 
-	.ob_dir_Msg .prefPlus,
-	.ob_dir_Msg .preferred,
-	.ob_dir_Msg .offline,
-	.ob_dir_Msg .lapsed, 
-	.ob_dir_Msg .decelPresPreferred{
+	#package-order_section{
 		display: none;
+
+		/* OB Section */
+		#package-ob_section{
+			width: 728px;
+			margin: 0 auto;
+			font-family: var(--Roboto-font);
+			color: var(--pureWht-color);
+			overflow: hidden;
+		
+			/* OB header styles */
+			& .ob_dir_Msg{
+				& .balance{
+					display: none;
+		
+					& .ob_Hdr{
+						/* height: 0; */
+						overflow: hidden;
+						box-sizing: border-box;
+						background-color: var(--ltBlue-color);
+						border-radius: 0 0 40px 40px;
+						padding: 20px;
+						box-shadow: 0px 2px 7px rgba(71, 74, 75, 0.31);
+						position: relative;
+						/* top: -100%; */
+						z-index: 51;
+				
+						& h6{
+							position: relative;
+							width: 648px;
+							height: 138px;
+							line-height: 138px;
+							margin: 0 auto;
+							overflow: hidden;
+							background: transparent url(../images/MIC_OB_HdrImg.png) top center no-repeat;
+							text-indent: -10000px;
+						}
+						
+						& p{
+							font-size: 26px;
+							font-style: italic;
+							font-weight: 500;
+							margin: 10px 100px 0;
+						}
+					}
+		
+				   & .ob_Main{
+					   p.obFooterCpy{ padding: 0 20px 10px; }
+				   }
+				   
+				   .ob_Main{
+						width: 684px;
+						background-color: var(--ltTan-color);
+						margin: -20px auto 50px;
+						padding: 20px 20px 20px;
+						border-radius: 0 0 10px 10px;
+						box-sizing: border-box;
+						box-shadow: 0px 2px 29px rgba(71, 74, 75, 0.31);
+						position: relative;
+						z-index: 50;
+				
+						.bottomArrow{
+							width: 538px;
+							height: 25px;
+							background-color: var(--teal-color);
+							margin: 0 auto 10px;
+							/* clip-path: polygon(0% 100%, 50% 0%, 100% 100%); */
+							clip-path: polygon(0% 0%, 50% 100%, 100% 0%);
+						}
+				
+						& ul li{
+							font-family: var(--Roboto-font);
+							font-weight: 700;
+							font-size: 30px;
+							line-height: 30px;
+							text-transform: uppercase;
+							/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#06708f+0,075166+100 */
+							background: linear-gradient(to bottom,  #06708f 0%,#075166 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+							margin: 0 0 10px;
+							border-radius: 40px;
+							overflow: hidden;
+							text-align: left;
+							box-sizing: border-box;
+							padding: 15px 10px;
+							position: relative;
+				
+							& span{
+								font-family: var(--Nunito-font);
+								font-weight: 700;
+								font-style: italic;
+								background-color: var(--teal-color);
+								text-transform: uppercase;
+								font-size: 36px;
+								line-height: 30px;
+								width: max-content;
+								height: 100%;
+								position: relative;
+								top: 0;
+								left: -10px;
+								padding: 5px 10px 5px 30px;
+								margin-right: 10px;
+							}
+							& span::after{
+								position: absolute;
+								content: "";
+								width: 50px;
+								height: 100%;
+								top: 0;
+								right: -50px;
+								background-color: var(--teal-color);
+								clip-path: polygon(0 0, 0% 100%, 55% 0);
+							}
+						}
+						
+				
+						.obFooterCpy{
+							color: var(--teal-color);
+							font-size: 22px;
+							line-height: 30px;
+						}
+					}
+				}	
+			} 
+		}
+
+		.disclaimer{
+			font-family:Arial, Helvetica, sans-serif;
+			font-size: 11px;
+			width: 600px;
+			padding: 20px 0;
+			margin: 0 auto;
+			text-align: center;
+		
+			p, a{ color: #000; }
+		
+			p{ margin-bottom: 14px; }
+			strong{ font-size: 12px; }
+		}
 	}
+}
 
-	.prospect p.obFooterCpy{font-size: 22px;}
-	.balance p.obFooterCpy{ padding: 0 20px 10px; }
+/* Mobile styles */
+@media only screen and (max-width: 600px) {
+	#package-wrap.mobilePkg{
+		min-width: 320px;
+		background-color: var(--AltWhite-color);
+	
+		& #package-contestWrap{
+			/* display: none; */
+			#arrowLeft, #arrowRight, #HowieImg, #DanielleImg, #VanImg{
+				display: none;
+			}
+			
+			#package-contestInner{
+				width: 320px;
+	
+				& #package-contestCopy{
+					height: auto !important;
+					background-color: var(--offWhite-color);
+					overflow: hidden;
+	
+					& h6{
+						font-size: 26px;
+						line-height: 30px;
+					}
+					& h6:first-of-type{
+						padding-top: 6px;
+					}
+					& h6:last-of-type{
+						font-size: 31px;
+						line-height: 34px;
+					}
+	
+					& p{
+						font-size: 16px;
+						line-height: 22px;
+					}
+					
+					& .MIC_Special_Box{
+						width: 300px !important;	
+					}			
+					& .MIC_Special_Box h5{	
+						font-size: 21px;
+						line-height: 34px;
+					}
+					& .MIC_Special_Box h5 span.pkgPrizeAmt{ 	
+						font-size: 36px;
+						line-height: 36px;
+					}
+					& .MIC_Special_Box h5 span.pkgPrizeDesc{
+						font-size: 30px;
+						line-height: 40px;
+					}
+					& .MIC_Special_Box:nth-last-child(2) h5{
+						padding: 10px 0;
+					}
+				}
+			}
+			
+			#package-contestInner #MIC_Button{
+				width: 253px;
+				height: 49px;
+				margin: 10px auto 0px;
+				font-size: 33px;
+				line-height: 49px;
+			}
+			
+			
+			#package-contestFtr p{
+				width: fit-content;
+				padding: 10px 20px;
+				font-size: 20px;
+				line-height: 29px;
+			}
+	
+			#package-contestFtr p:last-child{
+				font-size: 16px;
+				line-height: 24px;
+				padding-top: 10px;
+			}
+			
+			#package-contestFtr h6{
+				width: 300px;
+				display: inline;
+				font-size: 42px;
+				line-height: 43px;
+				background-image: linear-gradient(90deg, var(--yellow-color), var(--yellow-color));
+				background-size: 0 65%;
+				background-repeat: no-repeat;
+				background-position: left 10px;
+			}
+		}
 
-	/*.presPreferred p.obFooterCpy{ }
-	.prefPlus, p.obFooterCpy{ }
-	.preferred p.obFooterCpy{ }
-	.offline p.obFooterCpy{ } */
-	.offline .bottomCpy{
-		color: var(--teal-color);
-		font-size: 24px;
-		font-weight: 700;
-		padding-bottom: 20px;
-		position: relative;
+		/* Order section mobile */
+		#package-order_section{
+			overflow: auto;
+			display: none;
+			background-color: var(--ltTan-color);
+		
+			#package-ob_section{
+				max-width: 100%;
+				
+				/* background: #fff url(../images/LP_OB_Bkgrnd_Mob.png) center top no-repeat; */
+			
+				.ob_dir_Msg{
+					min-width: 320px;
+
+					& .balance{
+						display: none;
+			
+						.ob_Hdr{
+							border-radius: 0;
+							padding: 10px;
+	
+							& h6{
+								max-width: 100%;
+								background-size: contain;
+								margin-top: 20px;
+							}
+		
+							/* & h6{
+								font-family: var(--Nunito-font);
+								font-weight: 700;
+								position: relative;
+								left: -20px;
+								text-transform: capitalize;
+								font-size: 43px;
+								line-height: 50px;
+								margin: 0 auto;
+								transform: rotate(-4deg);
+								text-shadow: 2px 2px 0 #074e62, -2px 2px 0 #074e62, 2px -2px 0 #074e62, -2px -2px 0 #074e62, 0px 2px 0 #074e62, 0px -2px 0 #074e62, -2px 0px 0 #074e62, 2px 0px 0 #074e62, 4px 4px 0 #074e62, -4px 4px 0 #074e62, 4px -4px 0 #074e62, -4px -4px 0 #074e62, 0px 4px 0 #074e62, 0px -4px 0 #074e62, -4px 0px 0 #074e62, 4px 0px 0 #074e62, 2px 4px 0 #074e62, -2px 4px 0 #074e62, 2px -4px 0 #074e62, -2px -4px 0 #074e62, 4px 2px 0 #074e62, -4px 2px 0 #074e62, 4px -2px 0 #074e62, -4px -4px 0 #074e62;
+								
+								& span{
+									position: relative;
+									left: 17px;
+								}
+								& span:first-of-type{
+									left: 60px;
+								}
+								& span:last-of-type{
+									font-family: var(--Archivo-font);
+									display: block;
+									font-size: 121px;
+									line-height: 121px;
+									font-weight: 700;
+									text-transform: uppercase;
+									text-align: center;
+									top: -10px;
+									transform: rotate(4deg);
+								}
+							} */
+					
+							& p{
+								margin: 0;
+								margin: -15px 10px 0;
+							}
+						} 
+			
+						& .ob_Main{
+							max-width: 100%;
+							margin: 0;
+							padding: 0px 0px 20px;
+							border-radius: 0;
+							box-shadow: none;
+		
+							.bottomArrow{
+								width: 320px;
+								height: 25px;
+								background-color: var(--teal-color);
+								margin: 0;
+								clip-path: polygon(0% 0%, 50% 100%, 100% 0%);
+								margin: 0 auto 15px;
+							}
+		
+							ul{
+								max-width: 90%;
+								margin: 0 auto;
+								li{
+									font-family: var(--Nunito-font);
+									font-size: clamp(1rem, 2.5vw, 2rem); 
+									text-align: center;
+									box-sizing: border-box;
+									padding-left: 120px;
+									
+			
+									& p{
+										display: block;				
+										font-weight: 700;
+										font-style: italic;
+										text-transform: uppercase;
+										font-size: 36px;
+										line-height: 30px;
+										height: 100%;
+										/* position: relative;
+										top: 0;
+										left: -10px; */
+										padding: 5px 0;
+										/* margin-right: 10px; */
+									}
+									& p:first-child{
+										background-color: var(--teal-color);
+									}
+			
+									span{ 
+										position: absolute;
+										text-transform: none; 
+										display: flex;
+										align-items: center;
+										padding: 0 10px 0 40px;
+										font-size: clamp(1rem, 2.5vw, 2rem); 
+
+										& ::after{
+											position: absolute;
+											content: "";
+											width: 50px;
+											height: 100%;
+											top: 0;
+											right: -50px;
+											background-color: var(--teal-color);
+											clip-path: polygon(0 0, 0% 100%, 55% 0);
+										}
+									}
+								}
+							}
+							/* ul li:first-child p:last-child{font-size: 25px;}
+							ul li:nth-child(2) p:last-child{font-size: 25px;}
+							ul li:last-child p:last-child{font-size: 21px;} */
+			
+							p.obFooterCpy{ 
+								color: var(--teal-color);
+								font-size: clamp(1rem, 2.5vw, 2rem); 
+								line-height: 30px;
+								padding: 0 20px 10px; 
+							}
+						}
+						
+					} 
+				}
+			}
+	
+			/*fake product section style change for mobile*/
+			#mpWrap{
+				width: 320px;
+		
+				div{
+					h1{
+						font-size: 20px;
+						line-height: 30px;
+					}
+					p{
+						border-left: 120px solid #aaa;
+						font-size: 13px;
+					}
+					footer{
+						height: 45px;
+					}
+				} 
+			}
+		}
+	
+		.disclaimer {
+			font-size: 0.6875em;
+			max-width: 320px;
+		}
+		
+		.disclaimer p {
+			margin-bottom: 14px;
+		}
+		
+		.isUppercase {
+			text-transform: uppercase;
+		}
 	}
-	.offline .bottomCpy::before{
-		content: "";
-		width: 15px;
-		height: 25px;
-		border-left: 2px solid var(--teal-color);
-		border-bottom: 2px solid var(--teal-color);
-		position: absolute;
-		top: -12px;
-		left: 50px;
-	}
-	.offline .bottomCpy::after{
-		content: "";
-		width: 15px;
-		height: 25px;
-		border-right: 2px solid var(--teal-color);
-		border-bottom: 2px solid var(--teal-color);
-		position: absolute;
-		top: -12px;
-		right: 50px;
-	}
-
-	.lapsed p.obFooterCpy{ padding: 10px 0px 0px; }
-	.decelPresPreferred p.obFooterCpy{font-size: 18px; padding: 10px 0px 0px;}
-}
-
-#package-order_section{
-	display: none;
-}
-
-
-/*****Package Style End*********/
-#multipageWrap{
-	margin: 0 20px;
-}
-
-.disclaimer{
-	font-family:Arial, Helvetica, sans-serif;
-	font-size: 11px;
-	width: 600px;
-	padding: 20px 0;
-	margin: 0 auto;
-	text-align: center;
-}
-
-.disclaimer p, .disclaimer a{
-	color: #000;
-}
-
-.disclaimer p {
-	margin-bottom: 14px;
-}
-
-.disclaimer strong {
-	/*for NPN*/
-	font-size: 12px;
 }

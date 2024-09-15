@@ -24,8 +24,33 @@ function MIC_Init(){
         MIC_OBSec_Main = document.querySelector("#package-ob_section .Current .ob_Main"),
         MIC_OBSec_Main_LI = document.querySelectorAll("#package-ob_section .Current .ob_Main ul li"),
         MIC_OBSec_FooterCpy = document.querySelector("#package-ob_section .Current .ob_Main .obFooterCpy"),            
-        MIC_ProdSec = document.querySelector("#package-product_section"),
-        MIC_mobSelector = MIC_PackageDiv.classList.contains("mobilePkg");
+        MIC_ProdSec = document.querySelector("#package-product_section");
+        
+
+        function updateSize() {
+            // MIC_PackageDiv.textContent = window.innerWidth;
+
+            if (window.innerWidth <= 600) {
+                //Screen is 600px or below....
+                // <div id="package-wrap" class="mobilePkg"></div>
+                MIC_PackageDiv.classList.add("mobilePkg");
+                // location.reload();
+            }else{
+                MIC_PackageDiv.classList.remove("mobilePkg");
+                // location.reload();
+                
+            }
+        }
+
+        updateSize();
+        window.addEventListener("resize", updateSize);
+
+
+        
+        
+    let MIC_mobSelector = MIC_PackageDiv.classList.contains("mobilePkg");
+
+
 
         // if(!MIC_mobSelector){ 
         //     console.log("Desktop Version")
