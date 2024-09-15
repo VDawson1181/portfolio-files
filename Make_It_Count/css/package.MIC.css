@@ -260,6 +260,32 @@ body{
 	}
 }
 
+/* 
+						<!-- <div id="VanImg"><img src="images/MIC_PPVan.png" alt="Prize Patrol Van"></div> -->
+						<div id="package-contestInner">
+							<!-- <div id="arrowLeft"><img src="images/MIC_Arrow.png"></div>
+							<div id="arrowRight"><img src="images/MIC_Arrow.png"></div>						
+							<div id="HowieImg"><img src="images/MIC_Howie.png" alt="Howie of the Prize Patrol"></div>
+							<div id="DanielleImg"><img src="images/MIC_Danielle.png" alt="Danielle of the Prize Patrol"></div> -->
+
+*/
+@media only screen and (max-width: 600px) {
+	#VanImg, #arrowLeft, #arrowRight, #HowieImg, #DanielleImg{
+		display: none;
+	}
+
+	#package-wrap{
+		min-width: 972px;
+		width: 100%;
+		/* height: 742px; */
+		margin: 0 auto;
+		padding: 0;
+		background-color: var(--AltWhite-color);
+		position: relative;
+		text-align: center;
+	}
+}
+
 
 #package-ob_section{
 	width: 728px;
