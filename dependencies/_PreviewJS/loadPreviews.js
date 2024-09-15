@@ -17,7 +17,7 @@
 console.log("LOAD loadPreviews.js Local")
 
 // var strSrc = "//cdn-imageconv.pchassets.com/spectrum/packageReview/"; //PROD
-var strSrc = "../../dependencies/_PreviewJS/"; //PROD
+var strSrc = "https://vdawson1181.github.io/portfolio-files/dependencies/_PreviewJS/"; //PROD
 //var strSrc = "//creativedept.classic.pchad.com/Libraries/Packages/Spectrum/_global/prod/packagereview/" //testing
 
 // $.ajaxSetup ({
@@ -26,7 +26,7 @@ var strSrc = "../../dependencies/_PreviewJS/"; //PROD
 // });
  
 
-$("#uniNav1 preview").load(strSrc + "/preview_content.txt #uni_header", function(){
+$("#uniNav1 preview").load(strSrc + "preview_content.txt #uni_header", function(){
 
     var hide=false;
     if (typeof window.hideTemplate != "undefined"){
