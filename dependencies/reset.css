@@ -1,0 +1,157 @@
+/*
+
+RESET CSS v1.87 - Production version
+
+9/18/2023 - Scale down lightbox & pchLightboxAsset and move it up - VAD
+
+6.28.2023 - add css to hide FTC disclaimers on regular packages - VAD
+
+7.12.2016 - add css to hide OPTINS on oFroms so evergage can move and style without a - markm
+
+2018.08.30 - TEMP 1 - hide mobile signout in uninav, markm
+
+2018.09.12 - TEMP 2 - DESKTOP take background and border and shadow away from SIGNIN/OUT button. make textgrey - MARKM
+
+2018.11.28 - REMOVED TEMP 1 & 2 - spectrum team
+
+2018.11.29 - TEMP 3 - color .mpCartItemProp65Text - markm
+
+2018.12.07 - TEMP 4 - targeted product (eo) & mag fix - Nagesh/markm
+
+2018.12.10 - TEMP 5 - stop click of device eo labels, markm
+
+2019.1.22  - REMOVED  TEMP 3 & 4  - spectrum team.
+
+2019.2.18.1  - add more text-size-adjust selectors. markm
+
+2019.2.15  - REMOVED  TEMP 5 - "stop click of device eo labels, markm"   - spectrum team.
+
+2020.02.04.1 - desktop resize of mag image to address mobile fuzzy but dont crop DT, markm
+
+*/
+
+
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}ol,ul {list-style:none;}caption,th {text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym {border:0;}
+
+
+
+/* PCH additions */
+
+a:active,a:focus{ outline: none; /*NO LINK FOCUS BORDERS!!*/ }
+
+
+
+a img { border: none; }
+
+
+
+/*fix bold/srong/em/i - known reset.css issue*/
+
+strong, b, strong *, b * { font-weight: bold !important; } 
+
+em, i, em *, i * { font-style: italic !important; }
+
+
+
+/* Override the minimum font size on the iPhone and iPad */
+
+div, p, a, li, td, th, dl,dt,dd, h1,h2,h3,h4,h5,h6, span, address,caption,cite,code,dfn,em,stron, th,var { 
+
+    -ms-text-size-adjust: none !important;
+
+    -moz-text-size-adjust: none !important;
+
+    -webkit-text-size-adjust: none !important;
+
+    text-size-adjust: none !important;
+
+}
+
+
+
+/* PCH addition - add background color to mobile slp module - added 1/20/15 */
+
+#SlpModal .mSlpInPgBody { background: #fff; }
+
+
+
+/* PCH addition - Universal Pkg/EO disclaimer style */
+
+body .disclaimer, body .disclaimer a, .eo #eoDisclaimer, .eo #eoDisclaimer a, body .disclaimersWrap, body .disclaimersWrap a {
+
+    font-size: 12px !important;
+
+}
+
+
+
+/* v14 addtion - hide oForm Optins */
+
+body.oForm .SpectrumOptinList, body.eo .SpectrumOptinList{
+
+	display: none;
+
+}
+
+
+
+/* 2020.02.04 - desktop resize of mag image to address mobile fuzzy but dont crop DT, markm */
+
+.large.mainAdWrap .mag .productDetail .column1 img, .superfeature.mainAdWrap .mag .productDetail .column1 img{
+
+    width: 226px;
+
+    height: 300px;
+
+}
+
+
+
+/* 6.28.2023 - add css to hide FTC disclaimers on regular packages - VAD */
+
+body:not(.eo) #spctrmCopy1_ctl00_outerDiv .withOrderDisclaimer{
+
+    display: none;
+
+}
+
+
+
+/* 11/21/2023 - Spectrum issue where Lightboxes were too high - VAD*/
+
+.spectrumLightbox_content2:not(.sso-lightbox, #uniNavPopupContainer, #slpLightbox_OnCartItemClick) > div > div:not(.superFeature, .backgroundCanvasContainer, .dealPopPlaceholder div),
+
+.spectrumLightbox_content2:not(.sso-lightbox, #uniNavPopupContainer, #slpLightbox_OnCartItemClick) > div > section:not(.superFeature, .backgroundCanvasContainer, .dealPopPlaceholder div, .main-content){ 
+
+    /* scale: 0.65;
+
+    transform-origin: center top; */
+
+    top: 0px !important;
+
+} 
+
+.spectrumLightbox_content2:not(.sso-lightbox, #uniNavPopupContainer, #slpLightbox_OnCartItemClick) > div > .pchLightboxAsset { 
+
+    /* scale: 0.65;
+
+    transform-origin: center top;
+
+    position: relative; */
+
+    top: 0px !important;
+
+} 
+
+/* 11/21/2023 - Spectrum issue where Lightboxes were too high - VAD*/
+
+
+
+/* Don't scale down SLP Lightbox  */
+
+#slpLightbox_OnCartItemClick, #slpLightbox_OnCartItemClick > div > div, #slpLightbox_OnCartItemClick > div > section{ 
+
+    scale: 1 !important;
+
+} 
