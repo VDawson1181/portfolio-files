@@ -1,5 +1,5 @@
 //Win 1MM Tonight V13 - Pkg Desktop JS by VAD - 06/2020
-gsap.registerPlugin(SplitText,CSSRulePlugin,ScrollToPlugin);
+
 
 var clockInterval;
 var order = ['d','m','h','s'];
@@ -8,7 +8,7 @@ var order = ['d','m','h','s'];
 document.addEventListener('DOMContentLoaded', WIMMT_Init, false);	
 
 function WIMMT_Init() {
-	fUpdatePersonalization();
+    gsap.registerPlugin(SplitText,CSSRulePlugin,ScrollToPlugin);
     getUserSegmentCode();
 
     let WIMMT_PackageDiv = document.querySelector("#package-wrap"),
@@ -16,20 +16,36 @@ function WIMMT_Init() {
         WIMMT_bigStage = document.querySelector("#package-contest_section .stage--big"),
         WIMMT_bigStageStamp = document.querySelector("#package-contest_section .stage__main .stage__main__hdr"),
         WIMMT_bigStageULines = document.querySelector("#package-contest_section .stage__main .stage__main__underlines .underlines"),
-        WIMMT_bigStageHighlights = document.querySelectorAll("#package-contest_section .stage__main .stage__main__handwriting .handwriting_highlight"),
+        WIMMT_bigStageHighlights = document.querySelectorAll("#package-contest_section .stage__main .stage__main__handwriting h6 span"),
         WIMMT_ContestBtn = document.querySelector("#package-contest_section .stage__main__Btn"),
         WIMMT_OBSec = document.querySelector("#package-ob_section"),
         WIMMT_OBSec_Stage1 = document.querySelector("#package-ob_section #OB_DirMsg .ob__stage1"),
         WIMMT_OBSec_Stage1_Words = document.querySelector("#package-ob_section .ob__stage1 h6.Current"),
-        
         WIMMT_OBSec_Stage2 = document.querySelector("#package-ob_section #OB_DirMsg .ob__stage2"),
         WIMMT_OBSec_Stage2_Mid = document.querySelector("#package-order_section #package-ob_section #OB_DirMsg .ob__stage2 .ob__stage2__mid"),
         WIMMT_OBSec_Stage2_Mid_List = document.querySelectorAll("#package-order_section #package-ob_section #OB_DirMsg .ob__stage2 .ob__stage2__mid .ob__stage2__mid__wrapper .Current ul li"),
-        // WIMMT_OBSec_Stage2_Ftr = document.querySelector("#package-order_section #package-ob_section #OB_DirMsg .ob__stage2 .ob__stage2__ftr h6"),
         WIMMT_OrderSec = document.querySelector("#package-order_section"),
         WIMMT_ProdSec = document.querySelector("#package-pkg_section"),
         WIMMT_OBSec_Stage2_Top_UL,
         WIMMT_mobSelector = WIMMT_PackageDiv.classList.contains("mobilePkg");
+
+        function updateSize() {
+            // MIC_PackageDiv.textContent = window.innerWidth;
+
+            if (window.innerWidth <= 600) {
+                //Screen is 600px or below....
+                // <div id="package-wrap" class="mobilePkg"></div>
+                WIMMT_PackageDiv.classList.add("mobilePkg");
+                // location.reload();
+            }else{
+                WIMMT_PackageDiv.classList.remove("mobilePkg");
+                // location.reload();
+                
+            }
+        }
+
+        updateSize();
+        window.addEventListener("resize", updateSize);
 
         if(!WIMMT_mobSelector){ 
             WIMMT_OBSec_Stage2_Top_UL = document.querySelector("#package-order_section #package-ob_section #OB_DirMsg .ob__stage2 .ob__stage2__top h6.Current u");
@@ -37,16 +53,14 @@ function WIMMT_Init() {
             WIMMT_OBSec_Stage2_Top_UL = document.querySelectorAll("#package-order_section #package-ob_section #OB_DirMsg .ob__stage2 .ob__stage2__top h6.Current .ob__S2__Underline");
         }
 
-        OBvisibility = spectrumContest[0][0].OBvisibility;     	
-        pkgCookie = _packageGetValue("WIMMT_Start");
+        // OBvisibility = spectrumContest[0][0].OBvisibility;     	
+        // pkgCookie = _packageGetValue("WIMMT_Start");
 
     //Simple clock - Days/Hours/Minutes/Seconds...
-	var now=new Date(SERVER_DATETIME);//Current Server Date aka Today!
-	console.log(now)
-	var then = new Date(SERVER_DATE +  " 23:59:59"); //TODAY @ 11:59:59PM!
-	// var then = new Date(spectrumContest[0][0].deadline +  " 23:59:59"); //deadline date @ 11:59:59PM!
+	var now=new Date();//Current Server Date aka Today!
+	var then = new Date().setHours(24,0,0,0); //TODAY @ 11:59:59PM!
 
-	console.log("CLOCK NOW: " + now)
+	console.log("CLOCK NOW: " + now.getTime())
 	console.log("CLOCK END: " + then)
 
 	clockInterval = window.setInterval(function(){
@@ -76,24 +90,13 @@ function WIMMT_Init() {
         })
         contestLoaderAni.from(WIMMT_bigStageStamp,{duration:0.25,opacity:0,scale:'1.5',rotate:'-3deg',ease:"power3.in"},'+=1.5')
         contestLoaderAni.from(WIMMT_bigStageULines,{duration:0.5,width:'0px',ease:"none"})
-        contestLoaderAni.from(WIMMT_bigStageHighlights,{duration:0.5,width:'0px',ease:"none",stagger:0.5})             
+        // contestLoaderAni.from(WIMMT_bigStageHighlights,{duration:0.5,width:'0px',ease:"none",stagger:0.5})    
+        contestLoaderAni.to(WIMMT_bigStageHighlights,{duration:1,"backgroundPosition":"0 10px"})         
         .play();
-
-        // NO OB - Animations
-        var WIMMT_NoOB = new TimelineMax({paused: true, onStart:function(){ _packageSetValue("WIMMT_Start",true); console.log("OBAni NoOB Started...")},onComplete:function(){ if(window.mpLoad) mpLoad(); } });                 
-            WIMMT_NoOB.to(WIMMT_ContestSec,{duration:0.5,display:'none',opacity:0,easing:'none'})
-            WIMMT_NoOB.to(WIMMT_OrderSec,{duration:0.5,display:'block',opacity:1,easing:'none'})
-            WIMMT_NoOB.to(WIMMT_ProdSec,{duration:0.5,display:'block',opacity:1,ease:'none'})
-            // if(!WIMMT_mobSelector){ 
-            //     WIMMT_NoOB.from("#disclaimersWrap",{duration:0.5,opacity:0,ease:'none'})
-            // }else{    
-            //     WIMMT_OB_Ani.to(".disclaimer",{duration:0.5,opacity:1,ease:'none'})                
-            // }
-        // NO OB - Animations
 
         var WIMMT_OB_LetterAnimation = new SplitText(WIMMT_OBSec_Stage1_Words, {type:"words, chars"}), words = WIMMT_OB_LetterAnimation.words;
 
-        var WIMMT_OB_Ani = new TimelineMax({paused: true, onStart:function(){ _packageSetValue("WIMMT_Start",true); clearInterval(clockInterval); console.log("OBAni Started...")},onComplete:function(){ OB_List_Pulse.play(); if(window.mpLoad) mpLoad(); } }); 
+        var WIMMT_OB_Ani = new TimelineMax({paused: true, onStart:function(){ _packageSetValue("WIMMT_Start",true); clearInterval(clockInterval); console.log("OBAni Started...")},onComplete:function(){ OB_List_Pulse.play(); document.querySelector("#mpWrap").style.display = "block"; } }); 
 
             WIMMT_OB_Ani.to(WIMMT_ContestSec,{duration:0.5,display:'none',opacity:0,ease:'none'})
             WIMMT_OB_Ani.to(WIMMT_OrderSec,{duration:0.5,display:'block',opacity:1,ease:'none'})
@@ -112,49 +115,49 @@ function WIMMT_Init() {
     // OB Animations End        
 
 
-    if (!pkgCookie) {
+    // if (!pkgCookie) {
             //Code that looks at the package's button...
             WIMMT_ContestBtn.addEventListener('click', function actBtn(e){
                 e.preventDefault();   
                 console.log("Contest button clicked...");
-
-                if (!SpectrumPackageFacade.UserInfo.IsUserMerchEligible()) {
-                    //if NOT eligible ... do not show merch
-                    console.log("Merch inel Version...")
-                    _packageFormSubmit();
-                } else {
-                    //HIDE OB when set via admin/xml 
-                    if(typeof OBvisibility !== 'undefined'){
-                        if(OBvisibility == "hideOB"){
-                            console.log("hide OB version")
-                            WIMMT_NoOB.play();
+                WIMMT_OB_Ani.play();   
+                // if (!SpectrumPackageFacade.UserInfo.IsUserMerchEligible()) {
+                //     //if NOT eligible ... do not show merch
+                //     console.log("Merch inel Version...")
+                //     _packageFormSubmit();
+                // } else {
+                //     //HIDE OB when set via admin/xml 
+                //     if(typeof OBvisibility !== 'undefined'){
+                //         if(OBvisibility == "hideOB"){
+                //             console.log("hide OB version")
+                //             WIMMT_NoOB.play();
                             
-                        }else{
-                            console.log("normal version")
-                            WIMMT_OB_Ani.play();                  
-                        }
-                    } 
-                }
+                //         }else{
+                //             console.log("normal version")
+                //             WIMMT_OB_Ani.play();                  
+                //         }
+                //     } 
+                // }
             });
-    } else {
-        //Post click -- user already activated - Show everything & mpLoad....
-        WIMMT_OB_Ani.progress(1);
-    }
+    // } else {
+    //     //Post click -- user already activated - Show everything & mpLoad....
+    //     WIMMT_OB_Ani.progress(1);
+    // }
 
 
 
     //HIDE OB when set via admin/xml 
-    if(typeof OBvisibility !== 'undefined'){
-        if(OBvisibility == "hideOB") $("#package-ob_section").css({display: "none"});
-    }
+    // if(typeof OBvisibility !== 'undefined'){
+    //     if(OBvisibility == "hideOB") $("#package-ob_section").css({display: "none"});
+    // }
 	
-	$("#copyright").html(new Date(SERVER_DATE).getFullYear());
+	$("#copyright").html(new Date().getFullYear());
 };
 
 /*****Clock Functions*****/
 function doTheClock(now, then){
     var onCurrDate = now.getTime(); //make it a date obj, then make it seconds	
-    var ExpDate=new Date(spectrumContest[0][0].deadline); //make it a date obj
+    var ExpDate=new Date(); //make it a date obj
 
     gsap.to(".stage__clock__inner",{duration:0.25,opacity:1,ease:'none'})
 
@@ -164,7 +167,7 @@ function doTheClock(now, then){
     ExpDate = ExpDate.getTime(); //make it a date obj				
     var onSeconds_left = Math.floor(ExpDate - onCurrDate) / 1000;	
     //console.log("Simple Clock: "+onSeconds_left);
-    contest_replayDateVariants("currDate", onCurrDate);
+    // contest_replayDateVariants("currDate", onCurrDate);
 
     if(onSeconds_left<=0){
         console.log(onSeconds_left+"- Contest Over");
@@ -187,7 +190,7 @@ function doTheClock(now, then){
 
             //Calculate total number of hours
             var totalHrs = Math.floor(delta / 3600);
-            console.log("Total Hrs:"+totalHrs);
+            // console.log("Total Hrs:"+totalHrs);
 
             // calculate (and subtract) whole days
             var days = Math.floor(delta / 86400);
@@ -247,105 +250,13 @@ function clockPadder(inNum){
 }
 /*****Clock Functions*****/
 
-
 function getUserSegmentCode(){
     console.log("get user seg codes")
 
-    let ACV2_Seg_balance = document.querySelectorAll("#OB_DirMsg .balance"),
-    ACV2_Seg_prospects = document.querySelectorAll("#OB_DirMsg .prospect"),
-    ACV2_Seg_Lapsed = document.querySelectorAll("#OB_DirMsg .lapsed"),
-    ACV2_Seg_offline = document.querySelectorAll("#OB_DirMsg .offline"),
-    ACV2_Seg_preferred = document.querySelectorAll("#OB_DirMsg .preferred"),
-    ACV2_Seg_prefPlus = document.querySelectorAll("#OB_DirMsg .prefPlus"),
-    ACV2_Seg_prezPref = document.querySelectorAll("#OB_DirMsg .presPreferred");
+    let ACV2_Seg_balance = document.querySelectorAll("#OB_DirMsg .balance")
+    for(var IARI=0;IARI<ACV2_Seg_balance.length;IARI++){
+        ACV2_Seg_balance[IARI].style.display = "block";
+        ACV2_Seg_balance[IARI].classList.add("Current");                           
+    }
 
-    /*Get user type (Buyer/Prospects)*/
-    _packageGetUserType().done(function(userType){ 
-        console.log("User: "+userType) 
-        switch(userType.toString()){
-            case "buyer":
-                //BUYER
-                /*Get User's segment code*/
-                _packageGetSegment().done(function(segCode){ 
-                switch(segCode.toString()){                            
-                    case 'BL':
-                    case 'LB':
-                        // console.log("lapsed");  
-                        for(var IARI=0;IARI<ACV2_Seg_Lapsed.length;IARI++){
-                            ACV2_Seg_Lapsed[IARI].style.display = "block";
-                            ACV2_Seg_Lapsed[IARI].classList.add("Current");
-                        }
-                    break;                     
-                    case "OFNB":
-                        // console.log("offline");        
-                        // $('.ACV2_OB_DirMsg .offline').css({"display":"block"});  
-                        for(var IARI=0;IARI<ACV2_Seg_offline.length;IARI++){
-                            ACV2_Seg_offline[IARI].style.display = "block";
-                            ACV2_Seg_offline[IARI].classList.add("Current");                         
-                        }                          
-                    break;  
-                    case "BPV2":
-                        // console.log("preferred");        
-                        // $('.ACV2_OB_DirMsg .preferred').css({"display":"block"});    
-                        for(var IARI=0;IARI<ACV2_Seg_preferred.length;IARI++){
-                            ACV2_Seg_preferred[IARI].style.display = "block";
-                            ACV2_Seg_preferred[IARI].classList.add("Current");                          
-                        }                        
-                    break;         
-                    case "BPV3":
-                        // console.log("prefPlus");        
-                        // $('.ACV2_OB_DirMsg .prefPlus').css({"display":"block"});   
-                        for(var IARI=0;IARI<ACV2_Seg_prefPlus.length;IARI++){
-                            ACV2_Seg_prefPlus[IARI].style.display = "block";
-                            ACV2_Seg_prefPlus[IARI].classList.add("Current");                         
-                        }                         
-                    break;         
-                    case "BPP":
-                        // console.log("presPref");        
-                        // $('.ACV2_OB_DirMsg .presPref').css({"display":"block"});       
-                        for(var IARI=0;IARI<ACV2_Seg_prezPref.length;IARI++){
-                            ACV2_Seg_prezPref[IARI].style.display = "block";
-                            ACV2_Seg_prezPref[IARI].classList.add("Current");                          
-                        }                     
-                    break;                                                                                
-                    default:
-                        // console.log("Balance User");
-                        // $('.ACV2_OB_DirMsg .balance').css({"display":"block"});
-                        for(var IARI=0;IARI<ACV2_Seg_balance.length;IARI++){
-                            ACV2_Seg_balance[IARI].style.display = "block";
-                            ACV2_Seg_balance[IARI].classList.add("Current");                           
-                        }
-                    break;
-                }                                                    
-                }).fail(function(error){ 
-                    console.log("Failed: "+error)    
-                    //Failed? Show balance...
-                    // $('.ACV2_OB_DirMsg .balance').css({"display":"block"});     
-                    for(var IARI=0;IARI<ACV2_Seg_balance.length;IARI++){
-                        ACV2_Seg_balance[IARI].style.display = "block";
-                        ACV2_Seg_balance[IARI].classList.add("Current");
-                    }       
-                })
-                /*Get User's segment code*/
-            break;
-
-            default:
-                //PROSPECTS
-                console.log("Prospect User");                                
-                for(var IARI=0;IARI<ACV2_Seg_prospects.length;IARI++){
-                    ACV2_Seg_prospects[IARI].style.display = "block";
-                    ACV2_Seg_prospects[IARI].classList.add("Current");
-                }
-
-            break;      
-        }
-    }).fail(function(error){ 
-        console.log("Failed: "+error)
-        // $('.ACV2_OB_DirMsg .balance').css({"display":"block"});
-        for(var IARI=0;IARI<ACV2_Seg_balance.length;IARI++){
-            ACV2_Seg_balance[IARI].style.display = "block";
-            ACV2_Seg_balance[IARI].classList.add("Current");
-        }
-    });
-    /*Get user type (Buyer/Prospects)*/
 }

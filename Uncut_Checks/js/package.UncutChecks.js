@@ -2,18 +2,15 @@
 document.addEventListener('DOMContentLoaded', UC_Init, false);	
 
 function UC_Init(){						
-	fUpdatePersonalization();
     UC_GetUserSegmentCode();
 
+    //Randomly display coupons...
+    // var couponSet=$("#package-contest_section main .checksContainer div").toArray();
 
-    		//Randomly display coupons...
-            
-		// var couponSet=$("#package-contest_section main .checksContainer div").toArray();
-
-        // let couponSet = document.querySelectorAll("#package-contest_section main .checksContainer div"),
-        // couponSetArr = Object.values(couponSet);
-		// couponSetArr.sort(function(){return 0.5-Math.random()});
-        // console.log(couponSetArr);
+    // let couponSet = document.querySelectorAll("#package-contest_section main .checksContainer div"),
+    // couponSetArr = Object.values(couponSet);
+    // couponSetArr.sort(function(){return 0.5-Math.random()});
+    // console.log(couponSetArr);
 
 
     // Intro Animation
@@ -36,9 +33,8 @@ function UC_Init(){
         
     createCoupons(coupon_number,coupon_counter);
     createBenefitCoupons(OB_coupon_number, OB_coupon_counter);
-    
-    
-    let pkg_Contest_sect = document.querySelector("#package-contest_section"),
+
+        pkg_Contest_sect = document.querySelector("#package-contest_section"),
         pkg_ActNowBtn = document.querySelectorAll("#package-contest_section .actNowBtn"),
         // pkg_Contest_MainCpy = new SplitText("#package-contest_section main h6",{type:"words,lines"}),
         pkg_Contest_MainCpy = document.querySelectorAll("#package-contest_section main .contestMainText h6"),
@@ -52,10 +48,26 @@ function UC_Init(){
         UC_OB_BenefitCard = document.querySelectorAll("#package-ob_section .Current .mainFeatureRepeat .benefitCard"),        
         UC_OB_MainCpy = document.querySelectorAll("#package-ob_section .Current .ob_Main .mainFeatureTxt p"),
         UC_OB_Footer_Cpy = document.querySelectorAll("#package-ob_section .Current .ob_Main .ob_Ftr"),
-        UC_ProdSec = document.querySelector("#package-product_section"),
-        OBvisibility = spectrumContest[0][0].OBvisibility,  //HIDE OB when set via admin/xml 
-        pkgCookie = _packageGetValue("UC_Start");  //Get the session storage variable... Please make the storage variable name unique for this package.
+        UC_ProdSec = document.querySelector("#package-product_section");
 
+
+        function updateSize() {
+            // MIC_PackageDiv.textContent = window.innerWidth;
+
+            if (window.innerWidth <= 600) {
+                //Screen is 600px or below....
+                // <div id="package-wrap" class="mobilePkg"></div>
+                UC_PackageDiv.classList.add("mobilePkg");
+                // location.reload();
+            }else{
+                UC_PackageDiv.classList.remove("mobilePkg");
+                // location.reload();
+                
+            }
+        }
+
+        updateSize();
+        window.addEventListener("resize", updateSize);
 
     // Button Pulse Animation
     let UC_BtnPulse = new TimelineMax({ paused: true, delay:0.5,repeatDelay:1.25, repeat: -1})
@@ -86,8 +98,6 @@ function UC_Init(){
             UC_IntroAni.from([pkg_Contest_Footer_Cpy_Mobile,pkg_ActNowBtn,pkg_Contest_Footer_Cpy],{duration:0.5,opacity:0,ease:"none"})
         }
         
-        
-
     // OB - Animations
 
     //Ternary operator to check if the package is mobile or desktop -- then set the colorElement accordingly.
@@ -102,7 +112,7 @@ function UC_Init(){
         UC_OBAni.from(UC_OB_BenefitCard,{duration:0.25, opacity:0,left:"-500px",stagger:{each:0.1,from:"start",grid:"auto",ease:"none"}})        
         UC_OBAni.from(UC_OB_MainCpy,{opacity:0,x:'-50px',stagger:{each:0.2,from:"start",grid:"auto",ease:"none"}})
         UC_OBAni.from(UC_OB_Footer_Cpy,{duration:0.5,opacity:'0',bottom:'472px',ease:'none'}) 
-        UC_OBAni.add(function(){ if(window.mpLoad) mpLoad(); })
+        UC_OBAni.add(function(){ document.querySelector("#mpWrap").style.display = "block"; })
         if(!UC_mobSelector){ 
             UC_OBAni.from("#disclaimersWrap",{duration:0.5,opacity:0,ease:'none'})
         }else{    
@@ -110,69 +120,19 @@ function UC_Init(){
         }           
     // OB - Animations
 
-    // NO OB - Animations
-    let UC_NoOB= new TimelineMax({paused: true, onStart:function(){ UC_BtnPulse.pause(); _packageSetValue("UC_Start",true); } });      
-        UC_NoOB.to(colorElement,{duration:0.5,backgroundImage:'none',backgroundColor:'#005826',ease:'none'},0)
-        UC_NoOB.set(UC_OBSec,{display:'none',opacity:0},0)           
-        UC_NoOB.to(pkg_Contest_sect,{duration:0.5,display:'none',opacity:0,ease:'none'},0)
-        UC_NoOB.to(UC_OrderSec,{duration:0.5,display:'block',opacity:1,ease:'none'},0)                
-        UC_NoOB.set([UC_ProdSec,"#multipageWrap"],{display:'block',opacity:1})
-        UC_NoOB.add(function(){ if(window.mpLoad) mpLoad(); })
-        if(!UC_mobSelector){ 
-            UC_NoOB.to("#disclaimersWrap",{duration:0.5,opacity:1,ease:'none'})
-        }else{    
-            UC_NoOB.to(".disclaimer",{duration:0.5,opacity:1,ease:'none'})                
-        }
-    // NO OB - Animations
+    // Play the intro animation
+    UC_IntroAni.play();
 
-
-    if (!pkgCookie) {
-        // Play the intro animation
-        UC_IntroAni.play();
-
-        //Code that looks at ALL of the package's buttons...
-        pkg_ActNowBtn.forEach((element,index) => {
-            pkg_ActNowBtn[index].addEventListener('click', function actBtn(e){
-                e.preventDefault();   
-
-                if (!SpectrumPackageFacade.UserInfo.IsUserMerchEligible()) {
-                    //if NOT eligible ... do not show merch
-                    // console.log("Non EComm Version")
-                    _packageFormSubmit();
-                } else {                            
-                    //HIDE OB when set via admin/xml 
-                    if(typeof OBvisibility !== 'undefined'){
-                        if(OBvisibility == "hideOB"){
-                            UC_NoOB.play();                            
-                        }else{
-                            UC_OBAni.play();
-                        }
-                    } 
-                }
-            });
+    //Code that looks at ALL of the package's buttons...
+    pkg_ActNowBtn.forEach((element,index) => {
+        pkg_ActNowBtn[index].addEventListener('click', function actBtn(e){
+            e.preventDefault();   
+            UC_OBAni.play();
         });
-        //Code that looks at the package's button...
-        
-    } else {
-        //Post click -- user already activated - Show everything & mpLoad....
-        console.log("Reloaded Page... Show everything & mpLoad....")
-        UC_IntroAni.progress(1);
-
-        if(typeof OBvisibility !== 'undefined'){
-            if(OBvisibility == "hideOB"){
-                UC_NoOB.progress(1);
-            }else{
-                UC_OBAni.progress(1);
-            }
-        } 
-    }
-
-    //HIDE OB when set via admin/xml 
-    if(typeof OBvisibility !== 'undefined'){
-        if(OBvisibility == "hideOB") UC_OBSec.style.display = "none";
-    }
+    });
+    //Code that looks at the package's button...
 	
-	$("#copyright").html(new Date(SERVER_DATE).getFullYear());
+	$("#copyright").html(new Date().getFullYear());
 
 };
 
@@ -192,7 +152,6 @@ function createCoupons(coupon_number,coupon_counter){
 
         // Inject it into the DOM
         contest_elem.after(contest_clone);
-
 
         coupon_counter++;
 		
@@ -231,104 +190,13 @@ function createBenefitCoupons(OB_coupon_number, OB_coupon_counter){
 
 }
 
-
 function UC_GetUserSegmentCode(){
+    console.log("get user seg codes")
 
-    let ImpInfo_Seg_balance = document.querySelectorAll(".ob_dir_Msg .balance"),
-        ImpInfo_Seg_prospects = document.querySelectorAll(".ob_dir_Msg .prospect"),
-        ImpInfo_Seg_Lapsed = document.querySelectorAll(".ob_dir_Msg .lapsed"),
-        ImpInfo_Seg_offline = document.querySelectorAll(".ob_dir_Msg .offline"),
-        ImpInfo_Seg_preferred = document.querySelectorAll(".ob_dir_Msg .preferred"),
-        ImpInfo_Seg_prefPlus = document.querySelectorAll(".ob_dir_Msg .prefPlus"),
-        ImpInfo_Seg_prezPref = document.querySelectorAll(".ob_dir_Msg .presPreferred"),
-        ImpInfo_Seg_DecelPrezPref = document.querySelectorAll(".ob_dir_Msg .decelPresPreferred");
-    
-    /*Get user type (Buyer/Prospects)*/
-    _packageGetUserType().done(function(userType){ 
-        console.log("User: "+userType) 
-        switch(userType.toString()){
-            case "buyer":
-                //BUYER
-                /*Get User's segment code*/
-                _packageGetSegment().done(function(segCode){ 
-                    switch(segCode.toString()){                            
-                        case 'BL':
-                        case 'LB':
-                            console.log("lapsed");  
-                            for(var UCI=0;UCI<ImpInfo_Seg_Lapsed.length;UCI++){
-                                ImpInfo_Seg_Lapsed[UCI].style.display = "block";
-                                ImpInfo_Seg_Lapsed[UCI].classList.add("Current");
-                            }
-                        break;                     
-                        case "OFNB":
-                            console.log("offline");        
-                            for(var UCI=0;UCI<ImpInfo_Seg_offline.length;UCI++){
-                                ImpInfo_Seg_offline[UCI].style.display = "block";
-                                ImpInfo_Seg_offline[UCI].classList.add("Current");                         
-                            }                          
-                        break;  
-                        case "BPV2":
-                            console.log("preferred");        
-                            for(var UCI=0;UCI<ImpInfo_Seg_preferred.length;UCI++){
-                                ImpInfo_Seg_preferred[UCI].style.display = "block";
-                                ImpInfo_Seg_preferred[UCI].classList.add("Current");                          
-                            }                        
-                        break;         
-                        case "BPV3":
-                            console.log("prefPlus");        
-                            for(var UCI=0;UCI<ImpInfo_Seg_prefPlus.length;UCI++){
-                                ImpInfo_Seg_prefPlus[UCI].style.display = "block";
-                                ImpInfo_Seg_prefPlus[UCI].classList.add("Current");                         
-                            }                         
-                        break;         
-                        case "BPP":
-                            console.log("presPref");        
-                            for(var UCI=0;UCI<ImpInfo_Seg_prezPref.length;UCI++){
-                                ImpInfo_Seg_prezPref[UCI].style.display = "block";
-                                ImpInfo_Seg_prezPref[UCI].classList.add("Current");                          
-                            }                     
-                        break;  
-                        case "BPPN":                                                                              
-                            console.log("decelPresPreferred");              
-                            for(var UCI=0;UCI<ImpInfo_Seg_DecelPrezPref.length;UCI++){
-                                ImpInfo_Seg_DecelPrezPref[UCI].style.display = "block";
-                                ImpInfo_Seg_DecelPrezPref[UCI].classList.add("Current");                          
-                            }                     
-                        break;                                                                                
-                        default:
-                            console.log("Balance User");
-                            for(var UCI=0;UCI<ImpInfo_Seg_balance.length;UCI++){
-                                ImpInfo_Seg_balance[UCI].style.display = "block";
-                                ImpInfo_Seg_balance[UCI].classList.add("Current");                           
-                            }
-                        break;
-                    }                                                    
-                }).fail(function(error){ 
-                    console.log("Failed: "+error)    
-                    //Failed? Show balance... 
-                    for(var UCI=0;UCI<ImpInfo_Seg_balance.length;UCI++){
-                        ImpInfo_Seg_balance[UCI].style.display = "block";
-                        ImpInfo_Seg_balance[UCI].classList.add("Current");
-                    }       
-                })
-                /*Get User's segment code*/
-            break;
+    let UC_Seg_balance = document.querySelectorAll(".ob_dir_Msg .balance");
+    for(var IARI=0;IARI<UC_Seg_balance.length;IARI++){
+        UC_Seg_balance[IARI].style.display = "block";
+        UC_Seg_balance[IARI].classList.add("Current");                           
+    }
 
-            default:
-                //PROSPECTS
-                console.log("Prospect User");                                
-                for(var UCI=0;UCI<ImpInfo_Seg_prospects.length;UCI++){
-                    ImpInfo_Seg_prospects[UCI].style.display = "block";
-                    ImpInfo_Seg_prospects[UCI].classList.add("Current");
-                }
-            break;      
-        }
-    }).fail(function(error){ 
-        console.log("Failed: "+error)
-        for(var UCI=0;UCI<ImpInfo_Seg_balance.length;UCI++){
-            ImpInfo_Seg_balance[UCI].style.display = "block";
-            ImpInfo_Seg_balance[UCI].classList.add("Current");
-        }
-    });
-    /*Get user type (Buyer/Prospects)*/
 }

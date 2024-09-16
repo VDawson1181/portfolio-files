@@ -34,43 +34,31 @@ body {
   display: none;
   overflow-x: hidden;
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#db285f+0,db285f+50,221a83+50,221a83+50,221a83+50,221a83+100 */
-  background: #db285f;
-  /* Old browsers */
-  /* FF3.6-15 */
-  /* Chrome10-25,Safari5.1-6 */
-  background: -webkit-gradient(linear, left top, right top, from(#db285f), color-stop(50%, #db285f), color-stop(50%, #221a83), color-stop(50%, #221a83), color-stop(50%, #221a83), to(#221a83));
-  background: linear-gradient(to right, #db285f 0%, #db285f 50%, #221a83 50%, #221a83 50%, #221a83 50%, #221a83 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#db285f', endColorstr='#221a83',GradientType=1 );
-  /* IE6-9 */
+  background: #db285f; /* Old browsers */ /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #db285f 0%, #db285f 50%, #221a83 50%, #221a83 50%, #221a83 50%, #221a83 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#db285f", endColorstr="#221a83",GradientType=1 ); /* IE6-9 */
   /*Block*/
   /*Modifier*/
 }
-
 #package-contest_section .stage {
   margin: 20px auto;
-  background-color: white;
-  -webkit-box-shadow: black 0px 0px 21px;
-          box-shadow: black 0px 0px 21px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgb(0, 0, 0) 0px 0px 21px;
 }
-
 #package-contest_section .stage--big {
   width: 298px;
   height: 640px;
   position: relative;
 }
-
 #package-contest_section .stage__clock {
   width: 100%;
   height: 110px;
   color: #fff;
   background-color: #1a086a;
   border: 3px solid #fff;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   overflow: hidden;
 }
-
 #package-contest_section .stage__clock h6 {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
@@ -80,40 +68,25 @@ body {
   font-style: italic;
   text-align: center;
 }
-
 #package-contest_section .stage__clock .stage__clock__inner {
   margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  align-content: center;
+  justify-content: center;
   opacity: 0;
 }
-
 #package-contest_section .stage__clock .stage__clock__inner li:nth-child(even) {
   width: 15px;
   margin-top: 20px;
 }
-
 #package-contest_section .stage__clock .stage__clock__inner li {
   width: 145px;
   position: relative;
   text-align: center;
 }
-
 #package-contest_section .stage__clock .stage__clock__inner li .stage__clock__hdr {
   width: 100%;
   text-align: center;
@@ -121,21 +94,18 @@ body {
   top: 0;
   left: 0;
 }
-
 #package-contest_section .stage__clock .stage__clock__inner li .stage__clock__hdr {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 11px;
   line-height: 11px;
 }
-
 #package-contest_section .stage__clock .stage__clock__inner li .stage__clock__num {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-size: 60px;
   line-height: 81px;
 }
-
 #package-contest_section .stage__clock .stage__clock__inner li .stage__clock__seperator {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
@@ -143,54 +113,46 @@ body {
   font-size: 60px;
   line-height: 40px;
 }
-
 #package-contest_section .stage__main {
   text-align: center;
 }
-
 #package-contest_section .stage__main p {
   font-size: 18px;
   line-height: 25px;
   color: #000;
   margin-top: 10px;
 }
-
 #package-contest_section .stage__main .stage__main__hdr {
   width: 278px;
   margin: 6px auto 5px;
-  border: 3px solid #db285f;
-  color: #db285f;
+  border: 3px solid rgb(219, 40, 95);
+  color: rgb(219, 40, 95);
   padding: 5px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   text-transform: uppercase;
   font-family: "Nunito Sans", sans-serif;
   font-weight: 900;
   font-size: 25px;
   line-height: 27px;
-  -webkit-transform: rotate(1deg);
-          transform: rotate(1deg);
+  transform: rotate(1deg);
   -webkit-mask-image: url("../images/W1MMT_grunge.png");
   -webkit-mask-size: 944px 604px;
   mask-image: url("../images/W1MMT_grunge.png");
   mask-size: 944px 604px;
   mix-blend-mode: multiply;
 }
-
 #package-contest_section .stage__main .stage__main__contestAmt, #package-contest_section .stage__main .stage__main__contestAward {
-  color: #db285f;
+  color: rgb(219, 40, 95);
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 25px;
   line-height: 27px;
   text-transform: uppercase;
 }
-
 #package-contest_section .stage__main .stage__main__contestAmt {
   font-size: 40px;
   line-height: 50px;
 }
-
 #package-contest_section .stage__main .stage__main__handwriting {
   margin-top: 5px;
   display: inline-block;
@@ -201,19 +163,16 @@ body {
   line-height: 23px;
   position: relative;
 }
-
 #package-contest_section .stage__main .stage__main__handwriting h6 {
   position: relative;
   z-index: 55;
 }
-
 #package-contest_section .stage__main .stage__main__handwriting .handwriting_highlight {
   width: 278px;
   position: absolute;
   top: 0;
   z-index: 48;
 }
-
 #package-contest_section .stage__main .stage__main__handwriting .handwriting_highlight {
   width: 298px;
   height: 78px;
@@ -222,20 +181,17 @@ body {
   top: 0;
   left: -15px;
 }
-
 #package-contest_section .stage__main .stage__main__underlines {
   width: 278px;
   height: 15px;
   margin: 0 auto;
 }
-
 #package-contest_section .stage__main .stage__main__underlines .underlines {
   display: block;
   width: 278px;
   height: 15px;
   background: transparent url("../images/mobile/W1MMT_Underlines.png") 0px center no-repeat;
 }
-
 #package-contest_section .stage__main .stage__main__BtnSec .stage__main__Btn {
   display: block;
   width: 232px;
@@ -243,7 +199,7 @@ body {
   text-align: center;
   cursor: pointer;
   margin: 15px auto 10px;
-  border: 1px solid #db285f;
+  border: 1px solid rgb(219, 40, 95);
   border-radius: 50px;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
@@ -251,13 +207,11 @@ body {
   font-size: 28px;
   line-height: 52px;
   text-transform: uppercase;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 10px 0px;
-          box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 10px 0px;
-  background: #db285f none repeat scroll 0% 0%;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 10px 0px;
+  background: rgb(219, 40, 95) none repeat scroll 0% 0%;
   position: relative;
   z-index: 88;
 }
-
 #package-contest_section .stage__main .stage__main__BtnSec .stage__main__ftrCpy {
   text-align: center;
 }
@@ -266,21 +220,17 @@ body {
   display: none;
   background-color: #2caa8e;
 }
-
 #package-order_section #package-ob_section {
   width: 320px;
   margin: 0 auto;
   overflow: hidden;
 }
-
 #package-order_section #package-ob_section #OB_DirMsg {
   text-align: center;
 }
-
 #package-order_section #package-ob_section #OB_DirMsg .presPreferred, #package-order_section #package-ob_section #OB_DirMsg .prefPlus, #package-order_section #package-ob_section #OB_DirMsg .preferred, #package-order_section #package-ob_section #OB_DirMsg .offline, #package-order_section #package-ob_section #OB_DirMsg .prospect, #package-order_section #package-ob_section #OB_DirMsg .lapsed, #package-order_section #package-ob_section #OB_DirMsg .balance {
   display: none;
 }
-
 #package-order_section #package-ob_section #OB_DirMsg .ob__stage1 {
   height: 100vh;
   font-family: "Acme", sans-serif;
@@ -291,17 +241,14 @@ body {
   line-height: 56px;
   padding-top: 50px;
 }
-
 #package-order_section #package-ob_section #OB_DirMsg .ob__stage1 .presPreferred, #package-order_section #package-ob_section #OB_DirMsg .ob__stage1 .prefPlus {
   font-size: 48px;
   line-height: 56px;
 }
-
 #package-order_section #package-ob_section #OB_DirMsg .ob__stage1 .offline {
   font-size: 52px;
   line-height: 56px;
 }
-
 #package-order_section #package-ob_section #OB_DirMsg .ob__stage2 .ob__stage2__top h6 {
   font-family: "Acme", sans-serif;
   font-weight: 400;
@@ -310,18 +257,15 @@ body {
   color: #fff;
   padding-top: 5px;
 }
-
 #package-order_section #package-ob_section #OB_DirMsg .ob__stage2 .ob__stage2__top h6 .ob__S2__Underline {
   display: inline-block;
   text-decoration: underline;
 }
-
 #package-order_section #package-ob_section #OB_DirMsg .ob__stage2 .ob__stage2__top h6 .ob__underline {
   position: relative;
   color: #fff194;
   font-style: italic;
 }
-
 #package-order_section #package-ob_section #OB_DirMsg .ob__stage2 .ob__stage2__top h6 .ob__underline::after {
   content: "";
   position: absolute;
@@ -331,28 +275,23 @@ body {
   height: 14px;
   background: transparent url("../images/mobile/W1MMT_OBUnderlines.png") 0 0 no-repeat;
 }
-
 #package-order_section #package-ob_section #OB_DirMsg .ob__stage2 .ob__stage2__top h6.prefPlus {
   padding-bottom: 10px;
 }
-
 #package-order_section #package-ob_section #OB_DirMsg .ob__stage2 .ob__stage2__mid {
   background-color: #fff194;
   font-family: "Montserrat", sans-serif;
   font-weight: 800;
   overflow: hidden;
-  -webkit-box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.77);
-          box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.77);
+  box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.77);
   margin: 10px 0px;
 }
-
 #package-order_section #package-ob_section #OB_DirMsg .ob__stage2 .ob__stage2__mid .ob__stage2__mid__wrapper {
   width: 320px;
   margin: 5px auto 0px;
   text-align: left;
   position: relative;
 }
-
 #package-order_section #package-ob_section #OB_DirMsg .ob__stage2 .ob__stage2__mid .ob__stage2__mid__wrapper .ob__stage2__mid__seal {
   background: transparent url("../images/W1MMT_Seal.png") center center no-repeat;
   background-size: contain;
@@ -365,7 +304,6 @@ body {
   overflow: hidden;
   text-indent: -1000px;
 }
-
 #package-order_section #package-ob_section #OB_DirMsg .ob__stage2 .ob__stage2__mid .ob__stage2__mid__wrapper .Current ul {
   width: 100%;
   margin: 0 auto;
@@ -374,24 +312,20 @@ body {
   left: 0px;
   padding: 5px 0;
 }
-
 #package-order_section #package-ob_section #OB_DirMsg .ob__stage2 .ob__stage2__mid .ob__stage2__mid__wrapper .Current ul li {
   color: #2caa8e;
   list-style: disc;
   list-style-position: outside;
   margin: 0px 0 10px 50px;
 }
-
 #package-order_section #package-ob_section #OB_DirMsg .ob__stage2 .ob__stage2__mid .ob__stage2__mid__wrapper .lapsed.Current li, #package-order_section #package-ob_section #OB_DirMsg .ob__stage2 .ob__stage2__mid .ob__stage2__mid__wrapper .preferred.Current li, #package-order_section #package-ob_section #OB_DirMsg .ob__stage2 .ob__stage2__mid .ob__stage2__mid__wrapper .prospect.Current li, #package-order_section #package-ob_section #OB_DirMsg .ob__stage2 .ob__stage2__mid .ob__stage2__mid__wrapper .presPreferred li {
   font-size: 22px;
   line-height: 27px;
 }
-
 #package-order_section #package-ob_section #OB_DirMsg .ob__stage2 .ob__stage2__mid .ob__stage2__mid__wrapper .offline.Current li, #package-order_section #package-ob_section #OB_DirMsg .ob__stage2 .ob__stage2__mid .ob__stage2__mid__wrapper .balance.Current li {
   font-size: 20px;
   line-height: 28px;
 }
-
 #package-order_section #package-ob_section #OB_DirMsg .ob__stage2 .ob__stage2__ftr h6 {
   font-family: "Acme", sans-serif;
   font-weight: 400;
@@ -448,5 +382,4 @@ body {
   position: absolute;
   top: 0;
   z-index: 10;
-}
-/*# sourceMappingURL=m.package.WTV14.css.map */
+}/*# sourceMappingURL=m.package.WTV14.css.map */
