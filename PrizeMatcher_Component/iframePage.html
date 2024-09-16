@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IFrame</title>
+    <link rel="stylesheet" href="//scdn.pch.com/spectrum/css/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/prize_matcher.css">
+</head>
+<body>
+    <div id="iframePage">
+        <img id="pch_logo" class="pm_default_ease" src="images/prize_matcher_logo_pch.png" alt="Publisher's Clearing House">
+        <img id="pm_Logo_Main" class="pm_default_ease" src="images/prize_matcher_logo_main.png" alt="Ultimate Prize Matcher">
+        <img id="pm_coins_bkgrnd" class="pm_default_ease" src="images/prize_matcher_Tokens.png" alt="Ultimate Prize Matcher">
+        <section id="pm_content_main">
+            <div class="screens screen_intro">
+                <p class="exbold_font">Answer A Few <br> Quick Questions</p>
+                <p class="reg_font">and we'll find The</p>
+                <p class="bold_yellow_font">Perfect Prize</p>
+                <p class="bold_font">For You,</p>
+                <p class="reg_font">plus we'll give you an incredible</p>
+                <p class="bold_font">100,000 Tokens</p>
+                <a class="intro_Btn">Let's Go</a>
+                <a id="pm_privacy_link" target="_blank" href="https://privacy.pch.com/privacy-choices">Your Privacy Choices</a>
+            </div>
+            <div id="question_cover" class="pm_default_ease">
+                <ul id="screenQuestions" class="pm_default_ease">
+                </ul>
+                <section id="pm_screen_claim" class="screens">
+                    <p class="bold_font">We Think we've found</p>
+                    <p class="exbold_font">The Ultimate Prizes For You!</p>
+                    <p class="reg_font">(We really hope you love them!)</p>
+                    <ul class="screenAnswers">
+                        <li class="pm_prize_1"></li>
+                        <li class="pm_prize_2"></li>
+                        <li class="pm_prize_3"></li>
+                        <li class="pm_prize_4"></li>
+                    </ul>
+                    <p class="reg_font">Claim Your</p>
+                    <p class="exbold_font">100,000 Tokens Now!</p>
+                    <a class="answer answer_final">Claim Now</a>
+                </section>
+                <section id="pm_screen_outro" class="screens">
+                    <p class="exbold_font">You Got 100,000 Tokens</p>
+                    <p class="semibold_font">Now you can use them to enter to win all <br> these prizes we've matched you with & <br> So many more right away!</p>
+                    <ul class="screenAnswers">
+                        <li class="pm_prize_1"></li>
+                        <li class="pm_prize_2"></li>
+                        <li class="pm_prize_3"></li>
+                        <li class="pm_prize_4"></li>
+                    </ul>
+                    <a id="ShowMeMoreLink" data-showmorelink="https://www.pch.com" href="https://www.pch.com" target="_blank">Show Me More Prizes</a>
+                </section>
+            </div>
+        </section>
+    </div>
+
+    <script src="scripts/prize_matcher_iframe.js"></script>
+</body>
+</html>
