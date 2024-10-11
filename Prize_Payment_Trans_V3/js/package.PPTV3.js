@@ -101,7 +101,6 @@ function PPTV3_Init() {
             PPTV3_OB_Ani.to(PPTV3_OrderSec,{duration:0.5,display:'block',opacity:1,ease:'none'})
             PPTV3_OB_Ani.from(PPTV3_OB_PinkSlip,{duration:0.5,scale:0,top:'0px',ease:'none'})        
             PPTV3_OB_Ani.to(PPTV3_ProdSec,{duration:0.5,opacity:1,ease:'none'})        
-            // if (!pkgCookie) { PPTV3_OB_Ani.to(window, {duration: 0.5, scrollTo: {y: ".PPTV3_OB_Header", offsetY: 50}}) }
             PPTV3_OB_Ani.from(".Current .PPTV3_OB_PS_Ftr-Highlight",{duration:0.5,width:0,ease:'none'})        
             // OB - Animations
         }  

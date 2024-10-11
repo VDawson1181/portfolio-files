@@ -599,12 +599,15 @@ body {
     transform: scale(0);
   }
   #package-contest_section .PPTV3_Modal h6 {
-    font-size: 25px;
-    line-height: 32px;
+    font-size: 24px;
+    line-height: 27px;
   }
   #package-contest_section .PPTV3_Modal h6 span {
     color: rgb(255, 254, 162);
     font-style: italic;
+    display: block;
+    font-size: 35px;
+    line-height: 42px;
   }
   #package-contest_section .PPTV3_Modal .PPTV3_Modal_contest h5 {
     width: 290px;
@@ -641,13 +644,14 @@ body {
     background: transparent url("../images/mobile/PPTV3_OB_highlight_ModalUL.png") 0 0 no-repeat;
   }
   #package-contest_section .PPTV3_Modal p {
+    width: 300px;
     min-height: 90px;
     margin: 5px auto 0;
     background: transparent url("../images/mobile/PPTV3_OB_ModalUL.png") bottom center no-repeat;
     position: relative;
     z-index: 51;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 28px;
+    font-size: 25px;
     line-height: 31px;
     font-weight: bold;
     font-style: italic;
