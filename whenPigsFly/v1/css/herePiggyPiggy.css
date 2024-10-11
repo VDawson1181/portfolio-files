@@ -1,0 +1,394 @@
+body{ 
+	background-color:#efefef; 
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+h1{
+	text-align: center;
+	font-size: 40px;
+	color: #666;		
+}
+
+#subWrapper{
+	
+	width: 950px;
+	margin: 20px auto;
+	
+}
+
+#playArea{
+	background: transparent url("../images/countryside-path-landscape.jpg") center top no-repeat;
+	height: 500px;
+	width: 100%;
+	margin: 0 auto;
+	border: 2px solid #666;
+	position: relative;
+	overflow: hidden;	
+	
+	-moz-border-radius: 10px; 
+	-webkit-border-radius: 10px; 
+	-o-border-radius: 10px; 
+	-ms-border-radius: 10px; 
+	border-radius: 10px; 
+}
+
+#playArea h1{
+	color: #ececec;
+	font-size: 450px;
+	width: 100%;
+	font-weight: bold;
+	position: absolute;
+	z-index: 1;	
+	text-align: center;
+	
+		-moz-opacity: 0.35;
+	-webkit-opacity: 0.35;
+	-o-opacity: 0.35;
+	-ms-opacity: 0.35;
+	opacity: 0.35;
+}
+
+#playArea .timedOverlay{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 90;
+	width: 100%;
+	height: 100%;	
+	display: none;
+}
+
+#playArea .timedOverlay .timeCover{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	background: #333;
+	
+	-moz-opacity: 0.85;
+	-webkit-opacity: 0.85;
+	-o-opacity: 0.85;
+	-ms-opacity: 0.85;
+	opacity: 0.85;
+}
+
+#playArea .timedOverlay p{	
+	color: #fff;
+	font-size: 200px;
+	position: relative;
+	text-align: center;
+	z-index: 2;
+}
+
+#playArea #pigPen{ position: relative; z-index: 75;}
+
+#playArea #pigPen div.piggyTrooper{
+	width: 184px;
+	height: 216px;	
+	position: absolute;	
+	top: -230px;
+	display: block;
+	z-index: 75;
+}
+
+#playArea #pigPen p.piggy{
+	background: transparent url("../images/pigparachute.png") center top no-repeat;
+	width: 184px;
+	height: 216px;
+	/*top: 0;*/
+}
+
+/*#playArea #pigPen p.piggy:nth-child(1){ top: 200px; }
+#playArea #pigPen p.piggy:nth-child(2){ left: 50px; }
+#playArea #pigPen p.piggy:nth-child(3){ left: 100px; }
+#playArea #pigPen p.piggy:nth-child(4){ left: 150px; }
+#playArea #pigPen p.piggy:nth-child(5){ left: 200px; }
+#playArea #pigPen p.piggy:nth-child(6){ left: 250px; }*/
+
+/*#playArea #pigPen div.piggyTrooper:nth-child(1){ 
+	-webkit-animation-duration: 7s;
+	-moz-animation-duration: 7s;	
+	-ms-animation-duration: 7s;		
+	-o-animation-duration: 7s;		
+	animation-duration: 7s;
+}
+#playArea #pigPen div.piggyTrooper:nth-child(2){ 
+	-webkit-animation-duration: 2s;
+	-moz-animation-duration: 2s;	
+	-ms-animation-duration: 2s;		
+	-o-animation-duration: 2s;		
+	animation-duration: 2s;
+}
+#playArea #pigPen div.piggyTrooper:nth-child(3){ 
+	-webkit-animation-duration: 3s;
+	-moz-animation-duration: 3s;	
+	-ms-animation-duration: 3s;		
+	-o-animation-duration: 3s;		
+	animation-duration: 3s;
+}
+#playArea #pigPen div.piggyTrooper:nth-child(4){ 
+	-webkit-animation-duration: 4s;
+	-moz-animation-duration: 4s;	
+	-ms-animation-duration: 4s;		
+	-o-animation-duration: 4s;		
+	animation-duration: 4s;
+}
+#playArea #pigPen div.piggyTrooper:nth-child(5){ 
+	-webkit-animation-duration: 5s;
+	-moz-animation-duration: 5s;	
+	-ms-animation-duration: 5s;		
+	-o-animation-duration: 5s;		
+	animation-duration: 5s;
+}
+#playArea #pigPen div.piggyTrooper:nth-child(6){ 
+	-webkit-animation-duration: 6s;
+	-moz-animation-duration: 6s;	
+	-ms-animation-duration: 6s;		
+	-o-animation-duration: 6s;		
+	animation-duration: 6s;
+}*/
+/*****Group 1*****/
+#playArea #pigPen div.piggyTrooper:nth-child(1){ 
+	-webkit-animation-delay: 1s;
+	-moz-animation-delay: 1s;	
+	-ms-animation-delay: 1s;		
+	-o-animation-delay: 1s;		
+	animation-delay: 1s;
+}
+#playArea #pigPen div.piggyTrooper:nth-child(2){ 
+	-webkit-animation-delay: 2s;
+	-moz-animation-delay: 2s;	
+	-ms-animation-delay: 2s;		
+	-o-animation-delay: 2s;		
+	animation-delay: 2s;
+}
+#playArea #pigPen div.piggyTrooper:nth-child(3){ 
+	-webkit-animation-delay: 3s;
+	-moz-animation-delay: 3s;	
+	-ms-animation-delay: 3s;		
+	-o-animation-delay: 3s;		
+	animation-delay: 3s;
+}
+#playArea #pigPen div.piggyTrooper:nth-child(4){ 
+	-webkit-animation-delay: 4s;
+	-moz-animation-delay: 4s;	
+	-ms-animation-delay: 4s;		
+	-o-animation-delay: 4s;		
+	animation-delay: 4s;
+}
+#playArea #pigPen div.piggyTrooper:nth-child(5){ 
+	-webkit-animation-delay: 5s;
+	-moz-animation-delay: 5s;	
+	-ms-animation-delay: 5s;		
+	-o-animation-delay: 5s;		
+	animation-delay: 5s;
+}
+#playArea #pigPen div.piggyTrooper:nth-child(6){ 
+	-webkit-animation-delay: 6s;
+	-moz-animation-delay: 6s;	
+	-ms-animation-delay: 6s;		
+	-o-animation-delay: 6s;		
+	animation-delay: 6s;
+}
+
+/*****Group 2*****/
+#playArea #pigPen div.piggyTrooper:nth-child(7){ 
+	-webkit-animation-delay: 1.5s;
+	-moz-animation-delay: 1.5s;	
+	-ms-animation-delay: 1.5s;		
+	-o-animation-delay: 1.5s;		
+	animation-delay: 1.5s;
+}
+#playArea #pigPen div.piggyTrooper:nth-child(8){ 
+	-webkit-animation-delay: 2.5s;
+	-moz-animation-delay: 2.5s;	
+	-ms-animation-delay: 2.5s;		
+	-o-animation-delay: 2.5s;		
+	animation-delay: 2.5s;
+}
+#playArea #pigPen div.piggyTrooper:nth-child(9){ 
+	-webkit-animation-delay: 3.5s;
+	-moz-animation-delay: 3.5s;	
+	-ms-animation-delay: 3.5s;		
+	-o-animation-delay: 3.5s;		
+	animation-delay: 3.5s;
+}
+#playArea #pigPen div.piggyTrooper:nth-child(10){ 
+	-webkit-animation-delay: 4.5s;
+	-moz-animation-delay: 4.5s;	
+	-ms-animation-delay: 4.5s;		
+	-o-animation-delay: 4.5s;		
+	animation-delay: 4.5s;
+}
+#playArea #pigPen div.piggyTrooper:nth-child(11){ 
+	-webkit-animation-delay: 5.5s;
+	-moz-animation-delay: 5.5s;	
+	-ms-animation-delay: 5.5s;		
+	-o-animation-delay: 5.5s;		
+	animation-delay: 5.5s;
+}
+#playArea #pigPen div.piggyTrooper:nth-child(12){ 
+	-webkit-animation-delay: 6.5s;
+	-moz-animation-delay: 6.5s;	
+	-ms-animation-delay: 6.5s;		
+	-o-animation-delay: 6.5s;		
+	animation-delay: 6.5s;
+}
+
+/*****Group 3*****/
+#playArea #pigPen div.piggyTrooper:nth-child(13){ 
+	-webkit-animation-delay: 7s;
+	-moz-animation-delay: 7s;	
+	-ms-animation-delay: 7s;		
+	-o-animation-delay: 7s;		
+	animation-delay: 7s;
+}
+#playArea #pigPen div.piggyTrooper:nth-child(14){ 
+	-webkit-animation-delay: 8s;
+	-moz-animation-delay: 8s;	
+	-ms-animation-delay: 8s;		
+	-o-animation-delay: 8s;		
+	animation-delay: 8s;
+}
+#playArea #pigPen div.piggyTrooper:nth-child(15){ 
+	-webkit-animation-delay: 9s;
+	-moz-animation-delay: 9s;	
+	-ms-animation-delay: 9s;		
+	-o-animation-delay: 9s;		
+	animation-delay: 9s;
+}
+#playArea #pigPen div.piggyTrooper:nth-child(16){ 
+	-webkit-animation-delay: 10s;
+	-moz-animation-delay: 10s;	
+	-ms-animation-delay: 10s;		
+	-o-animation-delay: 10s;		
+	animation-delay: 10s;
+}
+#playArea #pigPen div.piggyTrooper:nth-child(17){ 
+	-webkit-animation-delay: 11s;
+	-moz-animation-delay: 11s;	
+	-ms-animation-delay: 11s;		
+	-o-animation-delay: 11s;		
+	animation-delay: 11s;
+}
+#playArea #pigPen div.piggyTrooper:nth-child(18){ 
+	-webkit-animation-delay: 12s;
+	-moz-animation-delay: 12s;	
+	-ms-animation-delay: 12s;		
+	-o-animation-delay: 12s;		
+	animation-delay: 12s;
+}
+
+@-webkit-keyframes piggyDrop {
+	0% {top: -230px;}	
+	100% {top: 520px;}
+}
+
+@-moz-keyframes piggyDrop {
+	0% {top: -230px;}	
+	100% {top: 520px;}
+}
+
+@-o-keyframes piggyDrop {
+	0% {top: -230px;}	
+	100% {top: 520px;}
+}
+
+@keyframes piggyDrop {
+	0% {top: -230px;}	
+	100% {top: 520px;}
+}
+
+.piggyDrop {
+	-webkit-animation-name: piggyDrop;
+	-moz-animation-name: piggyDrop;
+	-o-animation-name: piggyDrop;
+	animation-name: piggyDrop;
+	
+		-webkit-animation-duration: 3.5s;
+	-moz-animation-duration: 3.5s;	
+	-ms-animation-duration: 3.5s;		
+	-o-animation-duration: 3.5s;		
+	animation-duration: 3.5s;
+	
+		-webkit-animation-iteration-count: 1; 	
+	-moz-animation-iteration-count: 1; 	
+	-ms-animation-iteration-count: 1; 	
+	-o-animation-iteration-count: 1; 				
+	animation-iteration-count: 1;
+}
+
+
+@-webkit-keyframes piggy_rocking {
+  0%{ -webkit-transform: rotate(0deg);}
+  25% { -webkit-transform: rotate(6deg); }
+  75% { -webkit-transform: rotate(-6deg);}  
+}
+
+@-moz-keyframes piggy_rocking {
+  0%{ -moz-transform: rotate(0deg);}
+  25% { -moz-transform: rotate(6deg); }
+  75% { -moz-transform: rotate(-6deg);}  
+}
+
+@-o-keyframes piggy_rocking {
+  0%{ -o-transform: rotate(0deg); }
+  25% { -o-transform: rotate(6deg); }
+  75% { -o-transform: rotate(-6deg); }  
+}
+
+@keyframes piggy_rocking {
+  0%{ transform: rotate(0deg); }
+  25% { transform: rotate(6deg); }
+  75% { transform: rotate(-6deg); }  
+}
+
+.piggy_rock{
+	-webkit-animation: piggy_rocking 3.9s ease-in-out infinite alternate;
+	-moz-animation: piggy_rocking 3.9s ease-in-out infinite alternate;
+	-o-animation: piggy_rocking 3.9s ease-in-out infinite alternate;
+	animation: piggy_rocking 3.9s ease-in-out infinite alternate;
+	
+			transform-origin: center top;
+	-o-transform-origin: center top;
+	-moz-transform-origin: center top;
+	-webkit-transform-origin: center top;	
+}
+
+.dropIt_3000ms{
+-webkit-transition: all 3000ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
+   -moz-transition: all 3000ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
+     -o-transition: all 3000ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
+        transition: all 3000ms cubic-bezier(0.250, 0.250, 0.750, 0.750); /* linear */
+
+-webkit-transition-timing-function: cubic-bezier(0.250, 0.250, 0.750, 0.750);
+   -moz-transition-timing-function: cubic-bezier(0.250, 0.250, 0.750, 0.750);
+     -o-transition-timing-function: cubic-bezier(0.250, 0.250, 0.750, 0.750);
+        transition-timing-function: cubic-bezier(0.250, 0.250, 0.750, 0.750); /* linear */
+}
+
+.dropIt_1500ms{
+-webkit-transition: all 1500ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
+   -moz-transition: all 1500ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
+     -o-transition: all 1500ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
+        transition: all 1500ms cubic-bezier(0.250, 0.250, 0.750, 0.750); /* linear */
+
+-webkit-transition-timing-function: cubic-bezier(0.250, 0.250, 0.750, 0.750);
+   -moz-transition-timing-function: cubic-bezier(0.250, 0.250, 0.750, 0.750);
+     -o-transition-timing-function: cubic-bezier(0.250, 0.250, 0.750, 0.750);
+        transition-timing-function: cubic-bezier(0.250, 0.250, 0.750, 0.750); /* linear */	
+}
+
+.dropIt_500ms{
+-webkit-transition: all 500ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
+   -moz-transition: all 500ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
+     -o-transition: all 500ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
+        transition: all 500ms cubic-bezier(0.250, 0.250, 0.750, 0.750); /* linear */
+
+-webkit-transition-timing-function: cubic-bezier(0.250, 0.250, 0.750, 0.750);
+   -moz-transition-timing-function: cubic-bezier(0.250, 0.250, 0.750, 0.750);
+     -o-transition-timing-function: cubic-bezier(0.250, 0.250, 0.750, 0.750);
+        transition-timing-function: cubic-bezier(0.250, 0.250, 0.750, 0.750); /* linear */
+}

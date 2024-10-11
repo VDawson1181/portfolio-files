@@ -1,0 +1,224 @@
+body{ 
+	background-color:#efefef; 
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+h1{
+	text-align: center;
+	font-size: 40px;
+	color: #666;		
+}
+
+#subWrapper{	
+	width: 950px;
+	margin: 20px auto;	
+}
+
+#playArea{
+	background: transparent url("../images/countryside-path-landscape.jpg") center top no-repeat;
+	height: 500px;
+	width: 100%;
+	margin: 0 auto;
+	border: 2px solid #666;
+	position: relative;
+	overflow: hidden;	
+	
+	-moz-border-radius: 10px; 
+	-webkit-border-radius: 10px; 
+	-o-border-radius: 10px; 
+	-ms-border-radius: 10px; 
+	border-radius: 10px; 
+}
+
+#playArea video{	
+	position: absolute;
+	top: 0;
+	left: 0;	
+	z-index: 1;
+}
+
+#playArea #instructionArea{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	z-index: 5;	
+}
+
+#playArea #instructionArea div{
+	color: #ececec;
+	font-size: 70px;
+	font-weight: bold;
+	text-align: center;
+}
+
+#playArea #instructionArea div p.pigEx{
+	background: transparent url("../images/fallingPig.png") center top no-repeat;
+	background-size: contain;
+	width: 100%;
+	height: 160px;	
+	
+}
+
+#playArea #instructionArea div.startButton{
+	background-color: #0F0;
+	width: 255px;
+	padding: 10px 0;
+	margin: 0 auto;	
+	
+	-moz-border-radius: 10px; 
+	-webkit-border-radius: 10px; 
+	-o-border-radius: 10px; 
+	-ms-border-radius: 10px; 
+	border-radius: 10px; 	
+}
+
+#playArea h1{
+	color: #ececec;
+	font-size: 450px;
+	width: 100%;
+	font-weight: bold;
+	position: absolute;
+	z-index: 5;	
+	text-align: center;
+	
+		-moz-opacity: 0.35;
+	-webkit-opacity: 0.35;
+	-o-opacity: 0.35;
+	-ms-opacity: 0.35;
+	opacity: 0.35;
+}
+
+#playArea .timedOverlay{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 90;
+	width: 100%;
+	height: 100%;	
+	display: none;
+}
+
+#playArea .timedOverlay .timeCover{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	background: #333;
+	
+	-moz-opacity: 0.85;
+	-webkit-opacity: 0.85;
+	-o-opacity: 0.85;
+	-ms-opacity: 0.85;
+	opacity: 0.85;
+}
+
+#playArea .timedOverlay p{	
+	color: #fff;
+	font-size: 200px;
+	position: relative;
+	text-align: center;
+	z-index: 2;
+}
+
+#playArea #pigPen{ position: relative; z-index: 75;}
+
+#playArea #pigPen div.piggyTrooper{
+	width: 184px;
+	height: 216px;	
+	position: absolute;	
+	top: -230px;
+	display: block;
+	z-index: 75;
+}
+
+#playArea #pigPen p.piggy{
+	background: transparent url("../images/fallingPig.png") center top no-repeat;
+	background-size: contain;
+	width: 184px;
+	height: 216px;
+	/*top: 0;*/
+}
+
+@-webkit-keyframes piggyDrop {
+	0% {top: -230px;}	
+	100% {top: 520px;}
+}
+
+@-moz-keyframes piggyDrop {
+	0% {top: -230px;}	
+	100% {top: 520px;}
+}
+
+@-o-keyframes piggyDrop {
+	0% {top: -230px;}	
+	100% {top: 520px;}
+}
+
+@keyframes piggyDrop {
+	0% {top: -230px;}	
+	100% {top: 520px;}
+}
+
+.piggyDrop {
+	-webkit-animation-name: piggyDrop;
+	-moz-animation-name: piggyDrop;
+	-o-animation-name: piggyDrop;
+	animation-name: piggyDrop;
+	
+		-webkit-animation-duration: 5s;
+	-moz-animation-duration: 5s;	
+	-ms-animation-duration: 5s;		
+	-o-animation-duration: 5s;		
+	animation-duration: 5s;
+	
+		-webkit-animation-iteration-count: 1; 	
+	-moz-animation-iteration-count: 1; 	
+	-ms-animation-iteration-count: 1; 	
+	-o-animation-iteration-count: 1; 				
+	animation-iteration-count: 1;
+	
+		-webkit-animation-fill-mode: both;
+	-moz-animation-fill-mode: both;
+	-o-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+
+
+@-webkit-keyframes piggy_rocking {
+  0%{ -webkit-transform: rotate(0deg);}
+  25% { -webkit-transform: rotate(6deg); }
+  75% { -webkit-transform: rotate(-6deg);}  
+}
+
+@-moz-keyframes piggy_rocking {
+  0%{ -moz-transform: rotate(0deg);}
+  25% { -moz-transform: rotate(6deg); }
+  75% { -moz-transform: rotate(-6deg);}  
+}
+
+@-o-keyframes piggy_rocking {
+  0%{ -o-transform: rotate(0deg); }
+  25% { -o-transform: rotate(6deg); }
+  75% { -o-transform: rotate(-6deg); }  
+}
+
+@keyframes piggy_rocking {
+  0%{ transform: rotate(0deg); }
+  25% { transform: rotate(6deg); }
+  75% { transform: rotate(-6deg); }  
+}
+
+.piggy_rock{
+	-webkit-animation: piggy_rocking 3.9s ease-in-out infinite alternate;
+	-moz-animation: piggy_rocking 3.9s ease-in-out infinite alternate;
+	-o-animation: piggy_rocking 3.9s ease-in-out infinite alternate;
+	animation: piggy_rocking 3.9s ease-in-out infinite alternate;
+	
+			transform-origin: center top;
+	-o-transform-origin: center top;
+	-moz-transform-origin: center top;
+	-webkit-transform-origin: center top;	
+}
+
