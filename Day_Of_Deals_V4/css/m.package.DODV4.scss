@@ -1,0 +1,916 @@
+/*PKG_Name - Contest_Name(5KAWFL) - V1.0 - Pkg Mobile CSS by Dev_Name - ??/2019*/
+
+/******Package Specific Style Start******/
+#contestWrap{ overflow: hidden;}
+
+#mainWrap{
+	width: 320px;
+	margin: 0 auto;	
+	overflow: hidden;
+	background: #fff;
+}
+
+#mobileBody p{ padding: 10px 0;}
+
+#deviceWrap1{ display: none; }
+/******Package Specific Style Start******/
+// https://fonts.google.com/share?selection.family=Montserrat:wght@400;500;700;900%7CRoboto:wght@500
+//RobotoB Weight: 400;
+$RobotoBase: 'Roboto', sans-serif;
+@mixin RobotoBase($fntWght){
+ font-family: $RobotoBase;
+ font-weight: $fntWght;
+}
+//@include RobotoBase(400);
+
+//Montserrat Weight: 400|500|700|900;
+$MontBase: 'Montserrat', sans-serif;
+@mixin MontBase($fntWght){
+ font-family: $MontBase;
+ font-weight: $fntWght;
+}
+//@include MontBase(800);
+
+/******Default Package Style Start******/
+body{	
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: left;
+	color: #000;
+	font-size: 100%;
+	background-color: #ad1d1d;
+}
+
+.disclaimer {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 0.6875em;
+	max-width: 300px;
+	padding: 20px 0;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.disclaimer p, .disclaimer a{
+	color: #000;
+}
+
+.disclaimer p {
+	margin-bottom: 14px;
+}
+
+.isUppercase {
+	text-transform: uppercase;
+}
+/******Default Package Style End******/
+
+/*****Package Style Start*******/
+
+#package-contest_section{
+	width: 320px;
+	min-height: 600px;
+	margin: 20px auto;
+	padding-bottom: 20px;
+	overflow: hidden;
+	background: #fff url('../images/DOD_V4_Contest_Bkgrnd.png') 0 0 no-repeat;	
+	
+	// -webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
+	// -moz-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
+	// box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
+	
+
+	.contest_Sec_Hdr{
+		width: 310px;
+		height: 70px;
+		// background: transparent url(../images/DOD_V4_Hdr.png) center center no-repeat;	
+		color: #e22626;
+		
+		border-radius: 5px;
+		box-sizing: border-box;
+		position: relative;
+		left: 5px;
+		top: 5px;
+
+		.hdrBorder{
+			width: 310px;
+			height: 65px;
+			border: 4.5px solid #e22626;
+			border-radius: 5px;
+			box-sizing: border-box;
+			position: absolute;
+			top: 0;
+			left: 0;
+
+			-webkit-mask-image: url('../images/DOD_V4_grunge.png');
+			-webkit-mask-size: 944px 604px;
+			mask-image: url('../images/DOD_V4_grunge.png');
+			mask-size: 944px 604px;
+			mix-blend-mode: multiply;
+		}
+
+		.hdrArrow{
+			width: 0;
+			height: 0;
+			border-left: 9px solid transparent;
+			border-right: 9px solid transparent;
+			border-top: 7px solid #e22626;
+
+			position: absolute;
+			right: 25px;
+			top: 65px;
+
+			-webkit-mask-image: url('../images/DOD_V4_grunge.png');
+			-webkit-mask-size: 944px 604px;
+			mask-image: url('../images/DOD_V4_grunge.png');
+			mask-size: 944px 604px;
+			mix-blend-mode: multiply;
+		}
+		.hdrClock{
+			width: 58px;
+			height: 60px;
+			background: transparent url('../images/DOD_V4_Clock_img.png') center center no-repeat;
+			background-size: contain;
+			position: absolute;
+			right: 5px;
+			top: 87px;
+		}
+
+		h6{
+			// width: 619px;
+			text-align: center;
+			text-transform: uppercase;
+		}
+		h6:nth-of-type(1){
+			@include MontBase(900); 
+			font-size: 26px; 
+			line-height: 26px;
+			padding-top: 10px;
+		}
+		h6:nth-of-type(2){
+			@include MontBase(700); 
+			font-size: 15px; 
+			line-height: 20px;
+		}
+	}
+
+	.contest_Sec_Hdr_mid{
+		width: 320px;
+		height: 85px;
+		background: transparent url('../images/DOD_V4_hdr_midBkgrnd-Mob.png') center center no-repeat;
+		background-size: contain;
+		margin: 10px auto 0px;
+		text-align: center;
+		overflow: hidden;
+
+		// -webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
+		// -moz-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
+		// box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
+
+		h6{
+			width: 240px;
+			@include MontBase(900);
+			line-height: 20px;
+			font-size: 18px;
+			margin-top: 11px;
+			color:rgba(0, 0, 0, 1);
+
+			span{
+				text-transform: uppercase;
+			}
+		}
+
+	}
+
+	.contest_Sec_Contests{
+		display: flex;
+		width: 400%;
+
+		.contest{
+			// display: none;
+			width: 320px;			
+			text-align: center;
+			position: relative;
+
+			.conStamp{
+				filter: grayscale(1);
+				opacity: 1;
+			}
+
+			h6.conHdr{
+				opacity: 0;
+			}
+
+			.conCrossout{
+				width: 320px;
+				margin: 6px auto 0;
+				position: relative;
+
+				h6::before, h6::after{
+					content:'';
+					// width: 397px;
+					width: 0px;
+					height: 4px;
+					background-color: #ad1d1d;
+					opacity: 0.8;
+					position: absolute;
+					top: 0px;
+
+				}
+				h6::before{
+					left: 50px;
+					transform-origin: top left;
+					transform: rotate(4deg);
+				}
+				h6::after{					
+					right: 50px;
+					transform-origin: top right;
+					transform: rotate(-4deg);
+				}
+				h6{
+					color: #828282;
+				}
+
+			}
+		}
+
+		// Contest #1
+		.contest:nth-of-type(1){
+			height: 175px;
+			background: transparent url('../images/DOD_V4_S1Border_Mob.png') center center no-repeat;
+			background-size: contain;
+			display: block;
+			margin: 10px auto 30px;
+
+			h6{
+				margin: 0 auto;
+				// text-transform: uppercase;
+				font-size: 21px;
+				line-height: 21px;
+				@include MontBase(900);				
+				color: #e22626;
+			}
+			h6.conHdr{
+				margin-top: -21px;
+			}
+
+
+			h5{
+				font-size: 38px;
+				line-height: 38px;
+				text-transform: uppercase;
+				@include MontBase(900);				
+				color: #000;
+			}
+			h5:nth-of-type(2){
+				font-size: 33px;
+				line-height: 33px;
+			}
+
+			h4,h3{
+				font-size: 17px;
+				line-height: 17px;
+				@include MontBase(700);				
+				color: #000;
+				padding: 0px 0px 5px;
+			}
+			h3{
+				color: #e22626;
+				font-size: 16px;
+				line-height: 16px;
+				text-transform: uppercase;
+			}
+
+			.conStamp{
+				width: 156px;
+				height: 41px;
+				// border: 6px solid #e22626;
+				// border-radius: 5px;
+				box-sizing: border-box;
+				margin: 0 auto;
+				// padding: 5px;
+				position: relative;
+				top: 2px;
+				transform: rotate(-2deg);
+				// .bwView{
+				filter: grayscale(1);
+				opacity: 1;
+				// }
+
+				.stampBorder{
+					width: 156px;
+					height: 41px;
+					border: 3px solid #e22626;
+					border-radius: 5px;
+					box-sizing: border-box;
+					position: absolute;
+					top: 0;
+					left: 0;
+
+					-webkit-mask-image: url('../images/DOD_V4_grunge.png');
+					-webkit-mask-size: 944px 604px;
+					mask-image: url('../images/DOD_V4_grunge.png');
+					mask-size: 944px 604px;
+					mix-blend-mode: multiply;
+				}
+
+				h6{
+					// text-transform: uppercase;
+					font-size: 21px;
+					line-height: 35px;
+					@include MontBase(900);
+					color: #e22626;
+				}
+			}
+		}
+		// Contest #1 Ends
+		
+		// Contest #2
+		.contest:nth-of-type(2){
+			height: 175px;
+			background: transparent url('../images/DOD_V4_S2Border_Mob.png') center center no-repeat;
+			background-size: contain;
+			margin: 10px auto 30px;
+
+			h6{
+				margin: 0 auto;
+				// text-transform: uppercase;
+				font-size: 21px;
+				line-height: 21px;
+				@include MontBase(900);				
+				color: #e22626;
+			}
+			h6.conHdr{
+				margin-top: -21px;
+			}
+
+			h5{
+				font-size: 42px;
+				line-height: 42px;
+				// text-transform: uppercase;
+				@include MontBase(900);				
+				color: #000;
+			}
+			h5:nth-of-type(1){
+				margin-top: 2px;
+			}
+			h5:nth-of-type(2){
+				font-size: 29px;
+				line-height: 40px;
+			}
+			h4,h3{
+				font-size: 17px;
+				line-height: 28px;
+				@include MontBase(700);				
+				color: #000;
+				padding: 0px 0px 10px;
+			}
+			h3{
+				color: #e22626;
+			}
+
+			.conStamp{
+				width: 156px;
+				height: 41px;
+				// border: 6px solid #e22626;
+				// border-radius: 5px;
+				box-sizing: border-box;
+				margin: 0 auto;
+				// padding: 5px;
+				position: relative;
+				top: 2px;
+				transform: rotate(-2deg);
+				// .bwView{
+				filter: grayscale(1);
+				opacity: 1;
+				// }
+
+				.stampBorder{
+					width: 156px;
+					height: 41px;
+					border: 3px solid #e22626;
+					border-radius: 5px;
+					box-sizing: border-box;
+					position: absolute;
+					top: 0;
+					left: 0;
+
+					-webkit-mask-image: url('../images/DOD_V4_grunge.png');
+					-webkit-mask-size: 944px 604px;
+					mask-image: url('../images/DOD_V4_grunge.png');
+					mask-size: 944px 604px;
+					mix-blend-mode: multiply;
+				}
+
+				h6{
+					// text-transform: uppercase;
+					font-size: 21px;
+					line-height: 35px;
+					@include MontBase(900);
+					color: #e22626;
+				}
+			}
+		}
+		// Contest #2 Ends
+
+		// Contest #3
+		.contest:nth-of-type(3){
+			height: 175px;
+			background: transparent url('../images/DOD_V4_S2Border_Mob.png') center center no-repeat;
+			background-size: contain;
+			margin: 10px auto 30px;
+
+			h6{
+				margin: 0 auto;
+				// text-transform: uppercase;
+				font-size: 21px;
+				line-height: 21px;
+				@include MontBase(900);				
+				color: #e22626;
+			}
+			h6.conHdr{
+				margin-top: -21px;
+			}
+
+			h5{
+				font-size: 30px;
+				line-height: 30px;
+				// text-transform: uppercase;
+				@include MontBase(900);				
+				color: #000;
+			}
+			h4{padding-top: 4px}
+			h5:nth-of-type(1){
+				padding-top: 5px;
+			}
+			h5:nth-of-type(3){
+				font-size: 14px;
+				line-height: 20px;
+			}
+			h4,h3{
+				font-size: 17px;
+				line-height: 17px;
+				@include MontBase(700);				
+				color: #000;
+				// padding: 5px 0px 0px;
+			}
+			h3{
+				color: #e22626;
+			}
+
+
+			.conStamp{
+				width: 156px;
+				height: 41px;
+				// border: 6px solid #e22626;
+				// border-radius: 5px;
+				box-sizing: border-box;
+				margin: 0 auto;
+				// padding: 5px;
+				position: relative;
+				top: 2px;
+				transform: rotate(-2deg);
+				// .bwView{
+				filter: grayscale(1);
+				opacity: 1;
+				// }
+
+				.stampBorder{
+					width: 156px;
+					height: 41px;
+					border: 3px solid #e22626;
+					border-radius: 5px;
+					box-sizing: border-box;
+					position: absolute;
+					top: 0;
+					left: 0;
+
+					-webkit-mask-image: url('../images/DOD_V4_grunge.png');
+					-webkit-mask-size: 944px 604px;
+					mask-image: url('../images/DOD_V4_grunge.png');
+					mask-size: 944px 604px;
+					mix-blend-mode: multiply;
+				}
+
+				h6{
+					// text-transform: uppercase;
+					font-size: 21px;
+					line-height: 35px;
+					@include MontBase(900);
+					color: #e22626;
+				}
+			}
+		}
+		// Contest #3 Ends
+
+		.summary{
+			// display: none;
+			position: relative;
+			width: 320px;
+
+			.sumContest{
+				display: flex;
+				width: 320px;
+				position: relative;
+				
+				margin: 0px auto;
+				border: 2px solid #000;
+				border-left: none;
+				border-right: none;
+
+				// margin: 5px 0px;
+				// border-radius: 10px;
+				background: transparent url('../images/DOD_V4_Sum_Bkgrnd_Mob.png') center right no-repeat;
+				background-size: contain;
+				overflow: hidden;
+
+				.cornerCut{
+					width: 150px;
+					height: 75px;
+					text-align: center;
+					position: relative;
+
+					h6{
+						width: 85px;
+						height: 20px;
+						font-size: 12px;
+						line-height: 20px;
+						margin: 5px auto 4px;
+						background-color: #fff;
+						@include MontBase(900);
+						color: #e22626;
+						position: relative;
+						padding: 2px 3px;
+						z-index: 50;
+						transform: rotate(-2deg);
+					}
+
+					h5{
+						display: inline;
+						background-color: #e22626;
+						font-size: 14px;
+						line-height: 14px;
+						text-transform: uppercase;
+						@include MontBase(900);
+						color: #fff;
+						// text-shadow: 0px 3px 5px #e22626, 0px -3px 5px #e22626, 3px 0px 5px #e22626, -3px 0px 5px #e22626;
+						position: relative;
+						z-index: 50;
+					}
+					h5:nth-of-type(2){
+						@include MontBase(500);
+						text-transform: capitalize;
+						font-size: 12px;
+						line-height: 12px;
+					}
+					
+					.cutBkgrnd{
+						width: 100px;
+						height: 75px;
+						position: absolute;
+						top: 0;
+						left: 0;
+						z-index: 40;
+
+						background: #e22626;
+						-webkit-mask-image: url('../images/DOD_V4_grunge.png');
+						-webkit-mask-size: 682px 582px;
+						mask-image: url('../images/DOD_V4_grunge.png');
+						mask-size: 682px 582px;
+						mix-blend-mode: multiply;				
+					}
+				}
+
+				.summaryContest{
+					width: 100%;
+					// text-align: center;
+					position: relative;
+
+					h6{
+						@include MontBase(900);
+						color:rgba(0, 0, 0, 1);
+						padding: 10px 5px 0px;
+					}
+					h5{
+						@include MontBase(700);
+						padding: 0 20px;
+						text-align: left;
+						color:rgba(0, 0, 0, 1);
+						font-size: 26px;
+						line-height: 26px;
+					}
+				}
+			}
+
+			//Summary contest styles
+			.sumContest:nth-of-type(1){
+				.summaryContest{
+					h6{
+						font-size: 22px;
+						line-height: 22px;
+						text-transform: uppercase;
+					}
+					h5 span.explanation{
+						font-size: 12px;
+						line-height: 14px;
+						text-transform: uppercase;
+						@include MontBase(700);
+						position: absolute;
+						right: 0;
+						bottom: 0;
+						color:rgba(255, 255, 255, 1);
+						background-color: rgba(226, 38, 38, 1);
+						// background-color: rgba(127, 22, 22, 0.5);
+						padding: 2px 10px;
+						border-radius: 10px 0 0 0;
+					}
+				}
+			}
+			.sumContest:nth-of-type(2){
+				.summaryContest{
+					h6{
+						font-size: 20px;
+						line-height: 20px;
+					}
+				}
+			}
+			.sumContest:nth-of-type(3){
+				.summaryContest{
+					h6{
+						font-size: 20px;
+						line-height: 20px;
+					}
+					h5 span.explanation{
+						font-size: 10px;
+						line-height: 24px;
+						text-transform: capitalize;
+						@include MontBase(900);
+						position: absolute;
+						left: 5px;
+						bottom: 5px;
+						// color:rgba(255, 255, 255, 1);
+						// background-color: rgba(226, 38, 38, 1);
+						// padding: 5px 10px;
+						// border-radius: 10px 0 0 0;
+					}
+				}
+			}
+			//Summary contest styles
+		}
+	}
+
+	.sumButtonSection{
+		margin-top: 10px;
+
+		h6{
+			@include MontBase(500);
+			margin: 10px 20px 0;
+			color:rgba(0, 0, 0, 1);
+			text-align: left;
+			font-size: 16px;
+			line-height: 20px;
+		}
+
+		.package-ConBtn {
+			display: block;
+			width: 188px;
+			height: 45px;
+			text-align: center;
+			cursor: pointer;
+			z-index: 50;
+			margin: 0px auto;
+			border: 1px solid #cf2323;
+			border-radius: 50px;
+			@include RobotoBase(500); 
+			color: #fff;
+			/* // font-weight: bold; */
+			font-size: 20px;
+			line-height: 45px;
+			text-transform: uppercase;
+			// text-shadow: 0px 0px 2px #000;
+			-webkit-box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5);
+			box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5);
+	
+			/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#cf2323+0,7f1616+100 */
+			background: #cf2323; /* Old browsers */
+			background: -moz-linear-gradient(top,  #cf2323 0%, #7f1616 100%); /* FF3.6-15 */
+			background: -webkit-linear-gradient(top,  #cf2323 0%,#7f1616 100%); /* Chrome10-25,Safari5.1-6 */
+			background: linear-gradient(to bottom,  #cf2323 0%,#7f1616 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cf2323', endColorstr='#7f1616',GradientType=0 ); /* IE6-9 */
+		  }
+	}
+
+}
+
+/*****Package Style End*********/
+
+/****OB Styles start****/
+#package-order_section{
+	display: none;
+
+
+	#package-ob_section{
+		overflow: hidden;
+		width: 320px;
+		margin: 0 auto;
+		background-color: rgba(0, 0, 0, 1);
+
+		.ob_inner{
+			width: 320px;
+			min-height: 855px;
+			margin: 0 auto;
+			// background-color: rgba(255, 255, 255, 1);
+			// border: 1px solid rgba(255, 255, 255, 1);
+
+			.ob_inner_hdr{
+				text-transform: uppercase;
+				text-align: center;
+				margin-top: 20px;
+				position: relative;
+				z-index: 50;
+
+				h6{
+					color: rgba(255, 216, 173, 1);
+					font-size: 25px;
+					line-height: 25px;
+					@include MontBase(900);
+				}
+				h5{
+					background: transparent url('../images/DOD_V4_OB_Hdr.png') center center no-repeat;
+					background-size: contain;
+					color: rgba(255, 255, 255, 1);
+					font-size: 30px;
+					line-height: 50px;
+					@include MontBase(900);
+					font-style: italic;
+					margin-top: -5px;
+					// position: relative;
+					// top: -27px;
+				}
+			}
+
+			.ob_inner_main{
+				background: #f2f3f5 url('../images/DOD_V4_OB_Main_Bkgrnd_Mob.png') 0 0 no-repeat;
+				background-size: contain;
+				width: 320px;
+				min-height: 708px;
+				position: relative;
+				overflow: hidden;
+				z-index: 45;
+				margin: -5px auto 0;
+
+				// -webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
+				// -moz-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
+				// box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
+				// clip-path: inset(-25px -25px 0px -25px);
+
+				.ob_inner_main_hdr{
+					background: transparent url('../images/DOD_V4_OB_rewardBanner_Mob.png') 0 0 no-repeat;
+					background-size: contain;
+					width: 320px;
+					height: 160px;
+					// margin-left: -10px;
+					position: relative;
+					top: 15px;
+
+					.hdrHiddenContent{
+						text-align: center;
+						// opacity: 0;
+					}
+
+					h6{
+						overflow: hidden;
+						text-indent: -9999px;
+						background: transparent url('../images/DOD_V4_OB_Logo_Mob.png') center center no-repeat;
+						background-size: contain;
+						width: 320px;
+						height: 88px;
+						position: absolute;
+						top: -13px;
+					}
+					.ob_inner_main_hdr_copy{
+						overflow: hidden;
+						// text-indent: -9999px;
+						// background: transparent url('../images/DOD_V4_OB_Copy.png') 0 0 no-repeat;
+						width: 320px;
+						padding-top: 64px;
+						// height: 142px;
+						// position: absolute;
+						// top: 36px;
+						// right: 23px;
+						
+
+						p{
+							@include MontBase(900);
+							text-align: center;
+							color:rgba(0, 0, 0, 1);
+							font-size: 16px;
+							line-height: 18px;
+							// letter-spacing: -1.15px;
+							padding: 0 10px 6px;
+						}
+						h5{ 
+							width: 320px;
+							height: 16px;
+							background: transparent url('../images/DOD_V4_OB_Copy_Mob.png') center center no-repeat; 
+							background-size: contain;
+							text-indent: -9999px;
+							overflow: hidden;
+						}
+						h4{
+							@include MontBase(900);
+							text-align: center;
+							text-transform: uppercase;
+							color:rgba(210, 40, 32, 1);
+							font-size: 14px;
+							line-height: 21px;							
+						}
+					}
+				}
+
+				.ob_inner_main_rewards{
+					display: flex;
+					flex-wrap: wrap;
+					justify-content: center;
+
+					li{
+						background: transparent url('../images/DOD_V4_OB_Rewards_Mob.png') 0 0 no-repeat;
+						background-size: 100%;
+						width: 317px;
+						height: 141px;
+						overflow: hidden;
+
+						.ob_reward{
+							display: none;						
+							text-indent: -100000px;
+
+							position: relative;
+							left: -10000000px;
+						}
+					}
+
+					li:nth-of-type(2){ background-position: 0 -143px; }
+					li:nth-of-type(3){ background-position: 0 -286px; }
+					li:nth-of-type(4).prospects{ display:none; background-position: 0 -429px; }
+					
+				}
+			}
+
+			.ob_inner_dir_Msg{
+				position: relative;
+				@include MontBase(500);
+				color: rgba(0, 0, 0, 1);
+				text-align: center;
+
+				h6{
+					padding: 10px;
+					font-size: 17px;
+					line-height: 22px;										
+				}
+				h6.Current{
+					width: 300px;
+					// min-height: 146px;
+					// margin: 5px auto 10px;
+					
+				}
+				h5{
+					font-size: 12px;
+					line-height: 15px;		
+					padding: 10px;								
+				}
+				// h5:nth-of-type(2){
+				// 	padding-top: 20px;
+				// }
+			}
+		}		
+	}
+
+	#package-pkg_section{
+		width: 320px;
+		margin: 0 auto;
+		background-color: rgba(243, 244, 246, 1);
+	}
+
+
+}
+
+.ob_inner_dir_Msg{
+	.presPreferred, .prefPlus, .preferred, .offline, .prospect, .lapsed, .balance{
+		display: none;
+	}
+}
+/****OB Styles end****/
+
+/*****Merch Ineligible button.. place over package button (Absoulute positioning)*****/
+/*Refer to merch INELLIGABLE inelligable doc: http://creativedept.classic.pchad.com/Libraries/Packages/Spectrum/_docs/MERCH%20INELLIGABLE.TXT*/
+// .contestOnlySubmitButton{
+// 	width: 251px;
+// 	height: 74px;
+// 	border: 0;
+// 	text-indent: -999px;
+// 	overflow: hidden;
+// 	font-size: 0;
+// 	background: none;
+// 	cursor: pointer;
+// 	display: none;
+// 	position: absolute;
+// 	top: 0;
+// 	z-index: 10;
+// }

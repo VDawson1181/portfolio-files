@@ -1,0 +1,439 @@
+/* Prize Payment Transaction V3 - Contest_Name(5KAWF) - V1.0 - mobile Pkg by VAD - 04/2021 */
+/******Package Specific Style Start******/
+#contestWrap {
+  overflow: hidden;
+}
+
+#mainWrap {
+  width: 320px;
+  margin: 0 auto;
+  overflow: hidden;
+  background: #fff;
+}
+
+#mobileBody p {
+  padding: 10px 0;
+}
+
+#deviceWrap1 {
+  display: none;
+}
+
+/******Package Specific Style Start******/
+/******Default Package Style Start******/
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: left;
+  color: #000;
+  font-size: 100%;
+}
+
+.disclaimer {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.6875em;
+  max-width: 320px;
+  padding: 20px 0;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.disclaimer p, .disclaimer a {
+  color: #000;
+}
+
+.disclaimer p {
+  margin-bottom: 14px;
+}
+
+.isUppercase {
+  text-transform: uppercase;
+}
+
+/******Default Package Style End******/
+/*****Package Style Start*******/
+#package-wrap {
+  width: 320px;
+  margin: 0 auto;
+}
+
+#package-contest_section {
+  width: 320px;
+  margin: 0 auto;
+}
+#package-contest_section .PPTV3_Header {
+  background-color: #1f1f1f;
+  position: relative;
+  overflow: hidden;
+  z-index: 85;
+}
+#package-contest_section .PPTV3_Header div {
+  margin: auto;
+  position: relative;
+  text-align: center;
+  padding: 10px 10px 30px;
+}
+#package-contest_section .PPTV3_Header div .PPTV3_Arrow {
+  display: none;
+}
+#package-contest_section .PPTV3_Header div h6 {
+  color: #fff;
+  font-size: 35px;
+  line-height: 40px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  padding: 5px 0 0 0px;
+  text-transform: uppercase;
+}
+#package-contest_section .PPTV3_Header div h5 {
+  color: #fff672;
+  font-size: 35px;
+  line-height: 40px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+  padding: 5px 0 0 0px;
+}
+#package-contest_section .PPTV3_Header div:before {
+  display: none;
+}
+#package-contest_section .PPTV3_Header:after {
+  display: none;
+}
+#package-contest_section .PPTV3_Btn {
+  width: 282px;
+  height: 51px;
+  margin: 7px auto 10px;
+  font-size: 18px;
+  line-height: 51px;
+}
+#package-contest_section .PPTV3_Body {
+  position: relative;
+  z-index: 86;
+}
+#package-contest_section .PPTV3_Body .PPTV3_PinkSlip {
+  width: 302px;
+  height: 455px;
+  border: 2px solid rgb(212, 179, 233);
+  margin: 7px auto 5px;
+  background: transparent url("../images/mobile/PPTV3_PinkSlip_V2.png") center top no-repeat;
+  position: relative;
+  overflow: hidden;
+  color: #000;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+}
+#package-contest_section .PPTV3_Body .PPTV3_PinkSlip .PPTV3_Contest {
+  font-weight: bold;
+  text-align: center;
+  font-size: 26px;
+  line-height: 29px;
+  margin: 153px 0 0 0;
+}
+#package-contest_section .PPTV3_Body .PPTV3_PinkSlip .PPTV3_TransferDate {
+  display: none;
+}
+#package-contest_section .PPTV3_Body .PPTV3_PinkSlip .PPTV3_Address {
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: uppercase;
+  margin: 66px 0 0 0px;
+  text-align: center;
+}
+#package-contest_section .PPTV3_Body .PPTV3_PinkSlip .PPTV3_Address h6 {
+  font-size: 20px;
+  line-height: 21px;
+  margin-top: 10px;
+}
+#package-contest_section .PPTV3_Body .PPTV3_PinkSlip .PPTV3_RedCircle {
+  position: absolute;
+  top: 271px;
+  left: 5px;
+  width: 290px;
+  height: 64px;
+  background: transparent url("../images/mobile/PPTV3_RedCircle.png") center center no-repeat;
+  pointer-events: none;
+}
+#package-contest_section .PPTV3_Body .PPTV3_PinkSlip .PPTV3_EntrantAck {
+  width: 291px;
+  height: 104px;
+  margin: 14px 0 0 6px;
+  box-shadow: 0px -6px 6px rgb(255, 246, 114), 0px 6px 6px rgb(255, 246, 114), -6px 0px 6px rgb(255, 246, 114), 6px 0px 6px rgb(255, 246, 114);
+}
+#package-contest_section .PPTV3_Ftr {
+  width: 320px;
+  margin: 0px auto 20px;
+  font-size: 18px;
+  line-height: 24px;
+  color: #000;
+}
+#package-contest_section .PPTV3_Modal {
+  width: 300px;
+  height: 490px;
+  top: 35px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 89;
+  box-shadow: 0px 0px 0 calc(100vh + 100vw) rgba(0, 0, 0, 0.9);
+  transform: scale(0);
+}
+#package-contest_section .PPTV3_Modal h6 {
+  font-size: 25px;
+  line-height: 32px;
+}
+#package-contest_section .PPTV3_Modal h6 span {
+  color: rgb(255, 254, 162);
+  font-style: italic;
+}
+#package-contest_section .PPTV3_Modal .PPTV3_Modal_contest h5 {
+  width: 290px;
+  height: 45px;
+  margin: 10px auto 0;
+  background: transparent url("../images/PPTV3_OB_highlight_Modal.png") center center no-repeat;
+  background-size: contain;
+  font-size: 45px;
+  line-height: 45px;
+}
+#package-contest_section .PPTV3_Modal .PPTV3_Modal_contest h4 {
+  font-size: 21px;
+  line-height: 23px;
+  margin-top: 5px;
+}
+#package-contest_section .PPTV3_Modal .PPTV3_Modal_contest h4 hr {
+  width: 40px;
+  height: 2px;
+}
+#package-contest_section .PPTV3_Modal .PPTV3_Modal_contest h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  padding-top: 10px;
+  font-size: 46px;
+  line-height: 46px;
+  font-weight: bold;
+}
+#package-contest_section .PPTV3_Modal .PPTV3_Modal_UL {
+  width: 276px;
+  height: 70px;
+  position: relative;
+  z-index: 50;
+  top: -92px;
+  left: 11px;
+  background: transparent url("../images/mobile/PPTV3_OB_highlight_ModalUL.png") 0 0 no-repeat;
+}
+#package-contest_section .PPTV3_Modal p {
+  min-height: 90px;
+  margin: 5px auto 0;
+  background: transparent url("../images/mobile/PPTV3_OB_ModalUL.png") bottom center no-repeat;
+  position: relative;
+  z-index: 51;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 28px;
+  line-height: 31px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+#package-ob_section {
+  width: 320px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.PPTV3_OB_dir_Msg .PPTV3_OB_Header {
+  padding: 10px 0 5px;
+}
+.PPTV3_OB_dir_Msg .PPTV3_OB_Header h6 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  color: #292929;
+  font-size: 27px;
+  line-height: 33px;
+  text-transform: uppercase;
+  text-shadow: -4px 0px 4px rgb(255, 255, 255), 4px 0px 4px rgb(255, 255, 255), 0px -4px 4px rgb(255, 255, 255), 0px 4px 4px rgb(255, 255, 255);
+  text-align: center;
+}
+.PPTV3_OB_dir_Msg .PPTV3_OB_Header h6 span.lrg {
+  font-size: 35px;
+  line-height: 35px;
+}
+.PPTV3_OB_dir_Msg .PPTV3_OB_PinkSlip {
+  width: 302px;
+  min-height: 675px;
+  margin: 0 auto 10px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 3px rgb(0, 0, 0);
+  position: relative;
+}
+.PPTV3_OB_dir_Msg .PPTV3_OB_PinkSlip h5 {
+  text-align: center;
+  color: rgb(41, 41, 41);
+  font-size: 18px;
+  line-height: 24px;
+  padding-bottom: 10px;
+}
+.PPTV3_OB_dir_Msg .PPTV3_OB_PinkSlip .balance .PPTV3_OB_PS_Ftr h4 {
+  font-size: 35px;
+  line-height: 46px;
+}
+.PPTV3_OB_dir_Msg .PPTV3_OB_PinkSlip .prospect .PPTV3_OB_PS_Ftr h4,
+.PPTV3_OB_dir_Msg .PPTV3_OB_PinkSlip .preferred .PPTV3_OB_PS_Ftr h4,
+.PPTV3_OB_dir_Msg .PPTV3_OB_PinkSlip .lapsed .PPTV3_OB_PS_Ftr h4,
+.PPTV3_OB_dir_Msg .PPTV3_OB_PinkSlip .offline .PPTV3_OB_PS_Ftr h4,
+.PPTV3_OB_dir_Msg .PPTV3_OB_PinkSlip .prefPlus .PPTV3_OB_PS_Ftr h4 {
+  font-size: 31px;
+  line-height: 35px;
+}
+.PPTV3_OB_dir_Msg .PPTV3_OB_PinkSlip .presPreferred .PPTV3_OB_PS_Ftr h4 {
+  font-size: 31px;
+  line-height: 36px;
+  position: relative;
+  top: -5px;
+}
+.PPTV3_OB_dir_Msg .PPTV3_OB_PinkSlip .PPTV3_OB_PS_Ftr {
+  min-height: 107px;
+  margin: 0 auto;
+  position: relative;
+}
+.PPTV3_OB_dir_Msg .PPTV3_OB_PinkSlip .PPTV3_OB_PS_Ftr h4 {
+  text-align: center;
+  position: relative;
+  color: rgb(34, 38, 167);
+  line-height: 46px;
+  font-family: "Caveat", cursive;
+  font-weight: 400;
+}
+.PPTV3_OB_dir_Msg .PPTV3_OB_PinkSlip .PPTV3_OB_PS_Ftr .PPTV3_OB_PS_Ftr-Highlight {
+  display: block;
+  position: absolute;
+}
+.PPTV3_OB_dir_Msg .PPTV3_OB_PinkSlip .balance .PPTV3_OB_PS_Ftr .PPTV3_OB_PS_Ftr-Highlight {
+  background: transparent url("../images/mobile/PPTV3_OB_highlight_Bal.png") 0 0 no-repeat;
+  width: 286px;
+  height: 81px;
+  top: 7px;
+  left: 10px;
+}
+.PPTV3_OB_dir_Msg .PPTV3_OB_PinkSlip .lapsed .PPTV3_OB_PS_Ftr .PPTV3_OB_PS_Ftr-Highlight,
+.PPTV3_OB_dir_Msg .PPTV3_OB_PinkSlip .offline .PPTV3_OB_PS_Ftr .PPTV3_OB_PS_Ftr-Highlight,
+.PPTV3_OB_dir_Msg .PPTV3_OB_PinkSlip .prospect .PPTV3_OB_PS_Ftr .PPTV3_OB_PS_Ftr-Highlight,
+.PPTV3_OB_dir_Msg .PPTV3_OB_PinkSlip .preferred .PPTV3_OB_PS_Ftr .PPTV3_OB_PS_Ftr-Highlight,
+.PPTV3_OB_dir_Msg .PPTV3_OB_PinkSlip .prefPlus .PPTV3_OB_PS_Ftr .PPTV3_OB_PS_Ftr-Highlight {
+  background: transparent url("../images/mobile/PPTV3_OB_highlight_Pref.png") 0 0 no-repeat;
+  width: 280px;
+  height: 107px;
+  left: 10px;
+}
+.PPTV3_OB_dir_Msg .PPTV3_OB_PinkSlip .presPreferred .PPTV3_OB_PS_Ftr .PPTV3_OB_PS_Ftr-Highlight {
+  background: transparent url("../images/mobile/PPTV3_OB_highlight_PresPref.png") 0 0 no-repeat;
+  width: 301px;
+  height: 106px;
+}
+.PPTV3_OB_dir_Msg .PPTV3_OB_PinkSlip .PPTV3_OB_PS_Hdr {
+  text-align: center;
+  padding: 10px 0;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 244, 123);
+}
+.PPTV3_OB_dir_Msg .PPTV3_OB_PinkSlip .PPTV3_OB_PS_Hdr h6 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+.PPTV3_OB_dir_Msg .PPTV3_OB_PinkSlip .PPTV3_OB_PS_Hdr p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 27px;
+}
+.PPTV3_OB_dir_Msg .PPTV3_OB_PinkSlip .PPTV3_OB_PS_rewards {
+  width: 302px;
+  margin: 0px auto 5px;
+}
+.PPTV3_OB_dir_Msg .PPTV3_OB_PinkSlip .PPTV3_OB_PS_rewards ul li {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px 0px;
+}
+.PPTV3_OB_dir_Msg .PPTV3_OB_PinkSlip .PPTV3_OB_PS_rewards ul li span {
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 27px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
+.PPTV3_OB_dir_Msg .PPTV3_OB_PinkSlip .PPTV3_OB_PS_rewards ul li span hr {
+  border: none;
+  width: 76px;
+  background-color: rgb(27, 27, 27);
+  height: 3px;
+  margin: 5px;
+  display: inline-block;
+}
+.PPTV3_OB_dir_Msg .PPTV3_OB_PinkSlip .PPTV3_OB_PS_rewards ul li p {
+  width: 100%;
+  font-family: "Caveat", cursive;
+  font-weight: 400;
+  font-size: 39px;
+  line-height: 39px;
+  color: #4b4fdd;
+  text-align: center;
+}
+.PPTV3_OB_dir_Msg .PPTV3_OB_PinkSlip .presPreferred .PPTV3_OB_PS_rewards ul li p,
+.PPTV3_OB_dir_Msg .PPTV3_OB_PinkSlip .prefPlus .PPTV3_OB_PS_rewards ul li p,
+.PPTV3_OB_dir_Msg .PPTV3_OB_PinkSlip .preferred .PPTV3_OB_PS_rewards ul li p,
+.PPTV3_OB_dir_Msg .PPTV3_OB_PinkSlip .offline .PPTV3_OB_PS_rewards ul li p {
+  font-size: 31px;
+  line-height: 31px;
+}
+.PPTV3_OB_dir_Msg .PPTV3_OB_PinkSlip .offline .PPTV3_OB_PS_rewards ul li:nth-of-type(1) span,
+.PPTV3_OB_dir_Msg .PPTV3_OB_PinkSlip .prefPlus .PPTV3_OB_PS_rewards ul li:nth-of-type(1) span {
+  align-self: flex-start;
+}
+.PPTV3_OB_dir_Msg .PPTV3_OB_PinkSlip .presPreferred .PPTV3_OB_PS_rewards ul li,
+.PPTV3_OB_dir_Msg .PPTV3_OB_PinkSlip .prospect .PPTV3_OB_PS_rewards ul li {
+  padding: 5px 0px;
+}
+.PPTV3_OB_dir_Msg .presPreferred, .PPTV3_OB_dir_Msg .prefPlus, .PPTV3_OB_dir_Msg .preferred, .PPTV3_OB_dir_Msg .offline, .PPTV3_OB_dir_Msg .prospect, .PPTV3_OB_dir_Msg .lapsed, .PPTV3_OB_dir_Msg .balance {
+  display: none;
+}
+
+#package-product_section {
+  opacity: 0;
+}
+
+#package-order_section {
+  background: transparent url("../images/PPTV3_Main_RptBkgrnd.png") 0 0 repeat;
+  display: none;
+}
+
+.slide-in-blurred-top {
+  animation: slide-in-blurred-top 0.6s cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2022-4-29 15:31:22
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+/**
+ * ----------------------------------------
+ * animation slide-in-blurred-top
+ * ----------------------------------------
+ */
+@keyframes slide-in-blurred-top {
+  0% {
+    transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+    transform-origin: 50% 0%;
+    filter: blur(40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) scaleY(1) scaleX(1);
+    transform-origin: 50% 50%;
+    filter: blur(0);
+    opacity: 1;
+  }
+}/*# sourceMappingURL=m.package.PPTV3.css.map */

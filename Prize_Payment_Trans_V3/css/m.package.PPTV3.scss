@@ -1,0 +1,555 @@
+/* Prize Payment Transaction V3 - Contest_Name(5KAWF) - V1.0 - mobile Pkg by VAD - 04/2021 */
+
+// https://fonts.google.com/share?selection.family=Caveat:wght@400;700%7CPatrick%20Hand%7CPoppins:ital,wght@0,600;0,800;1,500%7CRoboto:wght@500
+//Patrick Hand Weights: 400;
+$PHndCond: 'Patrick Hand', cursive;
+@mixin PHndCond($fntWght){
+ font-family: $PHndCond;
+ font-weight: $fntWght;
+}
+//@include PHndCond(400);
+
+//Poppins Weight: 500|600|800;
+$PoppinsBase: 'Poppins', sans-serif;
+@mixin PoppinsBase($fntWght){
+ font-family: $PoppinsBase;
+ font-weight: $fntWght;
+}
+//@include PoppinsBase(800);
+
+//RobotoB Weight: 500;
+$RobotoBase: 'Roboto', sans-serif;
+@mixin RobotoBase($fntWght){
+ font-family: $RobotoBase;
+ font-weight: $fntWght;
+}
+//@include RobotoBase(500);
+
+//CaveatB Weight: 400|700;
+$CaveatBase: 'Caveat', cursive;
+@mixin CaveatBase($fntWght){
+ font-family: $CaveatBase;
+ font-weight: $fntWght;
+}
+//@include CaveatBase(400);
+
+/******Package Specific Style Start******/
+#contestWrap{ overflow: hidden;}
+
+#mainWrap{
+	width: 320px;
+	margin: 0 auto;	
+	overflow: hidden;
+	background: #fff;
+}
+
+#mobileBody p{ padding: 10px 0;}
+
+#deviceWrap1{ display: none; }
+/******Package Specific Style Start******/
+
+/******Default Package Style Start******/
+body{	
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: left;
+	color: #000;
+	font-size: 100%;
+}
+
+.disclaimer {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 0.6875em;
+	max-width: 320px;
+	padding: 20px 0;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.disclaimer p, .disclaimer a{
+	color: #000;
+}
+
+.disclaimer p {
+	margin-bottom: 14px;
+}
+
+.isUppercase {
+	text-transform: uppercase;
+}
+/******Default Package Style End******/
+
+/*****Package Style Start*******/
+#package-wrap{
+	width: 320px;
+	margin: 0 auto;
+}
+#package-contest_section{
+	width: 320px;
+	margin: 0 auto;
+
+	.PPTV3_Header{
+		// height: 154px;
+		background-color: #1f1f1f;
+		position: relative;
+		overflow: hidden;
+		z-index: 85;
+		
+		div{			
+			// width: 845px;
+			margin: auto;
+			position: relative;
+			text-align: center;
+			padding: 10px 10px 30px;
+			.PPTV3_Arrow{
+				display: none;
+			}
+
+			h6{
+				color: #fff;
+				font-size: 35px;
+				line-height: 40px;
+				@include PoppinsBase(800);
+				padding: 5px 0 0 0px;
+				text-transform: uppercase;
+			}
+			h5{
+				color: #fff672;
+				font-size: 35px;
+				line-height: 40px;
+				@include PoppinsBase(500);
+				font-style: italic;
+				padding: 5px 0 0 0px;
+			}
+		}
+		div:before{
+			display: none;
+		}
+
+	}
+	.PPTV3_Header:after{
+		display: none;
+	}
+
+	.PPTV3_Btn {
+		width: 282px;
+		height: 51px;
+		margin: 7px auto 10px;
+		font-size: 18px;
+		line-height: 51px;
+	}
+
+	.PPTV3_Body{
+		position: relative;
+		z-index: 86;
+
+		.PPTV3_PinkSlip{
+			width: 302px;
+			height: 455px;
+			border: 2px solid rgb(212, 179, 233);
+			margin: 7px auto 5px;
+			background: transparent url('../images/mobile/PPTV3_PinkSlip_V2.png') center top no-repeat;
+			position: relative;
+			overflow: hidden;
+			color: #000;
+			box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+		
+			.PPTV3_Contest{
+				font-weight: bold;	
+				text-align: center;	
+				font-size: 26px;
+				line-height: 29px;
+				margin: 153px 0 0 0;
+			}
+			.PPTV3_TransferDate{
+				display: none;
+			// 	font-size: 20px;
+			// 	line-height: 20px;
+			// 	text-transform: uppercase;
+			// 	margin: 57px 0 0 426px;
+			}
+			.PPTV3_Address{
+				font-size: 20px;
+				line-height: 24px;
+				text-transform: uppercase;
+				margin: 66px 0 0 0px;
+				// font-weight: bold;
+				text-align: center;
+			}
+			.PPTV3_Address h6{
+				font-size: 20px;
+				line-height: 21px;
+				margin-top: 10px;				
+			}
+		
+			.PPTV3_RedCircle{
+				position: absolute;
+				top: 271px;
+				left: 5px;
+				width: 290px;
+				height: 64px;
+				background: transparent url('../images/mobile/PPTV3_RedCircle.png') center center no-repeat;
+				pointer-events: none;
+			}
+
+			.PPTV3_EntrantAck{
+				width: 291px;
+				height: 104px;
+				margin: 14px 0 0 6px;
+				box-shadow: 0px -6px 6px rgb(255, 246, 114), 0px 6px 6px rgb(255, 246, 114), -6px 0px 6px rgb(255, 246, 114), 6px 0px 6px rgb(255, 246, 114);
+			}
+		}
+	}
+
+	.PPTV3_Ftr{
+		width: 320px;
+		margin: 0px auto 20px;
+		font-size: 18px;
+		line-height: 24px;
+		color: #000;
+	}
+
+	.PPTV3_Modal{
+		width: 300px;
+		height: 490px;
+
+		top: 35px;
+		left: 0;
+		right: 0;
+		margin: auto;		
+		z-index: 89;
+		box-shadow: 0px 0px 0 calc(100vh + 100vw) rgba(0, 0, 0, 0.9);
+		transform: scale(0);
+
+		h6{
+			font-size: 25px;
+			line-height: 32px;
+
+			span{
+				color: rgba(255, 254, 162, 1);
+				font-style: italic;
+			}
+		}
+
+		.PPTV3_Modal_contest{ 
+
+			h5{
+				width: 290px;
+				height: 45px;
+				margin: 10px auto 0;
+				background: transparent url('../images/PPTV3_OB_highlight_Modal.png') center center no-repeat;
+				background-size: contain;
+				font-size: 45px;
+				line-height: 45px;
+			}
+			h4{
+				font-size: 21px;
+				line-height: 23px;
+				margin-top: 5px;
+			
+				hr{
+					width: 40px;
+					height: 2px;
+				}
+			}
+			h3{
+				font-family: Arial, Helvetica, sans-serif;
+				padding-top: 10px;
+				font-size: 46px;
+				line-height: 46px;
+				font-weight: bold;
+			}
+		}
+
+		.PPTV3_Modal_UL{
+			width: 276px;
+			height: 70px;
+			position: relative;
+			z-index: 50;
+			top: -92px;
+			left: 11px;
+			background: transparent url('../images/mobile/PPTV3_OB_highlight_ModalUL.png') 0 0 no-repeat;
+			
+		}
+
+		p{
+			min-height: 90px;
+			margin: 5px auto 0;
+			background: transparent url('../images/mobile/PPTV3_OB_ModalUL.png') bottom center no-repeat;
+			position: relative;
+			z-index: 51;
+
+			font-family: Arial, Helvetica, sans-serif;
+			// padding-top: 10px;
+			font-size: 28px;
+			line-height: 31px;
+			font-weight: bold;
+			font-style: italic;
+		}
+	}
+
+}
+
+// OB Styles Start
+#package-ob_section{
+	width: 320px;
+	margin: 0 auto;
+	overflow: hidden;
+	// display: none;
+}
+
+.PPTV3_OB_dir_Msg{
+	.PPTV3_OB_Header{
+		padding: 10px 0 5px;
+
+		h6{
+			@include PoppinsBase(800);
+			color: #292929;
+			font-size: 27px;
+			line-height: 33px;
+			text-transform: uppercase;
+			text-shadow: -4px 0px 4px rgba(255, 255, 255, 1),4px 0px 4px rgba(255, 255, 255, 1),0px -4px 4px rgba(255, 255, 255, 1),0px 4px 4px rgba(255, 255, 255, 1); 
+			text-align: center;		
+
+			span.lrg{
+				font-size: 35px;
+				line-height: 35px;
+			}
+		}
+	} 
+	.PPTV3_OB_PinkSlip{		
+		width: 302px;
+		min-height: 675px;
+		margin: 0 auto 10px;
+		background-color: rgba(255, 255, 255, 1);
+		box-shadow: 0px 0px 3px rgba(0, 0, 0, 1);
+		position: relative;
+
+		h5{
+			text-align: center;
+			color: rgba(41, 41, 41, 1);
+			font-size: 18px;
+			line-height: 24px;
+			padding-bottom: 10px;
+			// padding: 20px 0px;
+		}
+		
+		.balance .PPTV3_OB_PS_Ftr h4 { font-size: 35px; line-height: 46px;}
+
+		.prospect .PPTV3_OB_PS_Ftr h4,
+		.preferred .PPTV3_OB_PS_Ftr h4,
+		.lapsed .PPTV3_OB_PS_Ftr h4, 
+		.offline .PPTV3_OB_PS_Ftr h4,
+		.prefPlus .PPTV3_OB_PS_Ftr h4{ font-size: 31px; line-height: 35px;}
+		.presPreferred .PPTV3_OB_PS_Ftr h4{ 
+			font-size: 31px; 
+			line-height: 36px;
+			position: relative;
+			top: -5px;
+		}
+
+		.PPTV3_OB_PS_Ftr{
+			// width: 534px;
+			min-height: 107px;
+			margin: 0 auto;
+			position: relative;
+			// padding-bottom: 10px;
+
+			h4{
+				text-align: center;
+				position: relative;
+				color: rgb(34, 38, 167);
+				// font-size: 45px;
+				line-height: 46px;
+				@include CaveatBase(400);
+			}
+		}
+		.PPTV3_OB_PS_Ftr .PPTV3_OB_PS_Ftr-Highlight {
+			// content: " ";
+			display: block;
+			// height: 107px;
+			// width: 100%;
+			position: absolute;						
+		  }
+		.balance .PPTV3_OB_PS_Ftr .PPTV3_OB_PS_Ftr-Highlight {
+			background: transparent url('../images/mobile/PPTV3_OB_highlight_Bal.png') 0 0 no-repeat;
+			width: 286px;
+			height: 81px;
+			top: 7px;
+			left: 10px;
+		}
+
+		.lapsed .PPTV3_OB_PS_Ftr .PPTV3_OB_PS_Ftr-Highlight,
+		.offline .PPTV3_OB_PS_Ftr .PPTV3_OB_PS_Ftr-Highlight,
+		.prospect .PPTV3_OB_PS_Ftr .PPTV3_OB_PS_Ftr-Highlight,
+		.preferred .PPTV3_OB_PS_Ftr .PPTV3_OB_PS_Ftr-Highlight,
+		.prefPlus .PPTV3_OB_PS_Ftr .PPTV3_OB_PS_Ftr-Highlight {
+			background: transparent url('../images/mobile/PPTV3_OB_highlight_Pref.png') 0 0 no-repeat;
+			width: 280px;
+			height: 107px;
+			left: 10px;
+		}
+
+		.presPreferred .PPTV3_OB_PS_Ftr .PPTV3_OB_PS_Ftr-Highlight {
+			background: transparent url('../images/mobile/PPTV3_OB_highlight_PresPref.png') 0 0 no-repeat;
+			width: 301px;
+			height: 106px;
+		}
+
+
+		.PPTV3_OB_PS_Hdr{
+			text-align: center;
+			padding: 10px 0;
+			background-color: rgba(0, 0, 0, 1);
+			color: rgba(255, 244, 123, 1);
+
+			h6{
+				@include PoppinsBase(800);
+				font-size: 32px;
+				line-height: 36px;
+				text-transform: uppercase;
+			}
+			p{
+				@include PoppinsBase(600);
+				font-size:22px;
+				line-height: 27px;
+			}
+		}
+
+		.PPTV3_OB_PS_rewards{
+			width: 302px;
+			margin: 0px auto 5px;
+
+			ul li{
+				display: flex;
+				flex-wrap: wrap;
+				padding: 5px 0px;
+
+				span{
+					width: 100%;
+					@include PoppinsBase(800);
+					font-size:24px;
+					line-height: 27px;
+					color:rgba(0, 0, 0, 1);
+					text-align: center;
+
+					hr{
+						border: none;
+						width: 76px;
+						background-color: rgb(27, 27, 27);
+						height: 3px;
+						margin: 5px;
+						display: inline-block;
+					}
+
+				}
+				p{
+					width: 100%;
+					@include CaveatBase(400);
+					font-size: 39px;
+					line-height: 39px;
+					color: #4b4fdd;
+					text-align: center;
+					// align-self: flex-end;
+					// width: 556px;
+					// text-indent: 20px;
+					// padding: 0 0 5px 20px;
+					// box-shadow: 0px 3px 0px #000;
+					// position: relative;
+					// top: -3px;
+					// left: 5px;
+				}
+			}
+		}
+
+		.presPreferred .PPTV3_OB_PS_rewards ul li p,
+		.prefPlus .PPTV3_OB_PS_rewards ul li p,
+		.preferred .PPTV3_OB_PS_rewards ul li p,
+		.offline .PPTV3_OB_PS_rewards ul li p{
+			font-size: 31px;
+			line-height: 31px;
+		}
+
+		.offline .PPTV3_OB_PS_rewards ul li:nth-of-type(1) span,
+		.prefPlus .PPTV3_OB_PS_rewards ul li:nth-of-type(1) span{
+			align-self: flex-start;
+		}
+		.presPreferred .PPTV3_OB_PS_rewards ul li,
+		.prospect .PPTV3_OB_PS_rewards ul li{
+			padding: 5px 0px;
+		}
+	}
+	.presPreferred, .prefPlus, .preferred, .offline, .prospect, .lapsed, .balance{
+		display: none;
+	}
+}
+
+#package-product_section{
+	opacity: 0;	
+}
+
+#package-order_section{
+	background: transparent url('../images/PPTV3_Main_RptBkgrnd.png') 0 0 repeat;
+	display: none;
+}
+// OB Styles End
+
+// Blurred In Top CSS
+.slide-in-blurred-top {
+	-webkit-animation: slide-in-blurred-top 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+	animation: slide-in-blurred-top 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2022-4-29 15:31:22
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation slide-in-blurred-top
+ * ----------------------------------------
+ */
+ @-webkit-keyframes slide-in-blurred-top {
+	0% {
+	  -webkit-transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+			  transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+	  -webkit-transform-origin: 50% 0%;
+			  transform-origin: 50% 0%;
+	  -webkit-filter: blur(40px);
+			  filter: blur(40px);
+	  opacity: 0;
+	}
+	100% {
+	  -webkit-transform: translateY(0) scaleY(1) scaleX(1);
+			  transform: translateY(0) scaleY(1) scaleX(1);
+	  -webkit-transform-origin: 50% 50%;
+			  transform-origin: 50% 50%;
+	  -webkit-filter: blur(0);
+			  filter: blur(0);
+	  opacity: 1;
+	}
+  }
+  @keyframes slide-in-blurred-top {
+	0% {
+	  -webkit-transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+			  transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+	  -webkit-transform-origin: 50% 0%;
+			  transform-origin: 50% 0%;
+	  -webkit-filter: blur(40px);
+			  filter: blur(40px);
+	  opacity: 0;
+	}
+	100% {
+	  -webkit-transform: translateY(0) scaleY(1) scaleX(1);
+			  transform: translateY(0) scaleY(1) scaleX(1);
+	  -webkit-transform-origin: 50% 50%;
+			  transform-origin: 50% 50%;
+	  -webkit-filter: blur(0);
+			  filter: blur(0);
+	  opacity: 1;
+	}
+  }
+  
+// Blurred In Top CSS

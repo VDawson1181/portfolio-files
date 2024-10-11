@@ -26,12 +26,11 @@ function WIMMT_Init() {
         WIMMT_OBSec_Stage2_Mid_List = document.querySelectorAll("#package-order_section #package-ob_section #OB_DirMsg .ob__stage2 .ob__stage2__mid .ob__stage2__mid__wrapper .Current ul li"),
         WIMMT_OrderSec = document.querySelector("#package-order_section"),
         WIMMT_ProdSec = document.querySelector("#package-pkg_section"),
-        WIMMT_OBSec_Stage2_Top_UL,
-        WIMMT_mobSelector = WIMMT_PackageDiv.classList.contains("mobilePkg");
-
+        WIMMT_OBSec_Stage2_Top_UL;
+        
         function updateSize() {
             // MIC_PackageDiv.textContent = window.innerWidth;
-
+            
             if (window.innerWidth <= 600) {
                 //Screen is 600px or below....
                 // <div id="package-wrap" class="mobilePkg"></div>
@@ -46,6 +45,8 @@ function WIMMT_Init() {
 
         updateSize();
         window.addEventListener("resize", updateSize);
+        
+    let WIMMT_mobSelector = WIMMT_PackageDiv.classList.contains("mobilePkg");
 
         if(!WIMMT_mobSelector){ 
             WIMMT_OBSec_Stage2_Top_UL = document.querySelector("#package-order_section #package-ob_section #OB_DirMsg .ob__stage2 .ob__stage2__top h6.Current u");
@@ -96,7 +97,7 @@ function WIMMT_Init() {
 
         var WIMMT_OB_LetterAnimation = new SplitText(WIMMT_OBSec_Stage1_Words, {type:"words, chars"}), words = WIMMT_OB_LetterAnimation.words;
 
-        var WIMMT_OB_Ani = new TimelineMax({paused: true, onStart:function(){ _packageSetValue("WIMMT_Start",true); clearInterval(clockInterval); console.log("OBAni Started...")},onComplete:function(){ OB_List_Pulse.play(); document.querySelector("#mpWrap").style.display = "block"; } }); 
+        var WIMMT_OB_Ani = new TimelineMax({paused: true, onStart:function(){ _packageSetValue("WIMMT_Start",true); clearInterval(clockInterval); console.log("OBAni Started...")},onComplete:function(){ OB_List_Pulse.play();  } }); 
 
             WIMMT_OB_Ani.to(WIMMT_ContestSec,{duration:0.5,display:'none',opacity:0,ease:'none'})
             WIMMT_OB_Ani.to(WIMMT_OrderSec,{duration:0.5,display:'block',opacity:1,ease:'none'})

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+  <contestgroup name="Day Of Deals V4" autoactivate="true" isPrimary="true">
+    <contest tag="Superprize">
+      <attribute tag="Giveaway Number" name="gwy" type="string" tempVal="1111"/>
+      <attribute tag="Deadline Date" name="deadline" type="date" tempVal="1/12/2022"/>
+      <attribute tag="Award Date" name="awardDate" type="date" tempVal="4/30/2022"/>
+      <attribute tag="Day Of Deals Expiration Date" name="DODExpDate" type="date" tempVal="4/28/2022"/>
+      <attribute tag="OB Visibility" name="OBvisibility" type="dropdown">
+        <attributeValue value="showOB"/>
+        <attributeValue value="hideOB"/>
+      </attribute>
+    </contest>
+  </contestgroup>   
+  <contestgroup name="Day Of Deals V4 upgrade 2" autoactivate="true" isPrimary="false">
+    <contest tag="Superprize Bonus">
+      <attribute tag="Giveaway Number" name="gwy" type="string" tempVal="1112"/>
+      <attribute tag="Award Date" name="awardDate" type="date" tempVal="4/29/2022"/>
+    </contest>
+  </contestgroup>   
+  <contestgroup name="Day Of Deals V4 upgrade 3" autoactivate="true" isPrimary="false">
+    <contest tag="Ford Escape">
+      <attribute tag="Giveaway Number" name="gwy" type="string" tempVal="1113"/>
+      <attribute tag="Award Date" name="awardDate" type="date" tempVal="4/28/2022"/>
+    </contest>
+  </contestgroup>   
+</metadata>

@@ -1,0 +1,747 @@
+/*PKG_Name - Contest_Name(5KAWFL) - V1.0 - Pkg Mobile CSS by Dev_Name - ??/2019*/
+/******Package Specific Style Start******/
+#contestWrap {
+  overflow: hidden;
+}
+
+#mainWrap {
+  width: 320px;
+  margin: 0 auto;
+  overflow: hidden;
+  background: #fff;
+}
+
+#mobileBody p {
+  padding: 10px 0;
+}
+
+#deviceWrap1 {
+  display: none;
+}
+
+/******Package Specific Style Start******/
+/******Default Package Style Start******/
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: left;
+  color: #000;
+  font-size: 100%;
+  background-color: #ad1d1d;
+}
+
+.disclaimer {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.6875em;
+  max-width: 300px;
+  padding: 20px 0;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.disclaimer p, .disclaimer a {
+  color: #000;
+}
+
+.disclaimer p {
+  margin-bottom: 14px;
+}
+
+.isUppercase {
+  text-transform: uppercase;
+}
+
+/******Default Package Style End******/
+/*****Package Style Start*******/
+#package-contest_section {
+  width: 320px;
+  min-height: 600px;
+  margin: 20px auto;
+  padding-bottom: 20px;
+  overflow: hidden;
+  background: #fff url("../images/DOD_V4_Contest_Bkgrnd.png") 0 0 no-repeat;
+}
+#package-contest_section .contest_Sec_Hdr {
+  width: 310px;
+  height: 70px;
+  color: #e22626;
+  border-radius: 5px;
+  box-sizing: border-box;
+  position: relative;
+  left: 5px;
+  top: 5px;
+}
+#package-contest_section .contest_Sec_Hdr .hdrBorder {
+  width: 310px;
+  height: 65px;
+  border: 4.5px solid #e22626;
+  border-radius: 5px;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-mask-image: url("../images/DOD_V4_grunge.png");
+  -webkit-mask-size: 944px 604px;
+  mask-image: url("../images/DOD_V4_grunge.png");
+  mask-size: 944px 604px;
+  mix-blend-mode: multiply;
+}
+#package-contest_section .contest_Sec_Hdr .hdrArrow {
+  width: 0;
+  height: 0;
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  border-top: 7px solid #e22626;
+  position: absolute;
+  right: 25px;
+  top: 65px;
+  -webkit-mask-image: url("../images/DOD_V4_grunge.png");
+  -webkit-mask-size: 944px 604px;
+  mask-image: url("../images/DOD_V4_grunge.png");
+  mask-size: 944px 604px;
+  mix-blend-mode: multiply;
+}
+#package-contest_section .contest_Sec_Hdr .hdrClock {
+  width: 58px;
+  height: 60px;
+  background: transparent url("../images/DOD_V4_Clock_img.png") center center no-repeat;
+  background-size: contain;
+  position: absolute;
+  right: 5px;
+  top: 87px;
+}
+#package-contest_section .contest_Sec_Hdr h6 {
+  text-align: center;
+  text-transform: uppercase;
+}
+#package-contest_section .contest_Sec_Hdr h6:nth-of-type(1) {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 26px;
+  padding-top: 10px;
+}
+#package-contest_section .contest_Sec_Hdr h6:nth-of-type(2) {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 20px;
+}
+#package-contest_section .contest_Sec_Hdr_mid {
+  width: 320px;
+  height: 85px;
+  background: transparent url("../images/DOD_V4_hdr_midBkgrnd-Mob.png") center center no-repeat;
+  background-size: contain;
+  margin: 10px auto 0px;
+  text-align: center;
+  overflow: hidden;
+}
+#package-contest_section .contest_Sec_Hdr_mid h6 {
+  width: 240px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  line-height: 20px;
+  font-size: 18px;
+  margin-top: 11px;
+  color: rgb(0, 0, 0);
+}
+#package-contest_section .contest_Sec_Hdr_mid h6 span {
+  text-transform: uppercase;
+}
+#package-contest_section .contest_Sec_Contests {
+  display: flex;
+  width: 400%;
+}
+#package-contest_section .contest_Sec_Contests .contest {
+  width: 320px;
+  text-align: center;
+  position: relative;
+}
+#package-contest_section .contest_Sec_Contests .contest .conStamp {
+  filter: grayscale(1);
+  opacity: 1;
+}
+#package-contest_section .contest_Sec_Contests .contest h6.conHdr {
+  opacity: 0;
+}
+#package-contest_section .contest_Sec_Contests .contest .conCrossout {
+  width: 320px;
+  margin: 6px auto 0;
+  position: relative;
+}
+#package-contest_section .contest_Sec_Contests .contest .conCrossout h6::before, #package-contest_section .contest_Sec_Contests .contest .conCrossout h6::after {
+  content: "";
+  width: 0px;
+  height: 4px;
+  background-color: #ad1d1d;
+  opacity: 0.8;
+  position: absolute;
+  top: 0px;
+}
+#package-contest_section .contest_Sec_Contests .contest .conCrossout h6::before {
+  left: 50px;
+  transform-origin: top left;
+  transform: rotate(4deg);
+}
+#package-contest_section .contest_Sec_Contests .contest .conCrossout h6::after {
+  right: 50px;
+  transform-origin: top right;
+  transform: rotate(-4deg);
+}
+#package-contest_section .contest_Sec_Contests .contest .conCrossout h6 {
+  color: #828282;
+}
+#package-contest_section .contest_Sec_Contests .contest:nth-of-type(1) {
+  height: 175px;
+  background: transparent url("../images/DOD_V4_S1Border_Mob.png") center center no-repeat;
+  background-size: contain;
+  display: block;
+  margin: 10px auto 30px;
+}
+#package-contest_section .contest_Sec_Contests .contest:nth-of-type(1) h6 {
+  margin: 0 auto;
+  font-size: 21px;
+  line-height: 21px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  color: #e22626;
+}
+#package-contest_section .contest_Sec_Contests .contest:nth-of-type(1) h6.conHdr {
+  margin-top: -21px;
+}
+#package-contest_section .contest_Sec_Contests .contest:nth-of-type(1) h5 {
+  font-size: 38px;
+  line-height: 38px;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  color: #000;
+}
+#package-contest_section .contest_Sec_Contests .contest:nth-of-type(1) h5:nth-of-type(2) {
+  font-size: 33px;
+  line-height: 33px;
+}
+#package-contest_section .contest_Sec_Contests .contest:nth-of-type(1) h4, #package-contest_section .contest_Sec_Contests .contest:nth-of-type(1) h3 {
+  font-size: 17px;
+  line-height: 17px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color: #000;
+  padding: 0px 0px 5px;
+}
+#package-contest_section .contest_Sec_Contests .contest:nth-of-type(1) h3 {
+  color: #e22626;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+#package-contest_section .contest_Sec_Contests .contest:nth-of-type(1) .conStamp {
+  width: 156px;
+  height: 41px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  position: relative;
+  top: 2px;
+  transform: rotate(-2deg);
+  filter: grayscale(1);
+  opacity: 1;
+}
+#package-contest_section .contest_Sec_Contests .contest:nth-of-type(1) .conStamp .stampBorder {
+  width: 156px;
+  height: 41px;
+  border: 3px solid #e22626;
+  border-radius: 5px;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-mask-image: url("../images/DOD_V4_grunge.png");
+  -webkit-mask-size: 944px 604px;
+  mask-image: url("../images/DOD_V4_grunge.png");
+  mask-size: 944px 604px;
+  mix-blend-mode: multiply;
+}
+#package-contest_section .contest_Sec_Contests .contest:nth-of-type(1) .conStamp h6 {
+  font-size: 21px;
+  line-height: 35px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  color: #e22626;
+}
+#package-contest_section .contest_Sec_Contests .contest:nth-of-type(2) {
+  height: 175px;
+  background: transparent url("../images/DOD_V4_S2Border_Mob.png") center center no-repeat;
+  background-size: contain;
+  margin: 10px auto 30px;
+}
+#package-contest_section .contest_Sec_Contests .contest:nth-of-type(2) h6 {
+  margin: 0 auto;
+  font-size: 21px;
+  line-height: 21px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  color: #e22626;
+}
+#package-contest_section .contest_Sec_Contests .contest:nth-of-type(2) h6.conHdr {
+  margin-top: -21px;
+}
+#package-contest_section .contest_Sec_Contests .contest:nth-of-type(2) h5 {
+  font-size: 42px;
+  line-height: 42px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  color: #000;
+}
+#package-contest_section .contest_Sec_Contests .contest:nth-of-type(2) h5:nth-of-type(1) {
+  margin-top: 2px;
+}
+#package-contest_section .contest_Sec_Contests .contest:nth-of-type(2) h5:nth-of-type(2) {
+  font-size: 29px;
+  line-height: 40px;
+}
+#package-contest_section .contest_Sec_Contests .contest:nth-of-type(2) h4, #package-contest_section .contest_Sec_Contests .contest:nth-of-type(2) h3 {
+  font-size: 17px;
+  line-height: 28px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color: #000;
+  padding: 0px 0px 10px;
+}
+#package-contest_section .contest_Sec_Contests .contest:nth-of-type(2) h3 {
+  color: #e22626;
+}
+#package-contest_section .contest_Sec_Contests .contest:nth-of-type(2) .conStamp {
+  width: 156px;
+  height: 41px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  position: relative;
+  top: 2px;
+  transform: rotate(-2deg);
+  filter: grayscale(1);
+  opacity: 1;
+}
+#package-contest_section .contest_Sec_Contests .contest:nth-of-type(2) .conStamp .stampBorder {
+  width: 156px;
+  height: 41px;
+  border: 3px solid #e22626;
+  border-radius: 5px;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-mask-image: url("../images/DOD_V4_grunge.png");
+  -webkit-mask-size: 944px 604px;
+  mask-image: url("../images/DOD_V4_grunge.png");
+  mask-size: 944px 604px;
+  mix-blend-mode: multiply;
+}
+#package-contest_section .contest_Sec_Contests .contest:nth-of-type(2) .conStamp h6 {
+  font-size: 21px;
+  line-height: 35px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  color: #e22626;
+}
+#package-contest_section .contest_Sec_Contests .contest:nth-of-type(3) {
+  height: 175px;
+  background: transparent url("../images/DOD_V4_S2Border_Mob.png") center center no-repeat;
+  background-size: contain;
+  margin: 10px auto 30px;
+}
+#package-contest_section .contest_Sec_Contests .contest:nth-of-type(3) h6 {
+  margin: 0 auto;
+  font-size: 21px;
+  line-height: 21px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  color: #e22626;
+}
+#package-contest_section .contest_Sec_Contests .contest:nth-of-type(3) h6.conHdr {
+  margin-top: -21px;
+}
+#package-contest_section .contest_Sec_Contests .contest:nth-of-type(3) h5 {
+  font-size: 30px;
+  line-height: 30px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  color: #000;
+}
+#package-contest_section .contest_Sec_Contests .contest:nth-of-type(3) h4 {
+  padding-top: 4px;
+}
+#package-contest_section .contest_Sec_Contests .contest:nth-of-type(3) h5:nth-of-type(1) {
+  padding-top: 5px;
+}
+#package-contest_section .contest_Sec_Contests .contest:nth-of-type(3) h5:nth-of-type(3) {
+  font-size: 14px;
+  line-height: 20px;
+}
+#package-contest_section .contest_Sec_Contests .contest:nth-of-type(3) h4, #package-contest_section .contest_Sec_Contests .contest:nth-of-type(3) h3 {
+  font-size: 17px;
+  line-height: 17px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color: #000;
+}
+#package-contest_section .contest_Sec_Contests .contest:nth-of-type(3) h3 {
+  color: #e22626;
+}
+#package-contest_section .contest_Sec_Contests .contest:nth-of-type(3) .conStamp {
+  width: 156px;
+  height: 41px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  position: relative;
+  top: 2px;
+  transform: rotate(-2deg);
+  filter: grayscale(1);
+  opacity: 1;
+}
+#package-contest_section .contest_Sec_Contests .contest:nth-of-type(3) .conStamp .stampBorder {
+  width: 156px;
+  height: 41px;
+  border: 3px solid #e22626;
+  border-radius: 5px;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-mask-image: url("../images/DOD_V4_grunge.png");
+  -webkit-mask-size: 944px 604px;
+  mask-image: url("../images/DOD_V4_grunge.png");
+  mask-size: 944px 604px;
+  mix-blend-mode: multiply;
+}
+#package-contest_section .contest_Sec_Contests .contest:nth-of-type(3) .conStamp h6 {
+  font-size: 21px;
+  line-height: 35px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  color: #e22626;
+}
+#package-contest_section .contest_Sec_Contests .summary {
+  position: relative;
+  width: 320px;
+}
+#package-contest_section .contest_Sec_Contests .summary .sumContest {
+  display: flex;
+  width: 320px;
+  position: relative;
+  margin: 0px auto;
+  border: 2px solid #000;
+  border-left: none;
+  border-right: none;
+  background: transparent url("../images/DOD_V4_Sum_Bkgrnd_Mob.png") center right no-repeat;
+  background-size: contain;
+  overflow: hidden;
+}
+#package-contest_section .contest_Sec_Contests .summary .sumContest .cornerCut {
+  width: 150px;
+  height: 75px;
+  text-align: center;
+  position: relative;
+}
+#package-contest_section .contest_Sec_Contests .summary .sumContest .cornerCut h6 {
+  width: 85px;
+  height: 20px;
+  font-size: 12px;
+  line-height: 20px;
+  margin: 5px auto 4px;
+  background-color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  color: #e22626;
+  position: relative;
+  padding: 2px 3px;
+  z-index: 50;
+  transform: rotate(-2deg);
+}
+#package-contest_section .contest_Sec_Contests .summary .sumContest .cornerCut h5 {
+  display: inline;
+  background-color: #e22626;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  color: #fff;
+  position: relative;
+  z-index: 50;
+}
+#package-contest_section .contest_Sec_Contests .summary .sumContest .cornerCut h5:nth-of-type(2) {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  text-transform: capitalize;
+  font-size: 12px;
+  line-height: 12px;
+}
+#package-contest_section .contest_Sec_Contests .summary .sumContest .cornerCut .cutBkgrnd {
+  width: 100px;
+  height: 75px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 40;
+  background: #e22626;
+  -webkit-mask-image: url("../images/DOD_V4_grunge.png");
+  -webkit-mask-size: 682px 582px;
+  mask-image: url("../images/DOD_V4_grunge.png");
+  mask-size: 682px 582px;
+  mix-blend-mode: multiply;
+}
+#package-contest_section .contest_Sec_Contests .summary .sumContest .summaryContest {
+  width: 100%;
+  position: relative;
+}
+#package-contest_section .contest_Sec_Contests .summary .sumContest .summaryContest h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  color: rgb(0, 0, 0);
+  padding: 10px 5px 0px;
+}
+#package-contest_section .contest_Sec_Contests .summary .sumContest .summaryContest h5 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  padding: 0 20px;
+  text-align: left;
+  color: rgb(0, 0, 0);
+  font-size: 26px;
+  line-height: 26px;
+}
+#package-contest_section .contest_Sec_Contests .summary .sumContest:nth-of-type(1) .summaryContest h6 {
+  font-size: 22px;
+  line-height: 22px;
+  text-transform: uppercase;
+}
+#package-contest_section .contest_Sec_Contests .summary .sumContest:nth-of-type(1) .summaryContest h5 span.explanation {
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  color: rgb(255, 255, 255);
+  background-color: rgb(226, 38, 38);
+  padding: 2px 10px;
+  border-radius: 10px 0 0 0;
+}
+#package-contest_section .contest_Sec_Contests .summary .sumContest:nth-of-type(2) .summaryContest h6 {
+  font-size: 20px;
+  line-height: 20px;
+}
+#package-contest_section .contest_Sec_Contests .summary .sumContest:nth-of-type(3) .summaryContest h6 {
+  font-size: 20px;
+  line-height: 20px;
+}
+#package-contest_section .contest_Sec_Contests .summary .sumContest:nth-of-type(3) .summaryContest h5 span.explanation {
+  font-size: 10px;
+  line-height: 24px;
+  text-transform: capitalize;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  position: absolute;
+  left: 5px;
+  bottom: 5px;
+}
+#package-contest_section .sumButtonSection {
+  margin-top: 10px;
+}
+#package-contest_section .sumButtonSection h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  margin: 10px 20px 0;
+  color: rgb(0, 0, 0);
+  text-align: left;
+  font-size: 16px;
+  line-height: 20px;
+}
+#package-contest_section .sumButtonSection .package-ConBtn {
+  display: block;
+  width: 188px;
+  height: 45px;
+  text-align: center;
+  cursor: pointer;
+  z-index: 50;
+  margin: 0px auto;
+  border: 1px solid #cf2323;
+  border-radius: 50px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  color: #fff;
+  /* // font-weight: bold; */
+  font-size: 20px;
+  line-height: 45px;
+  text-transform: uppercase;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5);
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#cf2323+0,7f1616+100 */
+  background: #cf2323; /* Old browsers */ /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #cf2323 0%, #7f1616 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#cf2323", endColorstr="#7f1616",GradientType=0 ); /* IE6-9 */
+}
+
+/*****Package Style End*********/
+/****OB Styles start****/
+#package-order_section {
+  display: none;
+}
+#package-order_section #package-ob_section {
+  overflow: hidden;
+  width: 320px;
+  margin: 0 auto;
+  background-color: rgb(0, 0, 0);
+}
+#package-order_section #package-ob_section .ob_inner {
+  width: 320px;
+  min-height: 855px;
+  margin: 0 auto;
+}
+#package-order_section #package-ob_section .ob_inner .ob_inner_hdr {
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 20px;
+  position: relative;
+  z-index: 50;
+}
+#package-order_section #package-ob_section .ob_inner .ob_inner_hdr h6 {
+  color: rgb(255, 216, 173);
+  font-size: 25px;
+  line-height: 25px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+}
+#package-order_section #package-ob_section .ob_inner .ob_inner_hdr h5 {
+  background: transparent url("../images/DOD_V4_OB_Hdr.png") center center no-repeat;
+  background-size: contain;
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+  line-height: 50px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+  margin-top: -5px;
+}
+#package-order_section #package-ob_section .ob_inner .ob_inner_main {
+  background: #f2f3f5 url("../images/DOD_V4_OB_Main_Bkgrnd_Mob.png") 0 0 no-repeat;
+  background-size: contain;
+  width: 320px;
+  min-height: 708px;
+  position: relative;
+  overflow: hidden;
+  z-index: 45;
+  margin: -5px auto 0;
+}
+#package-order_section #package-ob_section .ob_inner .ob_inner_main .ob_inner_main_hdr {
+  background: transparent url("../images/DOD_V4_OB_rewardBanner_Mob.png") 0 0 no-repeat;
+  background-size: contain;
+  width: 320px;
+  height: 160px;
+  position: relative;
+  top: 15px;
+}
+#package-order_section #package-ob_section .ob_inner .ob_inner_main .ob_inner_main_hdr .hdrHiddenContent {
+  text-align: center;
+}
+#package-order_section #package-ob_section .ob_inner .ob_inner_main .ob_inner_main_hdr h6 {
+  overflow: hidden;
+  text-indent: -9999px;
+  background: transparent url("../images/DOD_V4_OB_Logo_Mob.png") center center no-repeat;
+  background-size: contain;
+  width: 320px;
+  height: 88px;
+  position: absolute;
+  top: -13px;
+}
+#package-order_section #package-ob_section .ob_inner .ob_inner_main .ob_inner_main_hdr .ob_inner_main_hdr_copy {
+  overflow: hidden;
+  width: 320px;
+  padding-top: 64px;
+}
+#package-order_section #package-ob_section .ob_inner .ob_inner_main .ob_inner_main_hdr .ob_inner_main_hdr_copy p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+  line-height: 18px;
+  padding: 0 10px 6px;
+}
+#package-order_section #package-ob_section .ob_inner .ob_inner_main .ob_inner_main_hdr .ob_inner_main_hdr_copy h5 {
+  width: 320px;
+  height: 16px;
+  background: transparent url("../images/DOD_V4_OB_Copy_Mob.png") center center no-repeat;
+  background-size: contain;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+#package-order_section #package-ob_section .ob_inner .ob_inner_main .ob_inner_main_hdr .ob_inner_main_hdr_copy h4 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  text-align: center;
+  text-transform: uppercase;
+  color: rgb(210, 40, 32);
+  font-size: 14px;
+  line-height: 21px;
+}
+#package-order_section #package-ob_section .ob_inner .ob_inner_main .ob_inner_main_rewards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#package-order_section #package-ob_section .ob_inner .ob_inner_main .ob_inner_main_rewards li {
+  background: transparent url("../images/DOD_V4_OB_Rewards_Mob.png") 0 0 no-repeat;
+  background-size: 100%;
+  width: 317px;
+  height: 141px;
+  overflow: hidden;
+}
+#package-order_section #package-ob_section .ob_inner .ob_inner_main .ob_inner_main_rewards li .ob_reward {
+  display: none;
+  text-indent: -100000px;
+  position: relative;
+  left: -10000000px;
+}
+#package-order_section #package-ob_section .ob_inner .ob_inner_main .ob_inner_main_rewards li:nth-of-type(2) {
+  background-position: 0 -143px;
+}
+#package-order_section #package-ob_section .ob_inner .ob_inner_main .ob_inner_main_rewards li:nth-of-type(3) {
+  background-position: 0 -286px;
+}
+#package-order_section #package-ob_section .ob_inner .ob_inner_main .ob_inner_main_rewards li:nth-of-type(4).prospects {
+  display: none;
+  background-position: 0 -429px;
+}
+#package-order_section #package-ob_section .ob_inner .ob_inner_dir_Msg {
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
+#package-order_section #package-ob_section .ob_inner .ob_inner_dir_Msg h6 {
+  padding: 10px;
+  font-size: 17px;
+  line-height: 22px;
+}
+#package-order_section #package-ob_section .ob_inner .ob_inner_dir_Msg h6.Current {
+  width: 300px;
+}
+#package-order_section #package-ob_section .ob_inner .ob_inner_dir_Msg h5 {
+  font-size: 12px;
+  line-height: 15px;
+  padding: 10px;
+}
+#package-order_section #package-pkg_section {
+  width: 320px;
+  margin: 0 auto;
+  background-color: rgb(243, 244, 246);
+}
+
+.ob_inner_dir_Msg .presPreferred, .ob_inner_dir_Msg .prefPlus, .ob_inner_dir_Msg .preferred, .ob_inner_dir_Msg .offline, .ob_inner_dir_Msg .prospect, .ob_inner_dir_Msg .lapsed, .ob_inner_dir_Msg .balance {
+  display: none;
+}
+
+/****OB Styles end****/
+/*****Merch Ineligible button.. place over package button (Absoulute positioning)*****/
+/*Refer to merch INELLIGABLE inelligable doc: http://creativedept.classic.pchad.com/Libraries/Packages/Spectrum/_docs/MERCH%20INELLIGABLE.TXT*//*# sourceMappingURL=m.package.DODV4.css.map */
