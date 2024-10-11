@@ -2,6 +2,10 @@
 var pigCaptured = 0, timerCount = 10, hpp=1, timedOut = 1000, aniDuration = 5000, timeUp=false;
 $(document).ready(function(){	
 	startItUp();
+
+	document.querySelector("p.copyright span").innerHTML = new Date().getFullYear();
+
+	// new Date().getFullYear()
 });
 
 function startItUp(){	
