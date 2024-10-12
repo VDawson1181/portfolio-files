@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Particle Demo</title>
+        <meta name="viewport" content="width=1130">
+        <!-- CSS -->
+        <link rel="stylesheet" href="../dependencies/reset.css">
+        <link rel="stylesheet" href="../dependencies/VAD_animate.css">
+        <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet"> 
+        <style>
+            body{
+              background-color: #999;
+            }
+            .nav{
+              width: 800px;
+              margin: 0 auto;
+              text-align: center;
+              margin-bottom: 10px;
+            }
+            .nav button{
+              background-color: #000;
+              color: #fff;
+              border: 0;
+              font-size: 18px;
+              line-height: 20px;
+              padding: 5px;
+              cursor: pointer;
+              border-radius: 5px;
+            }
+            h1{
+              font-family: 'Pacifico', cursive;
+              font-size: 80px;
+              line-height: 80px;
+              text-align: center; 
+              margin: 25px 0 30px;
+              color: #7ADD20;
+              text-shadow: #000 2px 2px 1px;
+            }
+            .demo{
+              background-color: black;
+              width: 800px;
+              height: 500px;
+              margin: 0 auto 50px;
+              overflow: hidden;
+              position: relative;
+              border: 5px solid #fff;
+              box-shadow: #000 5px 5px 10px 3px;
+            }
+            .particle{
+              position: absolute;
+              border-radius: 50%;
+            }
+            .largeParticle{
+              width: 40px;
+              height: 40px;
+              background-color: #7ADD20;
+            }
+            .mediumParticle{
+              width: 30px;
+              height: 30px;
+              background-color: purple;
+            }      
+            .smallParticle{
+              width: 30px;
+              height: 30px;
+              background-color: orange;
+            }             
+        </style>      
+    </head>
+    <body>        
+        <h1>OOH Bubbles!</h1>
+
+        <div class="nav">
+          <button id="slow">Slow Motion</button>
+          <button id="normal">Normal</button>
+          <button id="fast">Fast Fwd</button>
+        </div>
+        <div id="particleContainer" class="demo">
+                 
+        </div> 
+    </body>
+
+    <!-- SCRIPTS -->
+    <!-- GLOBAL -->
+    <script src="../dependencies/jquery-1.7.min.js"></script>
+    <script src="../dependencies/GSAP_3.12.5_Min/gsap.min.js"></script> 
+    <!-- <script type="text/javascript" src="//cdn-imageconv.pchassets.com/spectrum/js/greenSock/TweenMax.min.js"></script>        -->
+    <script>
+      var sizes = ["small", "medium", "large"],
+          particleContainer = $("#particleContainer"),
+          slowBtn = $("#slow"),
+          normalBtn = $("#normal"),
+          fastBtn = $("#fast"),
+          startY = 510,
+          endY = -50;
+
+      //Build my timeline...
+
+      // var demoAni = new TimelineMax({ paused: false });
+      var demoAni = gsap.timeline({ paused: false })
+
+          for(var i=0; i<50; i++){
+            var sizeIndex = randomNumber(0,2);
+            var size = sizes[sizeIndex];
+            var speed = (3-sizeIndex);
+            var horizontalPosition = randomNumber(0,800);
+            var particle = $('<div class="particle '+ size +'Particle"><span class="string"></span></div>').appendTo(particleContainer); //Create a particle
+            demoAni.set(particle, {y:startY, x:horizontalPosition},0)//place at the bottom, randomly place among the x axis...
+
+            //create an animation at a random start time
+            demoAni.to(particle, speed, {y:endY, x:randomNumber(0,730), repeatDelay: Math.random()*2, repeat: 500}, Math.random()*2)
+
+            slowBtn.click(function(){
+              TweenLite.to(demoAni, 1, {timeScale:0.1})
+            })
+            normalBtn.click(function(){
+              TweenLite.to(demoAni, 2, {timeScale:1, ease:Bounce.easeIn})
+            })
+            fastBtn.click(function(){
+              TweenLite.to(demoAni, 2, {timeScale:4, ease:Bounce.easeIn})
+            })
+
+
+          }
+         
+      function randomNumber(min, max){
+        return Math.floor(Math.random() * (1 + max - min) + min);
+      }                                                                        
+    </script>
+</html>
