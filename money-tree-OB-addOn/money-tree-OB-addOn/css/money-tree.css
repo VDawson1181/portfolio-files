@@ -1,4 +1,7 @@
 /* Money Tree device - Balance v1.2 */
+body{
+	background-color: #8be7f3;
+}
 #money-tree-OB-addOn{
 	background: #6af3fc;
 	width: 730px;

@@ -1,13 +1,13 @@
 /* Money Tree Device - balance v1.2 */
 $(document).ready(function(){
 	if(!$("body.eo").length){//not EO? read data, change display, bind clicks as needed
-		var deviceIdentifier = "#money-tree-OB-addOn",
-		addOnDevice = deviceSettings.GetDeviceByElementId(deviceIdentifier);	
-		addOnDevice.eoClass = "addOnDevice MT_Label_Blank"; //set classname for EO form label	
-		deviceSettings.Save(); // always SAVE
+		var deviceIdentifier = "#money-tree-OB-addOn";
+		// addOnDevice = deviceSettings.GetDeviceByElementId(deviceIdentifier);	
+		// addOnDevice.eoClass = "addOnDevice MT_Label_Blank"; //set classname for EO form label	
+		// deviceSettings.Save(); // always SAVE
 		
 		//This code is going to attach the src of the devicePixel class to a variable, and then leave just the path...		
-		var deviceSrcMain = AddOnGetUrl($('.devicePixel').attr("src")).replace('images/devicePixel.gif','');
+		// var deviceSrcMain = AddOnGetUrl($('.devicePixel').attr("src")).replace('images/devicePixel.gif','');
 		
 		//Money Tree Click
 		$(deviceIdentifier+" .mt-tree-element").css({"cursor":"pointer"}).click(function(){	
@@ -17,7 +17,7 @@ $(document).ready(function(){
 				$(deviceIdentifier+", "+deviceIdentifier+" .mt-tree-element").removeClass("mt-wobble");
 				setTimeout(function(){
 					$(deviceIdentifier+", "+deviceIdentifier+" .mt-tree-element").addClass("mt-wobble");
-					 deviceActivate(deviceIdentifier,addOnDevice);							
+					 deviceActivate(deviceIdentifier);							
 				}, 500);									
 			});
 		});	
@@ -79,7 +79,7 @@ $(document).ready(function(){
 
 
 //EXample of a fuinction that updates the device & device-cookie so that "state" is remembered.
-function deviceActivate(deviceIdentifier,addOnDevice) {
+function deviceActivate(deviceIdentifier) {
 	var deviceRandom=Math.floor(Math.random()*10)+1;
 	// 40/20/20/10/10 split
 	
@@ -120,12 +120,12 @@ function deviceActivate(deviceIdentifier,addOnDevice) {
 	$(deviceIdentifier+" .mt-sign-element p.mt-sign-coaching").replaceWith("<p class='mt-sign-coaching pzAmount'>$"+devConCopy+"</p>");	
 	
 	//Activate Contest
-	deviceSettings.ActvateContestByElementId(deviceIdentifier, deviceSettings.GetDeviceByElementId(deviceIdentifier).Contests[devConChoice].Tag);	
-	//Saving my choices by extending the addOnDevice object 
-	addOnDevice.conCopy = devConCopy; //Hold my contest choice....		
-	addOnDevice.eoClass = "addOnDevice MT_Label_"+devConChoice; //set classname for EO form label
-	addOnDevice.strRequiredMessage="Your contest stamp has not been transferred! Find your missing stamp within this Notice and transfer as directed to claim your prize eligibility!";	
-	deviceSettings.Save();	
+	// deviceSettings.ActvateContestByElementId(deviceIdentifier, deviceSettings.GetDeviceByElementId(deviceIdentifier).Contests[devConChoice].Tag);	
+	// //Saving my choices by extending the addOnDevice object 
+	// addOnDevice.conCopy = devConCopy; //Hold my contest choice....		
+	// addOnDevice.eoClass = "addOnDevice MT_Label_"+devConChoice; //set classname for EO form label
+	// addOnDevice.strRequiredMessage="Your contest stamp has not been transferred! Find your missing stamp within this Notice and transfer as directed to claim your prize eligibility!";	
+	// deviceSettings.Save();	
 	
 	deviceAnimate(deviceIdentifier);	
 }
