@@ -183,33 +183,31 @@
 			-o-animation-name: carBounce;
 			animation-name: carBounce;
 		}
-
-
 	</style>
 </head>
 <body>
-<div id="subWrapper">
-	<h1>Thank You!!!</h1>
-	<div class="car1 aniTiming carBounce"></div> 
-    <div class="landscape"></div>
-    <div class="trackLayer transTiming">
-        <div class="trackLine Left aniLaneLines"></div>
-        <div class="trackLine Right aniLaneLines"></div>     
-    </div>      
-</div>
-<!-- SCRIPTS -->
-<!-- GLOBAL 3rd party -->
-<script src="../dependencies/jquery-1.7.min.js"></script>
+	<div id="subWrapper">
+		<h1>Thank You!!!</h1>
+		<div class="car1 aniTiming carBounce"></div> 
+		<div class="landscape"></div>
+		<div class="trackLayer transTiming">
+			<div class="trackLine Left aniLaneLines"></div>
+			<div class="trackLine Right aniLaneLines"></div>     
+		</div>      
+	</div>
+	<!-- SCRIPTS -->
+	<!-- GLOBAL 3rd party -->
+	<script src="../dependencies/jquery-1.7.min.js"></script>
 
-<!-- POC JS -->
-<script type="text/javascript">
-	$(document).ready(function(){
-		/*$("#subWrapper .trackLayer .trackLine").css({"height":"200%"});*/
-		$("#subWrapper .car1").css({"cursor":"pointer"}).click(function(){
-			$(this).removeClass("aniTiming carBounce").addClass("linearOneSec").css({"scale":"0","bottom":"210px"});
+	<!-- POC JS -->
+	<script type="text/javascript">
+		$(document).ready(function(){
+			/*$("#subWrapper .trackLayer .trackLine").css({"height":"200%"});*/
+			$("#subWrapper .car1").css({"cursor":"pointer"}).click(function(){
+				$(this).removeClass("aniTiming carBounce").addClass("linearOneSec").css({"scale":"0","bottom":"210px"});
+			});
 		});
-	});
-</script>
+	</script>
 
 </body>
 </html>
