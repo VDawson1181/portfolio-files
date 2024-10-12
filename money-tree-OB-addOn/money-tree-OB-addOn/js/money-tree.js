@@ -40,7 +40,7 @@ $(document).ready(function(){
 			});						
 		};
 				
-		var savingsCookie = getNameVal("savPlayed","MT");		
+		// var savingsCookie = getNameVal("savPlayed","MT");		
 		
 		/*if (addOnDevice.isActionTaken) {
 			if(!savingsCookie){
