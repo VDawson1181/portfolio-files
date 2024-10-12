@@ -4,7 +4,8 @@ body{
 }
 #money-tree-OB-addOn{
 	background: #6af3fc;
-	width: 730px;
+	max-width: 730px;
+	min-width: 320px;
 	height: 500px;
 	overflow: hidden;	
 	margin: 50px auto 0;
@@ -43,24 +44,30 @@ body{
 }
 
 #money-tree-OB-addOn .mt-tree-element{
-	width: 1000px;
-	height: 806px;
+	/* width: 1000px; */
+	/* height: 806px; */
+	width: 100%;
+	height: 100%;
 	/*margin: -235px 0 0 -135px;*/
 	background: url("../images/mt-Tree.png") center bottom no-repeat;	
+	background-size: cover;
 	position: absolute;
-	top: -185px;
-	left: -135px;
+	/*top: -185px;
+	left: -135px; */
 	z-index: 90;
 }
 
 #money-tree-OB-addOn .mt-sav-tree-element{
-	width: 917px;
-	height: 800px;
+	/* width: 917px;
+	height: 800px; */
+	width: 100%;
+	height: 100%;
 	/*margin: -235px 0 0 -135px;*/
 	background: url("../images/mt-sav-Tree.png") center bottom no-repeat;	
+	background-size: cover;
 	position: absolute;
-	top: -80px;
-	left: -135px;
+	/* top: -80px;
+	left: -135px; */
 	z-index: 90;
 	display: none;
 }
@@ -209,7 +216,8 @@ body{
 }
 
 #money-tree-OB-addOn .mt-hdr-element p.mt-hdr-game-name{
-	background: url("../images/mt-contest-hdr.png") center center no-repeat;	
+	background: url("../images/mt-contest-hdr.png") center center no-repeat;
+	background-size: contain;	
 	width: 100%;
 	height: 103px;	
 }
@@ -236,6 +244,7 @@ body{
 #money-tree-OB-addOn .mt-hdr-element .mt-hdr-gwy{
 	color: #fff;
 	margin: 4px 0 0 195px;
+	text-shadow: 1px 1px 3px #000;
 }
 
 #money-tree-OB-addOn .mt-sign-element{
@@ -316,7 +325,7 @@ body{
 }
 
 #money-tree-OB-addOn .mt-result-element{
-	width: 500px;
+	max-width: 500px;
 	height: 158px;
 	position: relative;
 	margin: 0 auto;
@@ -327,6 +336,7 @@ body{
 }
 #money-tree-OB-addOn .mt-result-element .mt-bird-bubble{
 	background: url("../images/mt-bird-bubble.png") center center no-repeat;	
+	background-size: contain;
 	width: 320px;
 	height: 140px;
 	position: absolute;
@@ -363,21 +373,21 @@ body{
 	position: relative;
   	z-index: 15;
 	color: #8be7f3; 
-	font-size: 32px; 
+	font-size: clamp(1.25rem, 1.5vw, 2rem) ; 
 	padding: 5px 0;
 }
 #money-tree-OB-addOn .mt-result-element .mt-result-bdy{ 	
 	position: relative;
   	z-index: 15;
 	color: #ffe2a9; 
-	font-size: 21px; 
+	font-size: clamp(1.25rem, 1.27vw, 1.313rem) ;  
 }
 #money-tree-OB-addOn .mt-result-element .mt-result-bdy span{text-transform: uppercase;}
 #money-tree-OB-addOn .mt-result-element .mt-result-ftr{ 
 	position: relative;
   	z-index: 15;
 	color: #ffffff; 
-	font-size: 18px; 
+	font-size: clamp(.9rem, 1vw, 1.125rem) ;  
 	padding: 10px 0;		
 }
 
@@ -395,7 +405,7 @@ body{
 .blueCpy{color: #8be7f3; }
 
 #money-tree-OB-addOn .mt-sav-result-element{
-	width: 572px;
+	max-width: 572px;
 	height: 192px;
 	position: relative;
 	margin: 0 auto;
@@ -439,15 +449,16 @@ body{
 	position: relative;
   	z-index: 15;
 	color: #8be7f3; 
-	font-size: 32px; 
+	font-size: clamp(1.563rem, 1.75vw, 2rem) ; 
+	line-height: clamp(1.563rem, 1.75vw, 2rem) ; 
 	padding: 5px 0;
 }
 #money-tree-OB-addOn .mt-sav-result-element .mt-result-bdy{ 	
 	position: relative;
   	z-index: 15;
 	color: #fff; 
-	font-size: 30px; 
-	line-height: 30px;
+	font-size: clamp(1.188rem, 1.75vw, 1.875rem) ; 
+	line-height: clamp(1.188rem, 1.75vw, 1.875rem) ;
 }
 #money-tree-OB-addOn .mt-sav-result-element .mr-result-dash{
     background: none repeat scroll 0 0 #fe0101;
@@ -462,8 +473,8 @@ body{
 	position: relative;
   	z-index: 15;
 	color: #ffe2a9; 
-	font-size: 20px; 
-	line-height: 20px;
+	font-size: clamp(1.5rem, 1.75vw, 1.875rem) ; 
+	line-height: clamp(1.5rem, 1.75vw, 1.875rem) ; 
 	padding: 10px 0;		
 }
 
@@ -844,3 +855,25 @@ body{
 	background: url("../images/mt-label-110.png") 0 0 no-repeat;		
 }
 /* EO SUPPORT Example */
+
+
+@media only screen and (max-width: 600px) {
+	#money-tree-OB-addOn .mt-hdr-element .mt-hdr-gwy{
+		width: max-content;
+		margin: 0 auto;
+	}
+	#money-tree-OB-addOn .mt-hdr-element{
+		background: none;
+	}
+	#money-tree-OB-addOn .mt-sav-sign-element{
+		scale: 0.75;
+		right: 185px;
+	}
+	#money-tree-OB-addOn .mt-sign-element{
+		scale: 0.75;
+		right: -55px;
+	}
+	#money-tree-OB-addOn .mt-sav-result-element .mt-result-ftr span{
+		display: block;
+	}
+}	

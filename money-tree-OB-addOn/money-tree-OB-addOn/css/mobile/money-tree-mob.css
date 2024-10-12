@@ -612,11 +612,6 @@
 	-ms-animation-iteration-count: 1; 	
 	-o-animation-iteration-count: 1; 				
 	animation-iteration-count: 1;
-	
-		/*-webkit-animation-fill-mode: both;
-	-moz-animation-fill-mode: both;
-	-o-animation-fill-mode: both;
-	animation-fill-mode: both;*/
 }
 
 --------------------------------------------------
@@ -753,33 +748,4 @@
 	-webkit-transform-origin: center top;	
 }
 
-/* EO SUPPORT Example */
-#eoDeviceContestLabels li.addOnDevice{
-	background: url("../images/eo_contestLabel_loading.png") center center no-repeat;	
-	width: 236px;
-	height: 172px;
-}
-
-#eoDeviceContestLabels .addOnDevice a{
-	display: block;
-	width: 239px;
-	height: 172px;
-	/*margin-left: 13px;*/
-}
-
-#eoDeviceContestLabels .addOnDevice a.MT_Label_0{
-	background: url("../images/mt-label-550.png") 0 0 no-repeat;		
-}
-#eoDeviceContestLabels .addOnDevice a.MT_Label_1{
-	background: url("../images/mt-label-455.png") 0 0 no-repeat;		
-}
-#eoDeviceContestLabels .addOnDevice a.MT_Label_2{
-	background: url("../images/mt-label-330.png") 0 0 no-repeat;		
-}
-#eoDeviceContestLabels .addOnDevice a.MT_Label_3{
-	background: url("../images/mt-label-245.png") 0 0 no-repeat;		
-}
-#eoDeviceContestLabels .addOnDevice a.MT_Label_4{
-	background: url("../images/mt-label-110.png") 0 0 no-repeat;		
-}
 /* EO SUPPORT Example */
