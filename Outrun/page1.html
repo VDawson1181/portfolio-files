@@ -1,0 +1,214 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>::: track Demo :::</title>
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=320,user-scalable=no" />
+
+	
+    <link rel="stylesheet" type="text/css" href="http://cdn.pch.com/spectrum/css/reset.css" />
+    <link href='http://fonts.googleapis.com/css?family=Amaranth:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="http://cdn.pch.com/spectrum/css/pch_animate.css" />
+    <style>
+		#subWrapper{
+			background: #1F1A56 url("images/tumblr_static_8bit-landscape.jpg") repeat-x 0 -45px;
+			background-size: 80%;
+			width: 750px;
+			height: 500px;	
+			margin: 25px auto;
+			border: 2px solid #000000;
+			border-radius: 25px;
+			position: relative;
+			overflow: hidden;
+			  -webkit-perspective: 200px;
+				 -moz-perspective: 200px;
+				   -o-perspective: 200px;
+					  perspective: 200px;			
+				
+
+			h1{
+				text-align: center;
+				position: absolute;
+				width: 100%;
+				font-size: 110px;
+				font-family: 'Amaranth', sans-serif;
+				
+				/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#16b5ec+0,e1f2f9+49,251400+52,f7bd04+65,f7bd04+100 */
+				background: #16b5ec; /* Old browsers */
+				background: -moz-linear-gradient(top,  #16b5ec 0%, #e1f2f9 49%, #251400 52%, #f7bd04 65%, #f7bd04 100%); /* FF3.6+ */
+				background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#16b5ec), color-stop(49%,#e1f2f9), color-stop(52%,#251400), color-stop(65%,#f7bd04), color-stop(100%,#f7bd04)); /* Chrome,Safari4+ */
+				background: -webkit-linear-gradient(top,  #16b5ec 0%,#e1f2f9 49%,#251400 52%,#f7bd04 65%,#f7bd04 100%); /* Chrome10+,Safari5.1+ */
+				background: -o-linear-gradient(top,  #16b5ec 0%,#e1f2f9 49%,#251400 52%,#f7bd04 65%,#f7bd04 100%); /* Opera 11.10+ */
+				background: -ms-linear-gradient(top,  #16b5ec 0%,#e1f2f9 49%,#251400 52%,#f7bd04 65%,#f7bd04 100%); /* IE10+ */
+				background: linear-gradient(to bottom,  #16b5ec 0%,#e1f2f9 49%,#251400 52%,#f7bd04 65%,#f7bd04 100%); /* W3C */
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#16b5ec', endColorstr='#f7bd04',GradientType=0 ); /* IE6-9 */
+
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;	
+				-webkit-text-stroke-width: 2px;
+				-webkit-text-stroke-color: black;			  
+			}
+			.landscape{
+				background: #fedfac none repeat scroll 0 0;
+				bottom: 143px;
+				height: 117px;
+				left: 0;
+				position: absolute;
+				/*transform: rotateX(53deg);*/
+				width: 100%;
+				z-index: 75;
+				/*transform: rotateX(85deg);*/
+			}
+			
+			.trackLayer{
+				width: 15%;
+				height: 100%;	
+				margin: 0 auto;
+				background: #827C7C;
+				position: relative;
+				z-index: 90;
+				overflow: hidden;
+				/*transform: translateZ( -100px ) rotateX( 90deg );*/
+				transform: rotateX(85deg);
+				border-left: 1px solid #fff;
+				border-right: 1px solid #fff;	
+				
+				/*outline: 70px solid #FEDFAC;*/
+			}
+			.trackLayer:after{
+				background: #fff;
+			}
+			.trackLayer .trackLine{
+				width: 1px;
+				height: 100%;
+				position: absolute;
+				border-left: 2px dashed #FFFFFF;
+			}    
+			.trackLayer .trackLine.Left{left: 30%;}
+			.trackLayer .trackLine.Right{right: 30%;}	
+
+		}
+		
+
+		.car1{
+			background: url("images/ferrari_straight1.png") no-repeat center center transparent;
+			background-size: contain;
+			width: 100%;
+			height: 110px;	
+			position: absolute;
+			bottom: 110px;
+			z-index: 99;
+		}
+
+
+		@-webkit-keyframes aniLaneLines {
+			0% {top: 0;}
+			50% {top: 120px;}
+			100% {top: 0;}
+		}
+
+		@-moz-keyframes aniLaneLines {
+			0% {top: 0;}
+			50% {top: 120px;}
+			100% {top: 0;}
+		}
+
+		@-o-keyframes aniLaneLines {
+			0% {top: 0;}
+			50% {top: 120px;}
+			100% {top: 0;}
+		}
+
+		@keyframes aniLaneLines {
+			0% {top: 0;}
+			50% {top: 120px;}
+			100% {top: 0;}
+		}
+
+		.aniLaneLines {
+			-webkit-animation-name: aniLaneLines;
+			-moz-animation-name: aniLaneLines;
+			-o-animation-name: aniLaneLines;
+			animation-name: aniLaneLines;
+			
+				-webkit-animation-duration: 500ms;
+			-moz-animation-duration: 500ms;	
+			-ms-animation-duration: 500ms;		
+			-o-animation-duration: 500ms;		
+			animation-duration: 500ms;
+			
+				-webkit-animation-fill-mode: both;
+			-moz-animation-fill-mode: both;
+			-o-animation-fill-mode: both;
+			animation-fill-mode: both;
+			
+			-webkit-animation-iteration-count: infinite; 	
+			-moz-animation-iteration-count: infinite; 	
+			-ms-animation-iteration-count: infinite; 	
+			-o-animation-iteration-count: infinite; 				
+			animation-iteration-count: infinite; 
+		}
+
+		.paused {
+		animation-play-state: paused;
+		}
+
+		@-webkit-keyframes carBounce {
+			0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);}
+			40% {-webkit-transform: translateY(3px);}
+			60% {-webkit-transform: translateY(-3px);}
+		}
+
+		@-moz-keyframes carBounce {
+			0%, 20%, 50%, 80%, 100% {-moz-transform: translateY(0);}
+			40% {-moz-transform: translateY(3px);}
+			60% {-moz-transform: translateY(-3px);}
+		}
+
+		@-o-keyframes carBounce {
+			0%, 20%, 50%, 80%, 100% {-o-transform: translateY(0);}
+			40% {-o-transform: translateY(3px);}
+			60% {-o-transform: translateY(-3px);}
+		}
+		@keyframes carBounce {
+			0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+			40% {transform: translateY(3px);}
+			60% {transform: translateY(-3px);}
+		}
+		.carBounce {
+			-webkit-animation-name: carBounce;
+			-moz-animation-name: carBounce;
+			-o-animation-name: carBounce;
+			animation-name: carBounce;
+		}
+
+
+	</style>
+</head>
+<body>
+<div id="subWrapper">
+	<h1>Thank You!!!</h1>
+	<div class="car1 aniTiming carBounce"></div> 
+    <div class="landscape"></div>
+    <div class="trackLayer transTiming">
+        <div class="trackLine Left aniLaneLines"></div>
+        <div class="trackLine Right aniLaneLines"></div>     
+    </div>      
+</div>
+<!-- SCRIPTS -->
+<!-- GLOBAL 3rd party -->
+<script type="text/javascript" src="http://cdn.pch.com/spectrum/packagecomponents/scripts/jquery-1.7.min.js"></script>
+<!--<script type="text/javascript" src="js/utils.js"></script>-->
+
+<!-- POC JS -->
+<script type="text/javascript">
+	$(document).ready(function(){
+		/*$("#subWrapper .trackLayer .trackLine").css({"height":"200%"});*/
+		$("#subWrapper .car1").css({"cursor":"pointer"}).click(function(){
+			$(this).removeClass("aniTiming carBounce").addClass("linearOneSec").css({"scale":"0","bottom":"210px"});
+		});
+	});
+</script>
+
+</body>
+</html>

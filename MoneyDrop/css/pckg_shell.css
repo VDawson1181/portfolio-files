@@ -1,0 +1,702 @@
+/******Default Package Style Start******/
+.isUppercase {	text-transform: uppercase; }
+strong{	font-weight: bold; }
+
+html{
+	height: 100%;
+	/* overflow: hidden; */
+}
+
+body{	
+	background: #2aa1d5;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	text-align: left;
+	color: #000;
+	/* overflow: hidden; */
+}
+
+#subWrapper{
+	width: 953px;
+	margin: 0 auto;
+	height: max-content;
+	overflow: hidden; 
+}
+
+#orderAreaWrap {
+	width: 800px;
+	background: #1d7417;
+	display:none;
+	margin: 0 auto 20px;
+	overflow: auto;
+}
+
+#orderAreaSubWrap{
+	background: #fff;
+	border: 2px solid #093d05;
+	margin: 15px;
+}
+
+/******Package Specific Style******/
+.contestArea{
+	width: 953px;
+	/*background: #fff;	*/
+	overflow: hidden;	
+	
+	/* -moz-transform: scale(0.8);
+	-ms-transform: scale(0.8);
+	-o-transform: scale(0.8);
+	-webkit-transform: scale(0.8);
+	transform: scale(0.8); */
+}
+
+.bonusHdrArea{
+	width: 714px;
+	height: 177px;	
+	margin: 0 auto;
+	background: transparent url("../images/MD_BonusHdr.png") 0 0 no-repeat;	
+	background-size: contain;
+	display: none;
+}
+
+.bonusHdrArea p{
+	text-align: center;
+	font-size: 18px;
+	color: #fff98f;
+	padding: 0 10px;
+}
+
+.bonusHdrArea p.bonusCpy span{
+	text-transform: uppercase;
+}
+
+.bonusHdrArea p.bonusAmt{
+	font-family: 'Anton', sans-serif;
+	font-style: italic;
+	font-size: 57px;
+	line-height: 57px;
+	margin-top: -5px;
+	letter-spacing: 2px;
+	color: #fff;	
+}
+
+.bonusHdrArea p.bonusGwyAmt{
+	font-style: italic;
+	font-size: 14px;
+	line-height: 14px;
+	color: #fff;		
+	padding-top: 5px;
+}
+
+.gameHdrArea{
+	background: transparent url("../images/MD_GameHdr.png") center top no-repeat;
+	background-size: contain;
+	height: 326px;
+	width: 100%;
+	position: relative;
+	z-index: 85;
+	margin-top: 5px;	
+}
+
+/*#contestArea h1{
+	text-align: center;
+	font-size: 40px;
+	color: #fff;		
+}*/
+
+.preStartScreen{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.preStartScreen .planeFlyer{
+	background: transparent url("../images/MD_RedPlane.png") bottom center no-repeat;	
+	height: 102px;
+	width: 246px;	
+	position: absolute;
+	top: 350px;
+	left: -250px;
+	z-index: 51;
+}
+
+.savingsArea .preStartScreen .planeFlyer{
+	background: transparent url("../images/MD_BluePlane.png") bottom center no-repeat;	
+}
+
+.preStartScreen .planePreStart{
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 65px;
+	left: 0;
+	text-align: center;
+	font-size: 414px;
+	color: #000;
+	opacity: 0.2;	
+	z-index: 50;
+}
+
+.transTimingSloooooow{
+-webkit-transition: all 2500ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
+   -moz-transition: all 2500ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
+     -o-transition: all 2500ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
+        transition: all 2500ms cubic-bezier(0.250, 0.250, 0.750, 0.750); /* linear */
+
+-webkit-transition-timing-function: cubic-bezier(0.250, 0.250, 0.750, 0.750);
+   -moz-transition-timing-function: cubic-bezier(0.250, 0.250, 0.750, 0.750);
+     -o-transition-timing-function: cubic-bezier(0.250, 0.250, 0.750, 0.750);
+        transition-timing-function: cubic-bezier(0.250, 0.250, 0.750, 0.750); /* linear */
+}
+
+.playArea{
+	background: transparent url("../images/MD_ContestBkgrnd.png") bottom center no-repeat;	
+	height: 600px;
+	width: 800px;
+	margin: -138px auto 0;
+	position: relative;
+	overflow: hidden;	
+}
+
+.playArea .instructionArea, .playArea .postPlayArea{
+	position: relative;
+	width: 672px;
+	height: 419px;
+	z-index: 85;	
+	margin: 125px auto 0;
+	
+	-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+/*.playArea .instructionArea{display:none;}*/
+.playArea .instructionArea, .playArea .postPlayArea{display:none;}
+
+.playArea .instructionArea div, .playArea .postPlayArea div{
+	color: #ececec;
+	font-size: 10px;
+	line-height: 10px;
+	position: relative;
+	z-index: 60;
+			
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;	
+}
+
+.playArea .postPlayArea div p.bonusGwyAmt{
+	font-size: 12px;
+	line-height: 12px;
+	color: #515151;		
+	padding-top: 5px;
+	text-align: center;
+	font-weight: bold;
+	width: 100%;
+	position: absolute;
+	top: 380px;
+}
+
+.playArea .instructionArea div ul, .playArea .postPlayArea div ul{
+	color: #3e3e3e;	
+	font-size: 20px;
+	line-height: 20px;
+	position: relative;
+	padding: 0 50px;
+}
+
+.playArea .postPlayArea div ul{
+	color: #3e3e3e;	
+	font-size: 20px;
+	line-height: 20px;
+	position: relative;
+	padding: 20px;	
+	}
+
+.playArea .instructionArea div ul li{ padding-bottom: 15px;}
+.playArea .instructionArea div ul li.howToPlayFirst{padding-bottom: 50px;}
+
+.playArea .instructionArea div.translucentBkgrnd, .playArea .postPlayArea div.translucentBkgrnd{
+	background: #fff;
+	width: 100%;
+	height: 415px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 55;
+		-moz-opacity: 0.70;
+	-webkit-opacity: 0.70;
+	-o-opacity: 0.70;
+	-ms-opacity: 0.70;
+	opacity: 0.70;
+	
+	-moz-border-radius: 10px; 
+	-webkit-border-radius: 10px; 
+	-o-border-radius: 10px; 
+	-ms-border-radius: 10px; 
+	border-radius: 10px; 	
+}
+
+.playArea .postPlayArea div.translucentBkgrndFeature{
+	background: transparent url("../images/MD_finishedMoney.png") center bottom no-repeat;
+	background-size: contain;
+	width: 110%;
+	height: 145px;
+	position: absolute;
+	bottom: -10px;
+	left: -40px;
+	z-index: 57;	
+}
+
+.playArea .instructionArea div p.instTopLine, .playArea .postPlayArea div p.instTopLine, .playArea .postPlayArea div p.instMidLine {
+	font-family: 'Luckiest Guy', cursive;
+	font-size: 28px;
+	line-height: 28px;
+	color: #3e3e3e;
+	text-align: center;
+	padding-top: 5px;
+}
+
+.playArea .postPlayArea div p.instTopLine{
+	font-size: 32px;
+	line-height: 32px;
+}
+
+.playArea .postPlayArea div p.instMidLine{
+	font-size: 24px;
+	line-height: 24px;	
+	padding-bottom: 15px;
+}
+
+.playArea .postPlayArea div p.instMidLine span.bundleAmt{
+	color: #22789d;
+}
+
+.playArea .instructionArea div p.instBotLine{
+	color: #22789d;
+	font-family: 'Luckiest Guy', cursive;
+	font-size: 46px;
+	line-height: 46px;
+	padding: 10px;
+	text-align: center;		
+}
+
+.playArea .postPlayArea div p.instBotLine {
+	color: #22789d;
+	font-family: 'Luckiest Guy', cursive;
+	font-size: 42px;
+	line-height: 42px;
+	padding: 5px;
+	text-align: center;		
+}	
+
+.playArea .instructionArea div p.instBotLine span.lrgTxt{ font-size: 70px; }
+
+.playArea .postPlayArea div p.instBotLine.lrgTxt{ font-size: 76px; }
+
+.playArea .postPlayArea div ul li{ text-align: center; padding-bottom: 5px; font-style: italic;}
+
+.playArea .postPlayArea div ul li span.playReset{ 
+	font-size: 20px;
+	color: #138c09;
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+.playArea .instructionArea div p.pigEx{
+	background: transparent url("../images/MD_SmallBundle.png") center top no-repeat;
+	background-size: contain;
+	width: 100%;
+	height: 112px;	
+	position: absolute;
+	top: -60px;
+	left: 0;	
+}
+
+.playArea .instructionArea div.startButton, .playArea .postPlayArea div.savingsButton{	
+	width: 216px;
+	height: 74px;
+	text-align: center;
+	margin: 0 auto;	
+}
+
+.playArea .instructionArea div.startButton{background: transparent url("../images/MD_BeginButton.png") bottom center no-repeat;}
+.playArea .postPlayArea div.savingsButton{ 
+	width: 262px; 
+	background: transparent url("../images/MD_ContinueButton.png") bottom center no-repeat;
+	/*color: #22789d;
+	font-family: 'Luckiest Guy', cursive;
+	font-size: 60px;
+	line-height: 60px;
+	display: none;*/
+}
+
+.htmlButton{
+	background: #ffa442; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ffa442 0%, #ff7501 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffa442), color-stop(100%,#ff7501)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #ffa442 0%,#ff7501 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ffa442 0%,#ff7501 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ffa442 0%,#ff7501 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #ffa442 0%,#ff7501 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffa442', endColorstr='#ff7501',GradientType=0 ); /* IE6-9 */
+	
+	text-shadow: 1px 1px 1px #000;
+	
+	-webkit-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    0px 0px 5px 0px rgba(50, 50, 50, 0.75);
+	box-shadow:         0px 0px 5px 0px rgba(50, 50, 50, 0.75);	
+	
+	
+	font-weight: bold;
+	
+	-moz-border-radius: 5px; 
+	-webkit-border-radius: 5px; 
+	-o-border-radius: 5px; 
+	-ms-border-radius: 5px; 
+	border-radius: 5px; 	
+	padding: 10px 0;
+	font-size: 33px;
+	line-height: 33px;
+}
+
+.playArea .instructionArea div h1{
+	color: #3e3e3e;
+	font-size: 24px;
+	font-style: italic;
+	padding: 20px 20px 30px;
+}
+
+.piggyScoreBoard{
+	background: transparent url("../images/MD_ScoreboardBkgrnd.png") center top no-repeat;	
+	background-size: contain;
+	width: 800px;
+	height: 92px;
+	margin: -92px auto 35px;
+	position: relative;
+	z-index: 80;
+	color: #fff;
+	font-family: 'Anton', sans-serif;
+	font-size: 30px;
+	line-height: 40px;
+	text-transform: uppercase;
+	
+		-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+
+.piggyScoreBoard p{ width: 35%; padding: 40px 10px 0;} 
+.piggyScoreBoard p.piggyCaught{float: left; text-align: left; }
+.piggyScoreBoard p.piggyTime{float: right; text-align: right; }
+
+.piggyScoreBoard span{ font-size: 40px;}
+ 
+.playArea .timedOverlay{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 90;
+	width: 100%;
+	height: 100%;	
+	display: none;
+}
+
+.playArea .timedOverlay .timeCover{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	background: #333;
+	
+	-moz-opacity: 0.85;
+	-webkit-opacity: 0.85;
+	-o-opacity: 0.85;
+	-ms-opacity: 0.85;
+	opacity: 0.85;
+	
+	-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+
+.playArea .timedOverlay p{	
+	color: #fff;
+	font-size: 210px;
+	line-height: 210px;
+	position: relative;
+	text-align: center;
+	padding-top: 50px;
+	z-index: 2;
+	
+	-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+
+.playArea .timedOverlay p span{ 
+	font-size: 45px; 
+	line-height: 45px;
+	display: block;	
+}
+
+.playArea .pigPen{ position: relative; z-index: 75;}
+
+.playArea .pigPen div.piggyTrooper{
+	width: 184px;
+	height: 216px;	
+	position: absolute;	
+	top: -230px;
+	display: block;
+	z-index: 75;
+}
+
+.playArea .pigPen p.piggy{
+	background: transparent url("../images/MD_MoneyPara.png") center top no-repeat;
+	background-size: contain;
+	width: 184px;
+	height: 216px;
+	/*top: 0;*/
+}
+
+@-webkit-keyframes piggyDrop {
+	0% {top: -230px;}	
+	100% {top: 650px;}
+}
+
+@-moz-keyframes piggyDrop {
+	0% {top: -230px;}	
+	100% {top: 650px;}
+}
+
+@-o-keyframes piggyDrop {
+	0% {top: -230px;}	
+	100% {top: 650px;}
+}
+
+@keyframes piggyDrop {
+	0% {top: -230px;}	
+	100% {top: 650px;}
+}
+
+.piggyDrop {
+	-webkit-animation-name: piggyDrop;
+	-moz-animation-name: piggyDrop;
+	-o-animation-name: piggyDrop;
+	animation-name: piggyDrop;
+	
+		-webkit-animation-duration: 6.5s;
+	-moz-animation-duration: 6.5s;	
+	-ms-animation-duration: 6.5s;		
+	-o-animation-duration: 6.5s;		
+	animation-duration: 6.5s;
+	
+		-webkit-animation-iteration-count: 1; 	
+	-moz-animation-iteration-count: 1; 	
+	-ms-animation-iteration-count: 1; 	
+	-o-animation-iteration-count: 1; 				
+	animation-iteration-count: 1;
+	
+		/*-webkit-animation-fill-mode: both;
+	-moz-animation-fill-mode: both;
+	-o-animation-fill-mode: both;
+	animation-fill-mode: both;*/
+}
+
+
+@-webkit-keyframes piggy_rocking {
+  0%{ -webkit-transform: rotate(0deg);}
+  25% { -webkit-transform: rotate(6deg); }
+  75% { -webkit-transform: rotate(-6deg);}  
+}
+
+@-moz-keyframes piggy_rocking {
+  0%{ -moz-transform: rotate(0deg);}
+  25% { -moz-transform: rotate(6deg); }
+  75% { -moz-transform: rotate(-6deg);}  
+}
+
+@-o-keyframes piggy_rocking {
+  0%{ -o-transform: rotate(0deg); }
+  25% { -o-transform: rotate(6deg); }
+  75% { -o-transform: rotate(-6deg); }  
+}
+
+@keyframes piggy_rocking {
+  0%{ transform: rotate(0deg); }
+  25% { transform: rotate(6deg); }
+  75% { transform: rotate(-6deg); }  
+}
+
+.piggy_rock{
+	-webkit-animation: piggy_rocking 3.9s ease-in-out infinite alternate;
+	-moz-animation: piggy_rocking 3.9s ease-in-out infinite alternate;
+	-o-animation: piggy_rocking 3.9s ease-in-out infinite alternate;
+	animation: piggy_rocking 3.9s ease-in-out infinite alternate;
+	
+			transform-origin: center top;
+	-o-transform-origin: center top;
+	-moz-transform-origin: center top;
+	-webkit-transform-origin: center top;	
+}
+
+/******Savings Style******/
+.savingsArea{margin-top: 5px; display: none;}
+
+/*.savingsArea .playArea .instructionArea, .savingsArea .playArea .postPlayArea {
+    display: block;
+}*/
+
+.savingsArea .gameHdrArea{
+	background: transparent url("../images/MD_SavingsHdr.png") center top no-repeat;
+	background-size: contain;
+}
+
+.savingsArea .playArea .instructionArea div p.instBotLine, .savingsArea .playArea .postPlayArea div p.instBotLine, .savingsArea .playArea .postPlayArea div p.instBotLine {
+	color: #004679;
+}
+
+.savingsArea .playArea .instructionArea div p.pigEx{
+	background: transparent url("../images/MD_SmallPkg.png") center top no-repeat;
+	background-size: contain;
+}
+
+.savingsArea .playArea .pigPen p.piggy{
+	background: transparent url("../images/MD_Savings_Box.png") center top no-repeat;
+	background-size: contain;
+}
+
+.savingsArea .playArea .instructionArea div ul li.howToPlayFirst {
+    line-height: 30px;
+	padding: 0 340px 20px 0;
+}
+
+.savingsArea .playArea .postPlayArea div p.instMidLine {
+	padding: 0;	
+	font-size:21px;
+	line-height: 21px;	
+}
+
+.savingsArea .playArea .postPlayArea div p.instBotLine.lrgTxt {
+    font-size: 98px;
+	line-height: 98px;
+}
+
+.savingsArea .playArea .postPlayArea div p.instBotLine.lrgTxt span.subTxt{
+    font-size: 28px;
+    left: 114px;
+    line-height: 28px;
+    position: absolute;
+    top: 90px;
+    width: 10px;	
+}
+
+.savingsArea .playArea .postPlayArea div p.instBotLine.smTxt {
+    font-size: 27px;
+	line-height: 27px;
+	padding: 0;
+}
+
+
+.savingsArea .piggyScoreBoard {
+	background: url("../images/MD_SavingsBkgrnd.png") no-repeat scroll center top rgba(0, 0, 0, 0);
+	background-size: contain;
+	margin: -92px auto 0;
+}
+
+.savingsArea .postPlayArea div.translucentBkgrndFeature{
+	background: transparent url("../images/MD_finishedCrates.png") center bottom no-repeat;
+	background-size: contain;
+	width: 110%;
+	height: 168px;
+	position: absolute;
+	bottom: -10px;
+	left: -40px;
+	z-index: 57;	
+}
+
+.savingsArea .postPlayArea div.translucentBkgrndFeature div.transBkgrndarrow{
+	background: transparent url("../images/MD_finishedCrateArrow.png") center center no-repeat;
+	width: 100%;
+	height: 168px;	
+}
+
+.playArea .postPlayArea div ul {
+	padding: 15px 30px;
+}
+
+.savingsArea .playArea .postPlayArea div p.bonusGwyAmt { display: none; }
+
+.savingsArea .playArea .postPlayArea div p.instMidLine span.bundleAmt{
+	color: #004679;
+}
+
+/*****Disclaimer Style******/
+.disclaimer {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	width: 600px;
+	padding: 20px 0;
+	margin: 0 auto;
+	text-align: center;
+}
+.disclaimer, .disclaimer a {color: #fff;}
+.disclaimer p {	margin-bottom: 14px;}
+.disclaimer strong {font-size: 12px;}
+
+/*** EO ****/
+.eo .eo_MD_contestLabel{width: 229px; height: 155px !important;}
+
+.eo .eoContestLabels li {background: url("../images/stamps/eo_contestLabel_loading.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);}
+.eo .eo_contestLabel_addon_MD_Main{ background: transparent url("../images/stamps/addOn_stampDevice_main.png") 0 0 no-repeat; }
+.eo .eo_contestLabel_addon_MD_0{ background: transparent url("../images/stamps/eo_contestLabel_addon_MD_0.png") 0 0 no-repeat; }
+.eo .eo_contestLabel_addon_MD_1{ background: transparent url("../images/stamps/eo_contestLabel_addon_MD_1.png") 0 0 no-repeat; }
+.eo .eo_contestLabel_addon_MD_2{ background: transparent url("../images/stamps/eo_contestLabel_addon_MD_2.png") 0 0 no-repeat; }
+.eo .eo_contestLabel_addon_MD_3{ background: transparent url("../images/stamps/eo_contestLabel_addon_MD_3.png") 0 0 no-repeat; }
+.eo .eo_contestLabel_addon_MD_4{ background: transparent url("../images/stamps/eo_contestLabel_addon_MD_4.png") 0 0 no-repeat; }
+.eo .eo_contestLabel_addon_MD_5{ background: transparent url("../images/stamps/eo_contestLabel_addon_MD_5.png") 0 0 no-repeat; }
+.eo .eo_contestLabel_addon_MD_6{ background: transparent url("../images/stamps/eo_contestLabel_addon_MD_6.png") 0 0 no-repeat; }
+.eo .eo_contestLabel_addon_MD_7{ background: transparent url("../images/stamps/eo_contestLabel_addon_MD_7.png") 0 0 no-repeat; }
+.eo .eo_contestLabel_addon_MD_8{ background: transparent url("../images/stamps/eo_contestLabel_addon_MD_8.png") 0 0 no-repeat; }
+.eo .eo_contestLabel_addon_MD_9{ background: transparent url("../images/stamps/eo_contestLabel_addon_MD_9.png") 0 0 no-repeat; }
+.eo .eo_contestLabel_addon_MD_10{ background: transparent url("../images/stamps/eo_contestLabel_addon_MD_10.png") 0 0 no-repeat; }
+.eo .eo_contestLabel_addon_MD_11{ background: transparent url("../images/stamps/eo_contestLabel_addon_MD_11.png") 0 0 no-repeat; }
+.eo .eo_contestLabel_addon_MD_12{ background: transparent url("../images/stamps/eo_contestLabel_addon_MD_12.png") 0 0 no-repeat; }
+.eo .eo_contestLabel_addon_MD_13{ background: transparent url("../images/stamps/eo_contestLabel_addon_MD_13.png") 0 0 no-repeat; }
+.eo .eo_contestLabel_addon_MD_14{ background: transparent url("../images/stamps/eo_contestLabel_addon_MD_14.png") 0 0 no-repeat; }
+.eo .eo_contestLabel_addon_MD_15{ background: transparent url("../images/stamps/eo_contestLabel_addon_MD_15.png") 0 0 no-repeat; }
+.eo .eo_contestLabel_addon_MD_16{ background: transparent url("../images/stamps/eo_contestLabel_addon_MD_16.png") 0 0 no-repeat; }
+
+.eo #submitButton{ width: 284px; height: 69px; }
+
+.eo #rules{ margin-bottom:20px !important; }
+
+.eo #rPrivacy{ float: left; width: 150px; text-align: left; padding-left: 10px; }
+
+.eo .buttonNoOrder{ background: transparent url("../images/MD_submitEntry.png") 0 0 no-repeat !important; }
+
+.eo .buttonOrder{ background: transparent url("../images/MD_submitEntryOrder.png") 0 0 no-repeat !important; }
+
+#deviceWrap1{ 
+	display: none; 
+}

@@ -1,0 +1,843 @@
+/* Money Tree device - Balance v1.2 */
+#money-tree-OB-addOn{
+	background: #6af3fc;
+	width: 730px;
+	height: 500px;
+	overflow: hidden;	
+	margin: 50px auto 0;
+	position: relative;
+	padding: 50px 0;
+	border: 2px solid #FD3838;
+}
+
+.offline, .oneTime{display: none;}
+
+.mt-dir-msg{
+	width: 233px;
+	height: 330px;		
+	background-image: url("../images/mt-Offline-dm.png");
+	text-align: center;
+	position: absolute;
+	top: 175px;
+	left: 30px;
+	z-index: 75;	
+}
+
+.mt-dir-msg.offline{ background-position: bottom center; }
+
+.mtFnt-luck{font-family: 'Luckiest Guy', cursive;}
+.mtFnt-aleg{font-family: 'Alegreya Sans', sans-serif; font-weight: 700;}
+
+#money-tree-OB-addOn .money-tree-bkgrnd{
+	width: 732px;
+	height: 609px;		
+	background: url("../images/mt-bkgrnd-sky.png") 0 0 no-repeat;
+	text-align: center;
+	position: absolute;
+	top: 100px;
+	left: 0;
+	z-index: 70;
+}
+
+#money-tree-OB-addOn .mt-tree-element{
+	width: 1000px;
+	height: 806px;
+	/*margin: -235px 0 0 -135px;*/
+	background: url("../images/mt-Tree.png") center bottom no-repeat;	
+	position: absolute;
+	top: -185px;
+	left: -135px;
+	z-index: 90;
+}
+
+#money-tree-OB-addOn .mt-sav-tree-element{
+	width: 917px;
+	height: 800px;
+	/*margin: -235px 0 0 -135px;*/
+	background: url("../images/mt-sav-Tree.png") center bottom no-repeat;	
+	position: absolute;
+	top: -80px;
+	left: -135px;
+	z-index: 90;
+	display: none;
+}
+
+.aniTimingSingle1500ms{
+	-webkit-animation-duration: 1500ms;
+	-moz-animation-duration: 1500ms;	
+	-ms-animation-duration: 1500ms;		
+	-o-animation-duration: 1500ms;		
+	animation-duration: 1500ms;
+	
+	-webkit-animation-iteration-count: 1; 	
+	-moz-animation-iteration-count: 1; 	
+	-ms-animation-iteration-count: 1; 	
+	-o-animation-iteration-count: 1; 				
+	animation-iteration-count: 1; 
+
+	-webkit-animation-fill-mode: both;
+	-moz-animation-fill-mode: both;
+	-o-animation-fill-mode: both;
+	animation-fill-mode: both;	
+}
+
+
+@-webkit-keyframes mt-wobble {
+  0% { -webkit-transform: translateX(0%); }
+  15% { -webkit-transform: translateX(-5%) rotate(-1deg); }
+  30% { -webkit-transform: translateX(3%) rotate(1deg); }
+  45% { -webkit-transform: translateX(-4%) rotate(-2deg); }
+  60% { -webkit-transform: translateX(3%) rotate(1deg); }
+  75% { -webkit-transform: translateX(-5%) rotate(-1deg); }
+  100% { -webkit-transform: translateX(0%); }
+}
+
+@-moz-keyframes mt-wobble {
+  0% { -moz-transform: translateX(0%); }
+  15% { -moz-transform: translateX(-5%) rotate(-1deg); }
+  30% { -moz-transform: translateX(3%) rotate(1deg); }
+  45% { -moz-transform: translateX(-4%) rotate(-2deg); }
+  60% { -moz-transform: translateX(3%) rotate(1deg); }
+  75% { -moz-transform: translateX(-5%) rotate(-1deg); }
+  100% { -moz-transform: translateX(0%); }
+}
+
+@-o-keyframes mt-wobble {
+  0% { -o-transform: translateX(0%); }
+  15% { -o-transform: translateX(-5%) rotate(-1deg); }
+  30% { -o-transform: translateX(3%) rotate(1deg); }
+  45% { -o-transform: translateX(-4%) rotate(-2deg); }
+  60% { -o-transform: translateX(3%) rotate(1deg); }
+  75% { -o-transform: translateX(-5%) rotate(-1deg); }
+  100% { -o-transform: translateX(0%); }
+}
+
+@keyframes mt-wobble {
+  0% { transform: translateX(0%); }
+  15% { transform: translateX(-5%) rotate(-1deg); }
+  30% { transform: translateX(3%) rotate(1deg); }
+  45% { transform: translateX(-4%) rotate(-2deg); }
+  60% { transform: translateX(3%) rotate(1deg); }
+  75% { transform: translateX(-5%) rotate(-1deg); }
+  100% { transform: translateX(0%); }
+}
+
+.mt-wobble {
+	-webkit-animation-name: mt-wobble ;
+	-moz-animation-name: mt-wobble ;
+	-o-animation-name: mt-wobble ;
+	animation-name: mt-wobble ;
+}
+
+@-webkit-keyframes rubberBand {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  30% {
+    -webkit-transform: scaleX(1.25) scaleY(0.75);
+    transform: scaleX(1.25) scaleY(0.75);
+  }
+
+  40% {
+    -webkit-transform: scaleX(0.75) scaleY(1.25);
+    transform: scaleX(0.75) scaleY(1.25);
+  }
+
+  60% {
+    -webkit-transform: scaleX(1.15) scaleY(0.85);
+    transform: scaleX(1.15) scaleY(0.85);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes rubberBand {
+  0% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  30% {
+    -webkit-transform: scaleX(1.25) scaleY(0.75);
+    -ms-transform: scaleX(1.25) scaleY(0.75);
+    transform: scaleX(1.25) scaleY(0.75);
+  }
+
+  40% {
+    -webkit-transform: scaleX(0.75) scaleY(1.25);
+    -ms-transform: scaleX(0.75) scaleY(1.25);
+    transform: scaleX(0.75) scaleY(1.25);
+  }
+
+  60% {
+    -webkit-transform: scaleX(1.15) scaleY(0.85);
+    -ms-transform: scaleX(1.15) scaleY(0.85);
+    transform: scaleX(1.15) scaleY(0.85);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+.rubberBand {
+  -webkit-animation-name: rubberBand;
+  animation-name: rubberBand;
+}
+
+
+#money-tree-OB-addOn .mt-hdr-element{
+	background: url("../images/mt-header.png") center center no-repeat;	
+	width: 100%;
+	height: 135px;
+	margin: 0 auto;
+	position: absolute;
+	top: 0;
+	left: 0;	
+	z-index: 95;		
+}
+
+#money-tree-OB-addOn .mt-hdr-element p.mt-hdr-game-name{
+	background: url("../images/mt-contest-hdr.png") center center no-repeat;	
+	width: 100%;
+	height: 103px;	
+}
+
+#money-tree-OB-addOn .mt-hdr-element p.pkg_closeButton{
+	background: transparent url("../images/mt-XOut.png") center center no-repeat;
+	width: 34px;
+	height: 34px;
+	text-align: center;
+	position: absolute;
+	top: 17px;
+	right: 10px;	
+	opacity: 0.8;
+	display: none;
+}
+
+#money-tree-OB-addOn .mt-hdr-element p.mt-hdr-savings-name{
+	background: url("../images/mt-savings-hdr.png") center center no-repeat;	
+	width: 100%;
+	height: 103px;	
+	display: none;	
+}
+
+#money-tree-OB-addOn .mt-hdr-element .mt-hdr-gwy{
+	color: #fff;
+	margin: 4px 0 0 195px;
+}
+
+#money-tree-OB-addOn .mt-sign-element{
+	background: url("../images/mt-bird-sign.png") center center no-repeat;	
+	width: 285px;
+	height: 301px;
+	position: absolute;
+	bottom: -230px;
+	right: 25px;
+	z-index: 95;
+}
+
+#money-tree-OB-addOn .mt-sign-element .mt-sign-pers{
+	color: #fff;
+	margin-top: 81px;
+	font-size: 22px;
+	text-align: center;	
+	text-shadow: 1px 1px 3px #000;
+	padding: 0 20px;
+}
+
+#money-tree-OB-addOn .mt-sign-element .mt-sign-pers span{ text-transform: uppercase; }
+
+.raiseTheSign{ bottom: -50px !important;}
+
+#money-tree-OB-addOn .mt-sign-element p.mt-sign-coaching, #money-tree-OB-addOn .mt-sav-sign-element p.mt-sign-coaching{
+	background: url("../images/mt-bird-coaching.png") 0 0 no-repeat;	
+	width: 182px;
+	height: 86px;
+	position: absolute;
+	top: -47px;
+	left: 15px;	
+	display: none;
+	
+		font-family: 'Bangers', cursive;
+	color: #fff;
+	font-size: 26px;
+	line-height: 26px;
+	padding-top: 13px;
+	text-align: center;
+}
+
+.pzAmount{
+	font-size: 30px !important;
+	line-height: 30px !important;
+	padding-top: 23px !important;
+}
+
+#money-tree-OB-addOn .mt-sav-sign-element{
+	background: url("../images/mt-bird-sav-sign.png") center center no-repeat;	
+	width: 285px;
+	height: 368px;
+	position: absolute;
+	bottom: -430px;
+	right: 25px;
+	z-index: 95;
+}
+
+#money-tree-OB-addOn .mt-sav-sign-element .mt-sign-pers{
+	color: #fff;
+	margin-top: 76px;
+	font-size: 19px;
+	text-align: center;	
+	text-shadow: 1px 1px 3px #000;
+	padding: 0 20px;
+}
+
+#money-tree-OB-addOn .mt-sav-sign-element .mt-sign-pers span{ text-transform: uppercase; }
+
+#money-tree-OB-addOn .mt-sav-sign-element p.mt-sign-coaching{
+	background: url("../images/mt-bird-coaching.png") 0 0 no-repeat;	
+	width: 182px;
+	height: 86px;
+	position: absolute;
+	top: -47px;
+	left: 15px;	
+	display: none;
+}
+
+#money-tree-OB-addOn .mt-result-element{
+	width: 500px;
+	height: 158px;
+	position: relative;
+	margin: 0 auto;
+	top: 270px;	
+	z-index: 98;
+	text-align: center;
+	display: none;
+}
+#money-tree-OB-addOn .mt-result-element .mt-bird-bubble{
+	background: url("../images/mt-bird-bubble.png") center center no-repeat;	
+	width: 320px;
+	height: 140px;
+	position: absolute;
+	top: -140px;
+	right: 72px;
+}
+#money-tree-OB-addOn .mt-result-element .mt-bird-bubble p{
+	color: #fff;
+	font-size: 24px;
+	line-height: 24px;
+	text-align: center;	
+	position: relative;
+	top: 22px;
+	left: -6px;
+}
+#money-tree-OB-addOn .mt-result-element .mt-bird-bubble span{
+	text-transform: uppercase;	
+}
+
+#money-tree-OB-addOn .mt-trans-bkgrnd{
+	width: 100%;
+	height: 100%;
+	background: #000;
+	opacity: 0.7;		
+	border-radius: 12px; 
+	background-clip: padding-box;
+	position: absolute;
+	z-index: 10;
+	top: 0;
+	left: 0;
+}
+
+#money-tree-OB-addOn .mt-result-element .mt-result-hdr{   
+	position: relative;
+  	z-index: 15;
+	color: #8be7f3; 
+	font-size: 32px; 
+	padding: 5px 0;
+}
+#money-tree-OB-addOn .mt-result-element .mt-result-bdy{ 	
+	position: relative;
+  	z-index: 15;
+	color: #ffe2a9; 
+	font-size: 21px; 
+}
+#money-tree-OB-addOn .mt-result-element .mt-result-bdy span{text-transform: uppercase;}
+#money-tree-OB-addOn .mt-result-element .mt-result-ftr{ 
+	position: relative;
+  	z-index: 15;
+	color: #ffffff; 
+	font-size: 18px; 
+	padding: 10px 0;		
+}
+
+#money-tree-OB-addOn .mt-result-element .mt-savStart-button{ 
+	background: url("../images/mt-continue-btn.png") center center no-repeat;	
+	background-size: contain;
+	width: 235px;
+	height: 66px;
+	margin: 0 auto;
+	position: relative;
+	z-index: 90;
+}
+.redCpy{color: #ff0000; }
+.yellowCpy{color: #fec334; }
+.blueCpy{color: #8be7f3; }
+
+#money-tree-OB-addOn .mt-sav-result-element{
+	width: 572px;
+	height: 192px;
+	position: relative;
+	margin: 0 auto;
+	top: 120px;	
+	z-index: 98;
+	text-align: center;
+	display: none;
+}
+
+#money-tree-OB-addOn .mt-sav-result-element .mt-bird-bubble{
+	background: url("../images/mt-bird-bubble.png") center center no-repeat;	
+	width: 320px;
+	height: 140px;
+	position: absolute;
+	top: -140px;
+	right: 72px;
+}
+#money-tree-OB-addOn .mt-sav-result-element .mt-bird-bubble p{
+	color: #fff;
+	font-size: 24px;
+	line-height: 24px;
+	text-align: center;	
+	position: relative;
+	top: 32px;
+	left: -6px;
+	padding: 0 10px;
+}
+#money-tree-OB-addOn .mt-sav-result-element .yellowCpy{
+	color: #ffc000;	
+	font-size: 28px;
+	line-height: 28px; 
+}
+
+#money-tree-OB-addOn .mt-sav-result-element .mt-bird-bubble span{
+	text-transform: uppercase;	
+}
+
+
+
+#money-tree-OB-addOn .mt-sav-result-element .mt-result-hdr{   
+	position: relative;
+  	z-index: 15;
+	color: #8be7f3; 
+	font-size: 32px; 
+	padding: 5px 0;
+}
+#money-tree-OB-addOn .mt-sav-result-element .mt-result-bdy{ 	
+	position: relative;
+  	z-index: 15;
+	color: #fff; 
+	font-size: 30px; 
+	line-height: 30px;
+}
+#money-tree-OB-addOn .mt-sav-result-element .mr-result-dash{
+    background: none repeat scroll 0 0 #fe0101;
+    height: 2px;
+    position: relative;
+    width: 100%;
+    z-index: 98;	
+	margin: 5px 0;
+}
+#money-tree-OB-addOn .mt-sav-result-element .mt-result-ftr span{text-transform: uppercase;}
+#money-tree-OB-addOn .mt-sav-result-element .mt-result-ftr{ 
+	position: relative;
+  	z-index: 15;
+	color: #ffe2a9; 
+	font-size: 20px; 
+	line-height: 20px;
+	padding: 10px 0;		
+}
+
+#money-tree-OB-addOn .addOnButton{
+	width: 158px;	
+	padding: 5px 0;
+	background: #CCC;	
+	margin: 0 auto;
+	font-size: 20px;
+}
+
+#money-tree-OB-addOn ul.playArea{
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;	
+	position: absolute;
+	left: 0px;	
+}
+
+#money-tree-OB-addOn ul.sav-playArea{
+	width: 600px;
+	height: 100%;
+	margin: 0 auto;	
+	position: absolute;
+	left: 130px;
+}
+
+#money-tree-OB-addOn .playArea li.mtMoney{
+	position: absolute;
+	top: -170px;
+	left: 15px;	
+	z-index: 92;	
+}
+
+#money-tree-OB-addOn .sav-playArea li.mtLeaf{
+	position: absolute;
+	top: -170px;
+	left: 15px;	
+	z-index: 92;	
+}
+
+#money-tree-OB-addOn .playArea p.mtBill{
+	background: url("../images/mt-Money.png") center center no-repeat;	
+	width: 85px;
+	height: 48px;	
+}
+
+#money-tree-OB-addOn .sav-playArea p.mtLeaf{
+	background: url("../images/mt-sav-Leaf.png") center center no-repeat;	
+	width: 32px;
+	height: 27px;	
+}
+
+#money-tree-OB-addOn .sav-playArea li.mtBoot{
+	position: absolute;
+	top: -170px;
+	left: 15px;	
+	z-index: 92;
+}
+
+#money-tree-OB-addOn .sav-playArea p.mtBoot{
+	background: url("../images/mt-Shoe.png") center center no-repeat;	
+	width: 96px;
+	height: 67px;			
+}
+
+#money-tree-OB-addOn .sav-playArea li.mtGift{
+	position: absolute;
+	top: -170px;
+	left: 175px;	
+	z-index: 98;
+}
+
+#money-tree-OB-addOn .sav-playArea p.mtGift{
+	background: url("../images/mt-GiftBox.png") center center no-repeat;	
+	width: 110px;
+	height: 123px;			
+}
+
+#money-tree-OB-addOn .playArea li.bill-1, #money-tree-OB-addOn .playArea li.bill-3, #money-tree-OB-addOn .playArea li.bill-5,
+#money-tree-OB-addOn .sav-playArea li.leaf-1, #money-tree-OB-addOn .sav-playArea li.leaf-3, #money-tree-OB-addOn .sav-playArea li.leaf-5{
+	-webkit-animation-delay: 1s; 
+	-moz-animation-delay: 1s; 
+	-o-animation-delay: 1s; 
+	animation-delay: 1s;
+}
+
+#money-tree-OB-addOn .playArea li.bill-2, #money-tree-OB-addOn .playArea li.bill-4, #money-tree-OB-addOn .playArea li.bill-6,
+#money-tree-OB-addOn .sav-playArea li.leaf-2, #money-tree-OB-addOn .sav-playArea li.leaf-4, #money-tree-OB-addOn .sav-playArea li.leaf-6{
+	-webkit-animation-delay: 1.5s; 
+	-moz-animation-delay: 1.5s; 
+	-o-animation-delay: 1.5s; 
+	animation-delay: 1.5s;
+}
+
+#money-tree-OB-addOn .playArea li.bill-7, #money-tree-OB-addOn .playArea li.bill-9, #money-tree-OB-addOn .playArea li.bill-11,
+#money-tree-OB-addOn .sav-playArea li.leaf-7, #money-tree-OB-addOn .sav-playArea li.leaf-9, #money-tree-OB-addOn .sav-playArea li.leaf-11{
+	-webkit-animation-delay: 2s; 
+	-moz-animation-delay: 2s; 
+	-o-animation-delay: 2s; 
+	animation-delay: 2s;
+}
+
+#money-tree-OB-addOn .playArea li.bill-8, #money-tree-OB-addOn .playArea li.bill-10, #money-tree-OB-addOn .playArea li.bill-12,
+#money-tree-OB-addOn .sav-playArea li.leaf-8, #money-tree-OB-addOn .sav-playArea li.leaf-10, #money-tree-OB-addOn .sav-playArea li.leaf-12{
+	-webkit-animation-delay: 2.5s; 
+	-moz-animation-delay: 2.5s; 
+	-o-animation-delay: 2.5s; 
+	animation-delay: 2.5s;
+}
+
+#money-tree-OB-addOn .playArea li.bill-13, #money-tree-OB-addOn .playArea li.bill-15, #money-tree-OB-addOn .playArea li.bill-17,
+#money-tree-OB-addOn .sav-playArea li.leaf-13, #money-tree-OB-addOn .sav-playArea li.leaf-15, #money-tree-OB-addOn .sav-playArea li.leaf-17{
+	-webkit-animation-delay: 1.75s; 
+	-moz-animation-delay: 1.75s; 
+	-o-animation-delay: 1.75s; 
+	animation-delay: 1.75s;
+}
+
+#money-tree-OB-addOn .playArea li.bill-14, #money-tree-OB-addOn .playArea li.bill-16, #money-tree-OB-addOn .playArea li.bill-18,
+#money-tree-OB-addOn .sav-playArea li.leaf-14, #money-tree-OB-addOn .sav-playArea li.leaf-16, #money-tree-OB-addOn .sav-playArea li.leaf-18{
+	-webkit-animation-delay: 2.75s; 
+	-moz-animation-delay: 2.75s; 
+	-o-animation-delay: 2.75s; 
+	animation-delay: 2.75s;
+}
+
+#money-tree-OB-addOn .playArea li.bill-19, #money-tree-OB-addOn .playArea li.bill-20,
+#money-tree-OB-addOn .sav-playArea li.leaf-19, #money-tree-OB-addOn .sav-playArea li.leaf-20{
+	-webkit-animation-delay: 1.25s; 
+	-moz-animation-delay: 1.25s; 
+	-o-animation-delay: 1.25s; 
+	animation-delay: 1.25s;
+}
+
+
+.pkg_closeButton{
+	width: 258px;	
+	height: 70px;
+	margin: 0 auto;
+	display: none;
+}
+
+@-webkit-keyframes piggyDrop {
+	0% {top: -170px;}	
+	100% {top: 520px;}
+}
+
+@-moz-keyframes piggyDrop {
+	0% {top: -170px;}	
+	100% {top: 520px;}
+}
+
+@-o-keyframes piggyDrop {
+	0% {top: -170px;}	
+	100% {top: 520px;}
+}
+
+@keyframes piggyDrop {
+	0% {top: -170px;}	
+	100% {top: 520px;}
+}
+
+.piggyDrop {
+	-webkit-animation-name: piggyDrop;
+	-moz-animation-name: piggyDrop;
+	-o-animation-name: piggyDrop;
+	animation-name: piggyDrop;
+	
+		-webkit-animation-duration: 2.5s;
+	-moz-animation-duration: 2.5s;	
+	-ms-animation-duration: 2.5s;		
+	-o-animation-duration: 2.5s;		
+	animation-duration: 2.5s;
+	
+		-webkit-animation-iteration-count: 1; 	
+	-moz-animation-iteration-count: 1; 	
+	-ms-animation-iteration-count: 1; 	
+	-o-animation-iteration-count: 1; 				
+	animation-iteration-count: 1;
+	
+		/*-webkit-animation-fill-mode: both;
+	-moz-animation-fill-mode: both;
+	-o-animation-fill-mode: both;
+	animation-fill-mode: both;*/
+}
+
+/*--------------------------------------------------*/
+
+@-webkit-keyframes bootDrop {
+	0% {top: -170px;}	
+	100% {top: 500px;}
+}
+
+@-moz-keyframes bootDrop {
+	0% {top: -170px;}	
+	100% {top: 500px;}
+}
+
+@-o-keyframes bootDrop {
+	0% {top: -170px;}	
+	100% {top: 500px;}
+}
+
+@keyframes bootDrop {
+	0% {top: -170px;}	
+	100% {top: 500px;}
+}
+
+.bootDrop {
+	-webkit-animation-name: bootDrop;
+	-moz-animation-name: bootDrop;
+	-o-animation-name: bootDrop;
+	animation-name: bootDrop;
+	
+		-webkit-animation-duration: 1.5s;
+	-moz-animation-duration: 1.5s;	
+	-ms-animation-duration: 1.5s;		
+	-o-animation-duration: 1.5s;		
+	animation-duration: 1.5s;
+	
+		-webkit-animation-iteration-count: 1; 	
+	-moz-animation-iteration-count: 1; 	
+	-ms-animation-iteration-count: 1; 	
+	-o-animation-iteration-count: 1; 				
+	animation-iteration-count: 1;
+	
+		/*-webkit-animation-fill-mode: both;
+	-moz-animation-fill-mode: both;
+	-o-animation-fill-mode: both;
+	animation-fill-mode: both;*/
+}
+
+@-webkit-keyframes giftDrop {
+	0% {top: -170px;}	
+	100% {top: 463px;}
+}
+
+@-moz-keyframes giftDrop {
+	0% {top: -170px;}	
+	100% {top: 463px;}
+}
+
+@-o-keyframes giftDrop {
+	0% {top: -170px;}	
+	100% {top: 463px;}
+}
+
+@keyframes giftDrop {
+	0% {top: -170px;}	
+	100% {top: 463px;}
+}
+
+.giftDrop {
+	-webkit-animation-name: giftDrop;
+	-moz-animation-name: giftDrop;
+	-o-animation-name: giftDrop;
+	animation-name: giftDrop;
+	
+		-webkit-animation-duration: 2.0s;
+	-moz-animation-duration: 2.0s;	
+	-ms-animation-duration: 2.0s;		
+	-o-animation-duration: 2.0s;		
+	animation-duration: 2.0s;
+	
+		-webkit-animation-iteration-count: 1; 	
+	-moz-animation-iteration-count: 1; 	
+	-ms-animation-iteration-count: 1; 	
+	-o-animation-iteration-count: 1; 				
+	animation-iteration-count: 1;
+	
+		/*-webkit-animation-fill-mode: both;
+	-moz-animation-fill-mode: both;
+	-o-animation-fill-mode: both;
+	animation-fill-mode: both;*/
+}
+
+#money-tree-OB-addOn .sav-playArea li.mtGift{
+	-webkit-animation-delay: 1.25s; 
+	-moz-animation-delay: 1.25s; 
+	-o-animation-delay: 1.25s; 
+	animation-delay: 1.25s;
+}
+
+
+@-webkit-keyframes bills_rocking {
+  0%{ -webkit-transform: rotate(0deg);}
+  25% { -webkit-transform: rotate(8deg); }
+  75% { -webkit-transform: rotate(-8deg);}  
+}
+
+@-moz-keyframes bills_rocking {
+  0%{ -moz-transform: rotate(0deg);}
+  25% { -moz-transform: rotate(8deg); }
+  75% { -moz-transform: rotate(-8deg);}  
+}
+
+@-o-keyframes bills_rocking {
+  0%{ -o-transform: rotate(0deg); }
+  25% { -o-transform: rotate(8deg); }
+  75% { -o-transform: rotate(-8deg); }  
+}
+
+@keyframes bills_rocking {
+  0%{ transform: rotate(0deg); }
+  25% { transform: rotate(8deg); }
+  75% { transform: rotate(-8deg); }  
+}
+
+.money_rock{
+	-webkit-animation: bills_rocking 2.9s ease-in-out infinite alternate;
+	-moz-animation: bills_rocking 2.9s ease-in-out infinite alternate;
+	-o-animation: bills_rocking 2.9s ease-in-out infinite alternate;
+	animation: bills_rocking 2.9s ease-in-out infinite alternate;
+	
+	transform-origin: center top;
+	-o-transform-origin: center top;
+	-moz-transform-origin: center top;
+	-webkit-transform-origin: center top;	
+}
+/*----------------------------------------------------------------------------*/
+
+@-webkit-keyframes pulseIn {
+    0% { -webkit-transform: scale(1); }	
+	50% { -webkit-transform: scale(0.7); }
+    100% { -webkit-transform: scale(1); }
+}
+@-moz-keyframes pulseIn {
+    0% { -moz-transform: scale(1); }	
+	50% { -moz-transform: scale(0.7); }
+    100% { -moz-transform: scale(1); }
+}
+@-o-keyframes pulseIn {
+    0% { -o-transform: scale(1); }	
+	50% { -o-transform: scale(0.7); }
+    100% { -o-transform: scale(1); }
+}
+@keyframes pulseIn {
+    0% { transform: scale(1); }	
+	50% { transform: scale(0.7); }
+    100% { transform: scale(1); }
+}
+
+.pulseIn {
+	-webkit-animation-name: pulse;
+	-moz-animation-name: pulse;
+	-o-animation-name: pulse;
+	animation-name: pulse;
+}
+
+/* EO SUPPORT Example */
+#eoDeviceContestLabels li.addOnDevice{
+	background: url("../images/eo_contestLabel_loading.png") center center no-repeat;	
+	width: 236px;
+	height: 172px;
+}
+
+#eoDeviceContestLabels .addOnDevice a{
+	display: block;
+	width: 236px;
+	height: 172px;
+	/*margin-left: 13px;*/
+}
+
+#eoDeviceContestLabels .addOnDevice a.MT_Label_0{
+	background: url("../images/mt-label-550.png") 0 0 no-repeat;		
+}
+#eoDeviceContestLabels .addOnDevice a.MT_Label_1{
+	background: url("../images/mt-label-455.png") 0 0 no-repeat;		
+}
+#eoDeviceContestLabels .addOnDevice a.MT_Label_2{
+	background: url("../images/mt-label-330.png") 0 0 no-repeat;		
+}
+#eoDeviceContestLabels .addOnDevice a.MT_Label_3{
+	background: url("../images/mt-label-245.png") 0 0 no-repeat;		
+}
+#eoDeviceContestLabels .addOnDevice a.MT_Label_4{
+	background: url("../images/mt-label-110.png") 0 0 no-repeat;		
+}
+/* EO SUPPORT Example */

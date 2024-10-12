@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<contestgroup name="SuperPrize" autoactivate="true" isPrimary="true">
+		<contest tag="SuperPrize">	
+			<attribute tag="Giveaway Number" name="gwy" type="string" tempVal="3080" />				
+		</contest>		   	  	  
+	</contestgroup>
+	<contestgroup name="Bonus" autoactivate="false" isPrimary="false">
+		<contest tag="$50,000.00 Contest">
+			<attribute tag="Giveaway Number" name="gwy" type="string" tempVal="3726" />		
+		</contest>
+		<contest tag="$60,000.00 Contest">
+			<attribute tag="Giveaway Number" name="gwy" type="string" tempVal="3726" />		
+		</contest>
+		<contest tag="$70,000.00 Contest">
+			<attribute tag="Giveaway Number" name="gwy" type="string" tempVal="3726" />		
+		</contest>
+		<contest tag="$80,000.00 Contest">
+			<attribute tag="Giveaway Number" name="gwy" type="string" tempVal="3726" />		
+		</contest>
+		<contest tag="$90,000.00 Contest">
+			<attribute tag="Giveaway Number" name="gwy" type="string" tempVal="3726" />		
+		</contest>
+		<contest tag="$100,000.00 Contest">
+			<attribute tag="Giveaway Number" name="gwy" type="string" tempVal="3726" />		
+		</contest>								
+		<contest tag="$110,000.00 Contest">	
+			<attribute tag="Giveaway Number" name="gwy" type="string" tempVal="3577" />				
+		</contest>
+		<contest tag="$120,000.00 Contest">	
+			<attribute tag="Giveaway Number" name="gwy" type="string" tempVal="3577" />				
+		</contest>
+		<contest tag="$130,000.00 Contest">	
+			<attribute tag="Giveaway Number" name="gwy" type="string" tempVal="3577" />				
+		</contest>
+		<contest tag="$140,000.00 Contest">	
+			<attribute tag="Giveaway Number" name="gwy" type="string" tempVal="3577" />				
+		</contest>
+		<contest tag="$150,000.00 Contest">	
+			<attribute tag="Giveaway Number" name="gwy" type="string" tempVal="3577" />				
+		</contest>
+		<contest tag="$160,000.00 Contest">	
+			<attribute tag="Giveaway Number" name="gwy" type="string" tempVal="3577" />				
+		</contest>
+		<contest tag="$170,000.00 Contest">	
+			<attribute tag="Giveaway Number" name="gwy" type="string" tempVal="3577" />				
+		</contest>
+		<contest tag="$180,000.00 Contest">	
+			<attribute tag="Giveaway Number" name="gwy" type="string" tempVal="3577" />				
+		</contest>
+		<contest tag="$190,000.00 Contest">	
+			<attribute tag="Giveaway Number" name="gwy" type="string" tempVal="3577" />				
+		</contest>
+		<contest tag="$200,000.00 Contest">	
+			<attribute tag="Giveaway Number" name="gwy" type="string" tempVal="3577" />				
+		</contest>
+		<contest tag="$330,000.00 Contest">	
+			<attribute tag="Giveaway Number" name="gwy" type="string" tempVal="3577" />				
+		</contest>																							
+	</contestgroup>
+</metadata>
