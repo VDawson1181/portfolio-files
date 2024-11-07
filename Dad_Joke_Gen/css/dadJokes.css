@@ -20,6 +20,10 @@
         font-size: clamp(3rem, 4.5vw, 5rem);
         margin: 20px 0;
     }
+    h2.countdown{
+        font-size: clamp(0.5rem, 2vw, 2.5rem);
+        margin: 20px 0;
+    }
     p{
         font-size: clamp(2rem, 3.5vw, 4rem);
     }

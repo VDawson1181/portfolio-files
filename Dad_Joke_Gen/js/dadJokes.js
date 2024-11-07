@@ -6,57 +6,92 @@ function dad_joke(){
     const apiUrl = 'https://api.api-ninjas.com/v1/dadjokes';
     const apiKey = '4cqcaehT7Vj0Qq+USdldFg==Mha9mRuOlilyBF4W';
     let mainJoke = document.querySelector("#dadJokeCentral p");
+    let mainJokeCountdown = document.querySelector("#dadJokeCentral h2.countdown span");
     
 // Look for key...
-if(!localStorage.jokeSeen){
 
-    
-     fetch(apiUrl, {
-       headers: {
-         'x-api-key': apiKey
-       }
-     })
-     .then(response => response.json())
-     .then(data => {
-       // Handle the API response data
-       data.forEach((element) => {
-            // console.log(element.joke);
-            let jokeMain = element.joke;
-            mainJoke.innerHTML = jokeMain;
-            console.log("Fresh Joke --", jokeMain);
+const item = localStorage.getItem('test-item');
 
-            // set local storage...
-            localStorage.jokeSeen = jokeMain;
-        });
-    })
-    .catch(error => {
-        // Handle any errors
-        console.error(error);
-    });
-    
-    // let jokeMain = Math.floor(Math.random() * 100);
-    // console.log("Fresh Joke --", jokeMain);
+if(item){
+    const res = (new Date()).getTime() > JSON.parse(item).expDate;
+    // console.log((new Date()).getTime() , JSON.parse(item).expDate)
+    if(res){
+        console.log("remove local storage...")
+        localStorage.removeItem('test-item');
+        getAFreshJoke();
+    }else{
+        //     const now = new Date();
+//     const midnight = new Date(now.getFullYear(), now.getMonth(), now.getDate()+1);
+//     const timeLeft = midnight - now;
+//     const hours = Math.floor(timeLeft / 1000 / 60 / 60);
+//     const minutes = Math.floor(timeLeft / 1000 / 60) % 60;
+//     const seconds = Math.floor(timeLeft / 1000) % 60;
+//     console.log(`${padZero(hours)}:${padZero(minutes)}:${padZero(seconds)}`);
 
-    //Output joke to html...
-    // mainJoke.innerHTML = jokeMain;
-    //Set jokeSeen in local storage...
-    // localStorage.jokeSeen = jokeMain;
+        mainJoke.innerHTML = JSON.parse(item).value;
+        mainJokeCountdown.innerHTML = new Date(JSON.parse(item).expDate);
+        console.log(JSON.parse(item).value);
+        console.log("Expires: "+new Date(JSON.parse(item).expDate));
+    }
 }else{
-    //Retrieve saved joke...
-    let savedJoke = localStorage.jokeSeen;
-    console.log("Joke has been seen already --", savedJoke);
-    mainJoke.innerHTML = localStorage.jokeSeen;
+    // Fresh joke....
+    getAFreshJoke();
+}
 
-    // setInterval(countdownToMidnight,999)
-    // todaysDate();
-    countDownToMidnight();
+
+function getAFreshJoke(){
+    fetch(apiUrl, {
+        headers: {
+          'x-api-key': apiKey
+        }
+      })
+      .then(response => response.json())
+      .then(data => {
+        // Handle the API response data
+        data.forEach((element) => {
+             // console.log(element.joke);
+             let jokeMain = element.joke;
+             mainJoke.innerHTML = jokeMain;
+             console.log("Fresh Joke --", jokeMain);
+ 
+             // set local storage to expire in 1 hour...
+             const date = new Date().setHours(new Date().getHours()+1);
+             // const date = new Date().setDate(new Date().getDate()+1);
+            //  const date = new Date(new Date().setHours(11,55,59,0));
+             console.log(date);
+
+
+             mainJokeCountdown.innerHTML = new Date(date);
+ 
+             // localStorage.jokeSeen = jokeMain;
+             localStorage.setItem('test-item', JSON.stringify({
+                 value: jokeMain,
+                 expDate: date
+             }));
+         });
+     })
+     .catch(error => {
+         // Handle any errors
+         console.error(error);
+     });
 }
 
 function countDownToMidnight(){
-    const date = new Date().setHours(new Date().getHours() + 24);
+    //set 
+    // const date = new Date().setHours(new Date().getHours() + 24);
+    const date = new Date().setHours(new Date().getHours()+24);
+    mainJokeCountdown.innerHTML = new Date(date);
 
-    console.log(date);
-    console.log(new Date(date));
+
+    // console.log(new Date(date));
+
+    // setInterval(function (){
+    //     // console.log(date);
+
+    //     mainJokeCountdown.innerHTML = new Date(date);
+
+    // },999);
+
 }
 
 // remove key
