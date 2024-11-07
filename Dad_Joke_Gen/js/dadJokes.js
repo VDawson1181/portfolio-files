@@ -29,9 +29,11 @@ if(item){
 //     console.log(`${padZero(hours)}:${padZero(minutes)}:${padZero(seconds)}`);
 
         mainJoke.innerHTML = JSON.parse(item).value;
-        mainJokeCountdown.innerHTML = new Date(JSON.parse(item).expDate);
+        // mainJokeCountdown.innerHTML = new Date(JSON.parse(item).expDate);
         console.log(JSON.parse(item).value);
-        console.log("Expires: "+new Date(JSON.parse(item).expDate));
+        
+
+        countdownTime(JSON.parse(item).expDate);
     }
 }else{
     // Fresh joke....
@@ -61,7 +63,7 @@ function getAFreshJoke(){
              console.log(date);
 
 
-             mainJokeCountdown.innerHTML = new Date(date);
+            //  mainJokeCountdown.innerHTML = new Date(date);
  
              // localStorage.jokeSeen = jokeMain;
              localStorage.setItem('test-item', JSON.stringify({
@@ -74,6 +76,29 @@ function getAFreshJoke(){
          // Handle any errors
          console.error(error);
      });
+}
+
+function countdownTime(expDate){
+    let mainJokeCountdown = document.querySelector("#dadJokeCentral h2.countdown span");
+    console.log("Expires: "+new Date(expDate));
+    
+    // const midnight = new Date(now.getFullYear(), now.getMonth(), now.getDate()+1);
+
+        setInterval(function (){
+            const now = new Date();
+            const timeLeft = expDate - now;
+            const hours = Math.floor(timeLeft / 1000 / 60 / 60);
+            const minutes = Math.floor(timeLeft / 1000 / 60) % 60;
+            const seconds = Math.floor(timeLeft / 1000) % 60;
+            mainJokeCountdown.innerHTML = `${padZero(hours)}:${padZero(minutes)}:${padZero(seconds)}`;
+            // console.log (`${padZero(hours)}:${padZero(minutes)}:${padZero(seconds)}`);
+
+    },999);
+
+}
+function padZero(num){
+    return (num < 10 ? "0" : "")+num;
+
 }
 
 function countDownToMidnight(){
