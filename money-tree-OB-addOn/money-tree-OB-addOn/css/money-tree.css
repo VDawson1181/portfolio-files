@@ -66,6 +66,7 @@ body{
 	background: url("../images/mt-sav-Tree.png") center bottom no-repeat;	
 	background-size: cover;
 	position: absolute;
+	top: 0;
 	/* top: -80px;
 	left: -135px; */
 	z-index: 90;
