@@ -29,7 +29,7 @@ $(document).ready(function(){
 			$(deviceIdentifier+", "+deviceIdentifier+" .mt-sav-tree-element").removeClass("mt-wobble");
 			setTimeout(function(){
 				$(deviceIdentifier+", "+deviceIdentifier+" .mt-sav-tree-element").addClass("mt-wobble");
-				setNameVal("savPlayed","MT","1");
+				// setNameVal("savPlayed","MT","1");
 				 savingsAnimate(deviceIdentifier);							
 			}, 500);									
 		}); 		
