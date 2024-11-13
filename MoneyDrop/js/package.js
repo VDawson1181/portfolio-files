@@ -104,8 +104,19 @@ function createAclone(gameClass){
 
 function initiateDrop(gameClass, hpp){			
 	//Create and place clone at random horizontal drop point... The humans will never see them coming.
-	var piggyDropPoint = Math.floor((Math.random()*650)+1);	 
-	var piggyScaleValue = [0.5,0.6,0.8,1,1.1];
+	var piggyWidth = $(".pigPen").width();
+	// var piggyDropPoint = Math.floor((Math.random()*650)+1);	 
+		
+	
+	if(window.innerWidth<=650){
+		console.log("Smaller")
+		var piggyDropPoint = Math.floor((Math.random()*300)+1);
+		var piggyScaleValue = [0.9,0.3,0.6,0.5,0.7];
+	}else{
+		console.log("Larger")
+		var piggyDropPoint = Math.floor((Math.random()*650)+1);
+		var piggyScaleValue = [0.5,0.6,0.8,1,1.1];
+	}
 	var piggyScaleRandom = Math.floor((Math.random()*5)+1);		
 	
 	if( $(".no-csstransforms3d").length > 0){

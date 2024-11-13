@@ -17,14 +17,15 @@ body{
 }
 
 #subWrapper{
-	width: 953px;
+	max-width: 953px;
+	min-width: 320px;
 	margin: 0 auto;
 	height: max-content;
 	overflow: hidden; 
 }
 
 #orderAreaWrap {
-	width: 800px;
+	/* width: 800px; */
 	background: #1d7417;
 	display:none;
 	margin: 0 auto 20px;
@@ -39,7 +40,7 @@ body{
 
 /******Package Specific Style******/
 .contestArea{
-	width: 953px;
+	/* width: 953px; */
 	/*background: #fff;	*/
 	overflow: hidden;	
 	
@@ -651,6 +652,66 @@ user-select: none;
 	color: #004679;
 }
 
+
+@media (width <= 600px) {
+	.contestArea{
+		width: 100vw;
+		margin: 0 auto;
+	}
+
+	.gameHdrArea{
+		height: 126px;
+	}
+
+	.playArea{
+		width: 100vw;
+		height: 560px;
+		margin: -68px auto 0;
+	}
+
+	.playArea .instructionArea, .playArea .postPlayArea{
+		width: 90vw;
+		margin: 75px auto 0;
+	}
+
+	.playArea .instructionArea div p.instBotLine span.lrgTxt{
+		font-size: 50px;
+	}
+
+	.playArea .instructionArea div h1{
+		font-size: 19px;
+	}
+	.playArea .instructionArea div ul, .playArea .postPlayArea div ul{
+		font-size: 16px;
+		padding: 5px 30px;
+	}
+	.playArea .instructionArea div p.pigEx{
+		height: 60px;
+		top: 25px;
+	}
+	.playArea .instructionArea div ul li.howToPlayFirst{
+		padding-bottom: 70px;
+	}
+	.playArea .instructionArea div.startButton, .playArea .postPlayArea div.savingsButton{
+		background-size: contain;
+		height: 55px;
+	}
+	.piggyScoreBoard{
+		font-size: 20px;
+		line-height: 30px;
+
+		span{
+			font-size: 30px;
+		}
+	}
+	.playArea .postPlayArea div p.instBotLine.lrgTxt{
+		font-size: 66px;
+	}
+	.playArea .postPlayArea div p.instBotLine{
+		font-size: 30px;
+	}
+  }
+
 /*****Disclaimer Style******/
 .disclaimer {
 	font-family:Arial, Helvetica, sans-serif;
@@ -663,39 +724,6 @@ user-select: none;
 .disclaimer, .disclaimer a {color: #fff;}
 .disclaimer p {	margin-bottom: 14px;}
 .disclaimer strong {font-size: 12px;}
-
-/*** EO ****/
-.eo .eo_MD_contestLabel{width: 229px; height: 155px !important;}
-
-.eo .eoContestLabels li {background: url("../images/stamps/eo_contestLabel_loading.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);}
-.eo .eo_contestLabel_addon_MD_Main{ background: transparent url("../images/stamps/addOn_stampDevice_main.png") 0 0 no-repeat; }
-.eo .eo_contestLabel_addon_MD_0{ background: transparent url("../images/stamps/eo_contestLabel_addon_MD_0.png") 0 0 no-repeat; }
-.eo .eo_contestLabel_addon_MD_1{ background: transparent url("../images/stamps/eo_contestLabel_addon_MD_1.png") 0 0 no-repeat; }
-.eo .eo_contestLabel_addon_MD_2{ background: transparent url("../images/stamps/eo_contestLabel_addon_MD_2.png") 0 0 no-repeat; }
-.eo .eo_contestLabel_addon_MD_3{ background: transparent url("../images/stamps/eo_contestLabel_addon_MD_3.png") 0 0 no-repeat; }
-.eo .eo_contestLabel_addon_MD_4{ background: transparent url("../images/stamps/eo_contestLabel_addon_MD_4.png") 0 0 no-repeat; }
-.eo .eo_contestLabel_addon_MD_5{ background: transparent url("../images/stamps/eo_contestLabel_addon_MD_5.png") 0 0 no-repeat; }
-.eo .eo_contestLabel_addon_MD_6{ background: transparent url("../images/stamps/eo_contestLabel_addon_MD_6.png") 0 0 no-repeat; }
-.eo .eo_contestLabel_addon_MD_7{ background: transparent url("../images/stamps/eo_contestLabel_addon_MD_7.png") 0 0 no-repeat; }
-.eo .eo_contestLabel_addon_MD_8{ background: transparent url("../images/stamps/eo_contestLabel_addon_MD_8.png") 0 0 no-repeat; }
-.eo .eo_contestLabel_addon_MD_9{ background: transparent url("../images/stamps/eo_contestLabel_addon_MD_9.png") 0 0 no-repeat; }
-.eo .eo_contestLabel_addon_MD_10{ background: transparent url("../images/stamps/eo_contestLabel_addon_MD_10.png") 0 0 no-repeat; }
-.eo .eo_contestLabel_addon_MD_11{ background: transparent url("../images/stamps/eo_contestLabel_addon_MD_11.png") 0 0 no-repeat; }
-.eo .eo_contestLabel_addon_MD_12{ background: transparent url("../images/stamps/eo_contestLabel_addon_MD_12.png") 0 0 no-repeat; }
-.eo .eo_contestLabel_addon_MD_13{ background: transparent url("../images/stamps/eo_contestLabel_addon_MD_13.png") 0 0 no-repeat; }
-.eo .eo_contestLabel_addon_MD_14{ background: transparent url("../images/stamps/eo_contestLabel_addon_MD_14.png") 0 0 no-repeat; }
-.eo .eo_contestLabel_addon_MD_15{ background: transparent url("../images/stamps/eo_contestLabel_addon_MD_15.png") 0 0 no-repeat; }
-.eo .eo_contestLabel_addon_MD_16{ background: transparent url("../images/stamps/eo_contestLabel_addon_MD_16.png") 0 0 no-repeat; }
-
-.eo #submitButton{ width: 284px; height: 69px; }
-
-.eo #rules{ margin-bottom:20px !important; }
-
-.eo #rPrivacy{ float: left; width: 150px; text-align: left; padding-left: 10px; }
-
-.eo .buttonNoOrder{ background: transparent url("../images/MD_submitEntry.png") 0 0 no-repeat !important; }
-
-.eo .buttonOrder{ background: transparent url("../images/MD_submitEntryOrder.png") 0 0 no-repeat !important; }
 
 #deviceWrap1{ 
 	display: none; 
