@@ -523,6 +523,11 @@ $AcmeBase: 'Acme', sans-serif;
 /* Mobile styles */
 @media (width <= 600px) {
 
+	#package-wrap{
+		width: 100vw;
+		min-width: 400px;
+	}
+
 	#package-contest_section .stage--big{
 		width: 375px;
 		height: 680px;		
@@ -873,27 +878,43 @@ $AcmeBase: 'Acme', sans-serif;
 		}
 
 		#package-pkg_section{
-			background-color: #fff;
+			// background-color: #fff;
 			max-width: 100%;
 			min-width: 375px;
 		}
 		/*fake product section style change for mobile*/
-		#mpWrap{
-			width: 100%;
+		// #mpWrap{
+		// 	width: 100%;
 	
-			div{
+		// 	div{
+		// 		h1{
+		// 			font-size: 20px;
+		// 			line-height: 30px;
+		// 		}
+		// 		p{
+		// 			border-left: 120px solid #aaa;
+		// 			font-size: 13px;
+		// 		}
+		// 		footer{
+		// 			height: 45px;
+		// 		}
+		// 	} 
+		// }
+
+		#mpWrap{
+			width: 100vw !important;
+
+			div{ 				
 				h1{
-					font-size: 20px;
-					line-height: 30px;
+					font-size: 27px !important;
 				}
+			
 				p{
-					border-left: 120px solid #aaa;
-					font-size: 13px;
+					border-left: 180px solid #aaa !important;
+					padding-left: 10px !important;
+					font-size: 15px !important;
 				}
-				footer{
-					height: 45px;
-				}
-			} 
+			}
 		}
 	}
 }

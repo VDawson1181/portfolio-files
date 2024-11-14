@@ -350,6 +350,10 @@ body {
 }
 /* Mobile styles */
 @media (width <= 600px) {
+  #package-wrap {
+    width: 100vw;
+    min-width: 400px;
+  }
   #package-contest_section .stage--big {
     width: 375px;
     height: 680px;
@@ -629,22 +633,18 @@ body {
     padding-bottom: 20px;
   }
   #package-order_section #package-pkg_section {
-    background-color: #fff;
     max-width: 100%;
     min-width: 375px;
   }
   #package-order_section #mpWrap {
-    width: 100%;
+    width: 100vw !important;
   }
   #package-order_section #mpWrap div h1 {
-    font-size: 20px;
-    line-height: 30px;
+    font-size: 27px !important;
   }
   #package-order_section #mpWrap div p {
-    border-left: 120px solid #aaa;
-    font-size: 13px;
-  }
-  #package-order_section #mpWrap div footer {
-    height: 45px;
+    border-left: 180px solid #aaa !important;
+    padding-left: 10px !important;
+    font-size: 15px !important;
   }
 }/*# sourceMappingURL=package.WTV14.css.map */

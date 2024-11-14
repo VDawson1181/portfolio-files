@@ -97,7 +97,7 @@ function WIMMT_Init() {
 
         var WIMMT_OB_LetterAnimation = new SplitText(WIMMT_OBSec_Stage1_Words, {type:"words, chars"}), words = WIMMT_OB_LetterAnimation.words;
 
-        var WIMMT_OB_Ani = new TimelineMax({paused: true, onStart:function(){ _packageSetValue("WIMMT_Start",true); clearInterval(clockInterval); console.log("OBAni Started...")},onComplete:function(){ OB_List_Pulse.play();  } }); 
+        var WIMMT_OB_Ani = new TimelineMax({paused: true, onStart:function(){ clearInterval(clockInterval); console.log("OBAni Started...")},onComplete:function(){ OB_List_Pulse.play();  } }); 
 
             WIMMT_OB_Ani.to(WIMMT_ContestSec,{duration:0.5,display:'none',opacity:0,ease:'none'})
             WIMMT_OB_Ani.to(WIMMT_OrderSec,{duration:0.5,display:'block',opacity:1,ease:'none'})
@@ -108,6 +108,7 @@ function WIMMT_Init() {
             if(!WIMMT_mobSelector) WIMMT_OB_Ani.from(WIMMT_OBSec_Stage2_Mid,{duration:0.25,display:'none',opacity:0,height:0,ease:'none'})
             WIMMT_OB_Ani.from('#package-order_section #package-ob_section #OB_DirMsg .ob__stage2 .ob__stage2__ftr h6.Current',{duration:1,opacity:0,ease:'none'})
             WIMMT_OB_Ani.to(WIMMT_ProdSec,{duration:0.5,display:'block',opacity:1,ease:'none'})
+            WIMMT_OB_Ani.add(function(){ document.querySelector("#mpWrap").style.display = "block"; })
             // if(!WIMMT_mobSelector){ 
             //     WIMMT_OB_Ani.from("#disclaimersWrap",{duration:0.5,opacity:0,ease:'none'})
             // }else{    
