@@ -18,7 +18,7 @@ body{
 
 #subWrapper{
 	max-width: 953px;
-	min-width: 320px;
+	min-width: 400px;
 	margin: 0 auto;
 	height: max-content;
 	overflow: hidden; 
@@ -673,14 +673,15 @@ user-select: none;
 @media (width <= 600px) {
 	.contestArea{
 		width: 100vw;
-		margin: 0 auto;
 	}
 
 	.gameHdrArea{
+		min-width: 400px;
 		height: 126px;
 	}
 
 	.playArea{
+		min-width: 400px;
 		width: 100vw;
 		height: 560px;
 		margin: -68px auto 0;
@@ -688,6 +689,7 @@ user-select: none;
 
 	.playArea .instructionArea, .playArea .postPlayArea{
 		width: 90vw;
+		min-width: 380px;
 		margin: 75px auto 0;
 	}
 
