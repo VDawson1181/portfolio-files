@@ -397,8 +397,8 @@ body{
 }
 
 /* Mobile styles */
-@media only screen and (max-width: 600px) {
-	#package-wrap.mobilePkg{
+@media (width <= 600px) {
+	#package-wrap{
 		min-width: 320px;
 		background-color: var(--AltWhite-color);
 	
