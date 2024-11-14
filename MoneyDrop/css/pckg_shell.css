@@ -710,6 +710,18 @@ user-select: none;
 	.playArea .postPlayArea div p.instBotLine{
 		font-size: 30px;
 	}
+
+	.playArea .instructionArea div p.instBotLine{
+		font-size: 30px;
+		line-height: 30px;
+	}
+	.savingsArea .playArea .instructionArea div ul li.howToPlayFirst{
+		padding: 0 150px 20px 0;
+	}
+	.savingsArea .playArea .instructionArea div p.pigEx{
+		top: 0;
+		left: 60px;
+	}
   }
 
 /*****Disclaimer Style******/
