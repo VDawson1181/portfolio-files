@@ -8,11 +8,6 @@ body {
 }
 
 /*****Package Style Start*******/
-.mobilePkg #package-contest_section .stage--big {
-  width: 298px;
-  height: 680px;
-}
-
 #package-contest_section {
   width: 100vw;
   height: 100vh;
@@ -354,7 +349,11 @@ body {
   }
 }
 /* Mobile styles */
-@media only screen and (max-width: 600px) {
+@media (width <= 600px) {
+  #package-contest_section .stage--big {
+    width: 375px;
+    height: 680px;
+  }
   #package-contest_section {
     min-width: 320px;
   }

@@ -636,7 +636,7 @@ body{
 			}
 	
 			/*fake product section style change for mobile*/
-			#mpWrap{
+			/* #mpWrap{
 				width: 320px;
 		
 				div{
@@ -652,7 +652,23 @@ body{
 						height: 45px;
 					}
 				} 
+			} */
+			#mpWrap{
+				width: 100vw !important;
+
+				div{ 				
+					h1{
+						font-size: 27px !important;
+					}
+				
+					p{
+						border-left: 180px solid #aaa !important;
+						padding-left: 10px !important;
+						font-size: 15px !important;
+					}
+				}
 			}
+		
 		}
 	
 		.disclaimer {
