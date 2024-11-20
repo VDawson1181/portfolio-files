@@ -476,7 +476,7 @@ body {
 /* Mobile styles */
 @media only screen and (max-width: 600px) {
   #package-contest_section {
-    width: 320px;
+    width: 100vw;
     margin: 0 auto;
   }
   #package-contest_section .PPTV3_Header {
@@ -490,26 +490,26 @@ body {
     margin: auto;
     position: relative;
     text-align: center;
-    padding: 10px 10px 30px;
+    padding: 10px 0px;
   }
   #package-contest_section .PPTV3_Header div .PPTV3_Arrow {
     display: none;
   }
   #package-contest_section .PPTV3_Header div h6 {
-    width: 300px;
+    width: 100vw;
     color: #fff;
-    font-size: 35px;
-    line-height: 40px;
+    font-size: 25px;
+    line-height: 30px;
     font-family: "Poppins", sans-serif;
     font-weight: 800;
     padding: 5px 0 0 0px;
     text-transform: uppercase;
   }
   #package-contest_section .PPTV3_Header div h5 {
-    width: 300px;
+    width: 100vw;
     color: #fff672;
-    font-size: 35px;
-    line-height: 40px;
+    font-size: 25px;
+    line-height: 30px;
     font-family: "Poppins", sans-serif;
     font-weight: 500;
     font-style: italic;
@@ -524,9 +524,14 @@ body {
   #package-contest_section .PPTV3_Btn {
     width: 282px;
     height: 51px;
-    margin: 7px auto 10px;
     font-size: 18px;
     line-height: 51px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 395px;
+    margin: auto;
+    z-index: 99;
   }
   #package-contest_section .PPTV3_Body {
     position: relative;
@@ -583,8 +588,8 @@ body {
   #package-contest_section .PPTV3_Ftr {
     width: 320px;
     margin: 0px auto 20px;
-    font-size: 18px;
-    line-height: 24px;
+    font-size: 15px;
+    line-height: 20px;
     color: #000;
   }
   #package-contest_section .PPTV3_Modal {
@@ -657,7 +662,7 @@ body {
     font-style: italic;
   }
   #package-ob_section {
-    width: 320px;
+    width: 100vw;
     margin: 0 auto;
     overflow: hidden;
   }
@@ -832,7 +837,7 @@ body {
     /*fake product section style change for mobile*/
   }
   #package-product_section #mpWrap {
-    width: 320px;
+    width: 100vw;
   }
   #package-product_section #mpWrap div h1 {
     font-size: 20px;
