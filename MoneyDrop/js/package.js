@@ -256,6 +256,10 @@ function postPlayCreator(gameClass, finalTally){
 		$(".contestArea .playArea .postPlayArea div ul li span.sentenceStructure").replaceWith("<span class='sentenceStructure'>Continue</span>");				
 		savingsCreator();
 	}
+	
+	if(finalTally==0){
+		savingsCreator();
+	}
 
 	if(gameClass == ".savingsArea"){
 		console.log(gameClass+" Game Done....")
