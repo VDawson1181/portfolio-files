@@ -296,11 +296,11 @@ function savingsCreator(){
 			$(".savingsArea .playArea .postPlayArea div ul li span.sentenceStructure").replaceWith("<span class='sentenceStructure'>Continue</span>");
 			
 			//post instruction copy changes...
-			$(".savingsArea .playArea .postPlayArea div p.instTopLine").replaceWith("<p class='instTopLine'>Nice Try, <span class='replay replay_fname'>Johnnyextraman</span>.</p>");
+			$(".savingsArea .playArea .postPlayArea div p.instTopLine").replaceWith("<p class='instTopLine'>Nice, <span class='replay replay_fname'>Johnnyextraman</span>.</p>");
 			$(".savingsArea .playArea .postPlayArea div p.instMidLine").replaceWith("<p class='instMidLine'>You Played PCH Savings Drop And Revealed:</p>");
-			$(".savingsArea .playArea .postPlayArea div ul").replaceWith("<ul><li>Take advantage of these incredible savings!</li><li>Place an order today!</li></ul>");
+			$(".savingsArea .playArea .postPlayArea div ul").replaceWith("<ul><li>Take advantage of these incredible savings!</li><li>Try any deal below.</li></ul>");
 			$(".savingsArea .playArea .postPlayArea p.lrgTxt").replaceWith("<p class='instBotLine lrgTxt'><span class='subTxt'>UP TO</span><span class='prizeAmt'>80% OFF</span></p>");	
-			$(".savingsArea .playArea .postPlayArea p.smTxt").replaceWith("<p class='instBotLine smTxt'>Savings Approved Throughout!</p>");
+			$(".savingsArea .playArea .postPlayArea p.smTxt").replaceWith("<p class='instBotLine smTxt'>Savings Approved Throughout.</p>");
 			$(".savingsArea .playArea .postPlayArea div.savingsButton").css({"display":"none"});	  		
 			// fUpdatePersonalization();	
 
