@@ -1,6 +1,7 @@
-//Money Drop V1.2.1 - By VD & NT
+//Money Drop V1.2.2 - By VD & NT
 var pigCaptured = 0, timerCount = 10, hpp=1, timedOut = 1000, aniDuration = 5000, contestPlayed=false, timeUp=false;
-$(document).ready(function(){							
+$(document).ready(function(){				
+	console.log("Money Drop V1.2.1 - updated 08/28/2025");			
 	// fInitContestChoice(".contestArea");		
 	
 	$(".contestArea .gameHdrArea, .contestArea .playArea, .contestArea .piggyScoreBoard").clone().appendTo( ".savingsArea" );
